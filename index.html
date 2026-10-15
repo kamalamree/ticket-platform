@@ -26,10 +26,7 @@
             font-family: Arial, sans-serif;
         }
 
-        /* =========================
-           البانر الرئيسي
-        ========================= */
-
+        /* البانر */
         .hero {
             width: 100%;
             background: #07111F;
@@ -40,14 +37,9 @@
             display: block;
             width: 100%;
             height: auto;
-            margin: 0;
-            padding: 0;
         }
 
-        /* =========================
-           قسم الحفلات
-        ========================= */
-
+        /* قسم الحفلات */
         .concerts-section {
             width: 100%;
             max-width: 1200px;
@@ -73,20 +65,14 @@
             font-size: 16px;
         }
 
-        /* =========================
-           شبكة الكروت
-        ========================= */
-
+        /* شبكة الحفلات */
         .concerts-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
 
-        /* =========================
-           كارت الحفلة
-        ========================= */
-
+        /* الكارت */
         .concert-card {
             background: #0D1B2A;
             border: 1px solid rgba(212, 175, 55, 0.25);
@@ -103,7 +89,6 @@
         }
 
         /* صورة الحفلة */
-
         .concert-image {
             width: 100%;
             aspect-ratio: 3 / 4;
@@ -119,7 +104,6 @@
         }
 
         /* معلومات الحفلة */
-
         .concert-info {
             padding: 20px;
         }
@@ -152,7 +136,6 @@
         }
 
         /* السعر */
-
         .price {
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             padding-top: 15px;
@@ -172,7 +155,6 @@
         }
 
         /* زر الحجز */
-
         .book-button {
             display: block;
             width: 100%;
@@ -194,10 +176,7 @@
             filter: brightness(1.1);
         }
 
-        /* =========================
-           الموبايل
-        ========================= */
-
+        /* الموبايل */
         @media (max-width: 900px) {
             .concerts-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -226,10 +205,7 @@
 
 <body>
 
-    <!-- =========================
-         البانر الرئيسي
-    ========================= -->
-
+    <!-- البانر الرئيسي -->
     <header class="hero">
         <img
             src="./hero-banner.png"
@@ -238,10 +214,7 @@
     </header>
 
 
-    <!-- =========================
-         قسم الحفلات
-    ========================= -->
-
+    <!-- الحفلات -->
     <main class="concerts-section">
 
         <div class="section-title">
@@ -253,7 +226,7 @@
         <div class="concerts-grid">
 
             <!-- =========================
-                 عمرو دياب
+                 1 - عمرو دياب
             ========================= -->
 
             <article class="concert-card">
@@ -300,6 +273,57 @@
                 </div>
 
             </article>
+
+
+            <!-- =========================
+                 2 - نانسي عجرم
+            ========================= -->
+
+            <article class="concert-card">
+
+                <div class="concert-image">
+                    <img
+                        src="./nancy-ajram.png"
+                        alt="حفلة نانسي عجرم في دبي"
+                    >
+                </div>
+
+                <div class="concert-info">
+
+                    <h2>نانسي عجرم</h2>
+
+                    <div class="concert-details">
+
+                        <div class="detail">
+                            <span class="detail-icon">📅</span>
+                            <span>24 أكتوبر 2026</span>
+                        </div>
+
+                        <div class="detail">
+                            <span class="detail-icon">📍</span>
+                            <span>Coca-Cola Arena - دبي</span>
+                        </div>
+
+                        <div class="detail">
+                            <span class="detail-icon">🇦🇪</span>
+                            <span>الإمارات العربية المتحدة</span>
+                        </div>
+
+                    </div>
+
+                    <div class="price">
+                        <span>يبدأ سعر التذكرة من</span>
+                        <strong>سيتم الإعلان</strong>
+                    </div>
+
+                    <a href="#" class="book-button">
+                        احجز الآن
+                    </a>
+
+                </div>
+
+            </article>
+
 
         </div>
 
