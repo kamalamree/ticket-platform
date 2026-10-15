@@ -8,6 +8,7 @@
     <title>Ticket arab | بوابة التذاكر</title>
 
     <style>
+
         * {
             box-sizing: border-box;
         }
@@ -26,7 +27,10 @@
             font-family: Arial, sans-serif;
         }
 
-        /* البانر */
+        /* =========================
+           البانر الرئيسي
+        ========================= */
+
         .hero {
             width: 100%;
             background: #07111F;
@@ -39,7 +43,11 @@
             height: auto;
         }
 
-        /* قسم الحفلات */
+
+        /* =========================
+           قسم الحفلات
+        ========================= */
+
         .concerts-section {
             width: 100%;
             max-width: 1200px;
@@ -47,10 +55,12 @@
             padding: 45px 20px 60px;
         }
 
+
         .section-title {
             text-align: center;
             margin-bottom: 35px;
         }
+
 
         .section-title h1 {
             margin: 0 0 10px;
@@ -59,42 +69,63 @@
             font-weight: 800;
         }
 
+
         .section-title p {
             margin: 0;
             color: #AEB8C4;
             font-size: 16px;
         }
 
-        /* شبكة الحفلات */
+
+        /* =========================
+           شبكة الكروت
+        ========================= */
+
         .concerts-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 25px;
         }
 
-        /* الكارت */
+
+        /* =========================
+           كارت الحفلة
+        ========================= */
+
         .concert-card {
             background: #0D1B2A;
             border: 1px solid rgba(212, 175, 55, 0.25);
             border-radius: 18px;
             overflow: hidden;
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+
+            box-shadow:
+                0 12px 35px rgba(0, 0, 0, 0.35);
+
             transition: 0.3s ease;
         }
 
+
         .concert-card:hover {
             transform: translateY(-6px);
+
             border-color: #D4AF37;
-            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5);
+
+            box-shadow:
+                0 18px 45px rgba(0, 0, 0, 0.5);
         }
 
-        /* صورة الحفلة */
+
+        /* =========================
+           صورة الحفلة
+        ========================= */
+
         .concert-image {
             width: 100%;
             aspect-ratio: 3 / 4;
             overflow: hidden;
             background: #050C15;
         }
+
 
         .concert-image img {
             width: 100%;
@@ -103,127 +134,217 @@
             display: block;
         }
 
-        /* معلومات الحفلة */
+
+        /* =========================
+           معلومات الحفلة
+        ========================= */
+
         .concert-info {
             padding: 20px;
         }
 
+
         .concert-info h2 {
             margin: 0 0 15px;
+
             font-size: 25px;
+
             color: #FFFFFF;
         }
+
 
         .concert-details {
             display: flex;
             flex-direction: column;
+
             gap: 10px;
+
             margin-bottom: 20px;
         }
+
 
         .detail {
             display: flex;
             align-items: center;
+
             gap: 9px;
+
             color: #D7DCE2;
+
             font-size: 15px;
         }
 
+
         .detail-icon {
             color: #D4AF37;
+
             font-size: 18px;
+
             width: 24px;
         }
 
-        /* السعر */
+
+        /* =========================
+           السعر
+        ========================= */
+
         .price {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top:
+                1px solid rgba(255, 255, 255, 0.1);
+
             padding-top: 15px;
+
             margin-bottom: 18px;
         }
 
+
         .price span {
             color: #AEB8C4;
+
             font-size: 13px;
         }
 
+
         .price strong {
             display: block;
+
             margin-top: 4px;
+
             color: #D4AF37;
+
             font-size: 25px;
         }
 
-        /* زر الحجز */
+
+        /* =========================
+           زر الحجز
+        ========================= */
+
         .book-button {
             display: block;
+
             width: 100%;
+
             padding: 14px;
+
             border: none;
+
             border-radius: 10px;
-            background: linear-gradient(135deg, #D4AF37, #B8963E);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #D4AF37,
+                    #B8963E
+                );
+
             color: #07111F;
+
             text-align: center;
+
             text-decoration: none;
+
             font-size: 17px;
+
             font-weight: 800;
+
             cursor: pointer;
+
             transition: 0.25s ease;
         }
 
+
         .book-button:hover {
             transform: scale(1.02);
+
             filter: brightness(1.1);
         }
 
-        /* الموبايل */
+
+        /* =========================
+           الموبايل
+        ========================= */
+
         @media (max-width: 900px) {
+
             .concerts-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+
         }
 
+
         @media (max-width: 600px) {
+
             .concerts-section {
-                padding: 30px 15px 45px;
+                padding:
+                    30px 15px 45px;
             }
+
 
             .section-title h1 {
                 font-size: 27px;
             }
 
+
             .concerts-grid {
                 grid-template-columns: 1fr;
             }
 
+
             .concert-info h2 {
                 font-size: 23px;
             }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <!-- البانر الرئيسي -->
+
+    <!-- =========================
+         البانر الرئيسي
+    ========================= -->
+
     <header class="hero">
+
         <img
             src="./hero-banner.png"
             alt="Ticket arab - حفلات العالم العربي"
         >
+
     </header>
 
 
-    <!-- الحفلات -->
+
+    <!-- =========================
+         قسم الحفلات
+    ========================= -->
+
     <main class="concerts-section">
 
+
         <div class="section-title">
-            <h1>أحدث الحفلات</h1>
-            <p>احجز تذكرتك واستمتع بأقوى الحفلات</p>
+
+            <h1>
+                أحدث الحفلات
+            </h1>
+
+            <p>
+                احجز تذكرتك واستمتع بأقوى الحفلات
+            </p>
+
         </div>
 
 
+
         <div class="concerts-grid">
+
+
 
             <!-- =========================
                  1 - عمرو دياب
@@ -231,48 +352,101 @@
 
             <article class="concert-card">
 
+
                 <div class="concert-image">
+
                     <img
                         src="./amr-diab.png"
                         alt="حفلة عمرو دياب في دبي"
                     >
+
                 </div>
+
+
 
                 <div class="concert-info">
 
-                    <h2>عمرو دياب</h2>
+
+                    <h2>
+                        عمرو دياب
+                    </h2>
+
 
                     <div class="concert-details">
 
-                        <div class="detail">
-                            <span class="detail-icon">📅</span>
-                            <span>7 نوفمبر 2026</span>
-                        </div>
 
                         <div class="detail">
-                            <span class="detail-icon">📍</span>
-                            <span>Coca-Cola Arena - دبي</span>
+
+                            <span class="detail-icon">
+                                📅
+                            </span>
+
+                            <span>
+                                7 نوفمبر 2026
+                            </span>
+
                         </div>
 
+
+
                         <div class="detail">
-                            <span class="detail-icon">🇦🇪</span>
-                            <span>الإمارات العربية المتحدة</span>
+
+                            <span class="detail-icon">
+                                📍
+                            </span>
+
+                            <span>
+                                Coca-Cola Arena - دبي
+                            </span>
+
                         </div>
+
+
+
+                        <div class="detail">
+
+                            <span class="detail-icon">
+                                🇦🇪
+                            </span>
+
+                            <span>
+                                الإمارات العربية المتحدة
+                            </span>
+
+                        </div>
+
 
                     </div>
+
+
 
                     <div class="price">
-                        <span>يبدأ سعر التذكرة من</span>
-                        <strong>سيتم الإعلان</strong>
+
+                        <span>
+                            يبدأ سعر التذكرة من
+                        </span>
+
+                        <strong>
+                            سيتم الإعلان
+                        </strong>
+
                     </div>
 
-                    <a href="#" class="book-button">
+
+
+                    <a
+                        href="#"
+                        class="book-button"
+                    >
                         احجز الآن
                     </a>
 
+
                 </div>
 
+
             </article>
+
 
 
             <!-- =========================
@@ -281,53 +455,210 @@
 
             <article class="concert-card">
 
+
                 <div class="concert-image">
+
                     <img
                         src="./nancy-ajram.png"
                         alt="حفلة نانسي عجرم في دبي"
                     >
+
                 </div>
+
+
 
                 <div class="concert-info">
 
-                    <h2>نانسي عجرم</h2>
+
+                    <h2>
+                        نانسي عجرم
+                    </h2>
+
 
                     <div class="concert-details">
 
-                        <div class="detail">
-                            <span class="detail-icon">📅</span>
-                            <span>24 أكتوبر 2026</span>
-                        </div>
 
                         <div class="detail">
-                            <span class="detail-icon">📍</span>
-                            <span>Coca-Cola Arena - دبي</span>
+
+                            <span class="detail-icon">
+                                📅
+                            </span>
+
+                            <span>
+                                24 أكتوبر 2026
+                            </span>
+
                         </div>
 
+
+
                         <div class="detail">
-                            <span class="detail-icon">🇦🇪</span>
-                            <span>الإمارات العربية المتحدة</span>
+
+                            <span class="detail-icon">
+                                📍
+                            </span>
+
+                            <span>
+                                Coca-Cola Arena - دبي
+                            </span>
+
                         </div>
+
+
+
+                        <div class="detail">
+
+                            <span class="detail-icon">
+                                🇦🇪
+                            </span>
+
+                            <span>
+                                الإمارات العربية المتحدة
+                            </span>
+
+                        </div>
+
 
                     </div>
+
+
 
                     <div class="price">
-                        <span>يبدأ سعر التذكرة من</span>
-                        <strong>سيتم الإعلان</strong>
+
+                        <span>
+                            يبدأ سعر التذكرة من
+                        </span>
+
+                        <strong>
+                            سيتم الإعلان
+                        </strong>
+
                     </div>
 
-                    <a href="#" class="book-button">
+
+
+                    <a
+                        href="#"
+                        class="book-button"
+                    >
                         احجز الآن
                     </a>
 
+
                 </div>
 
+
             </article>
+
+
+
+            <!-- =========================
+                 3 - إليسا
+            ========================= -->
+
+            <article class="concert-card">
+
+
+                <div class="concert-image">
+
+                    <img
+                        src="./elissa.png"
+                        alt="حفلة إليسا في مسقط"
+                    >
+
+                </div>
+
+
+
+                <div class="concert-info">
+
+
+                    <h2>
+                        إليسا
+                    </h2>
+
+
+                    <div class="concert-details">
+
+
+                        <div class="detail">
+
+                            <span class="detail-icon">
+                                📅
+                            </span>
+
+                            <span>
+                                13 نوفمبر 2026
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="detail">
+
+                            <span class="detail-icon">
+                                📍
+                            </span>
+
+                            <span>
+                                Oman Convention & Exhibition Centre - مسقط
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="detail">
+
+                            <span class="detail-icon">
+                                🇴🇲
+                            </span>
+
+                            <span>
+                                سلطنة عمان
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="price">
+
+                        <span>
+                            يبدأ سعر التذكرة من
+                        </span>
+
+                        <strong>
+                            سيتم الإعلان
+                        </strong>
+
+                    </div>
+
+
+
+                    <a
+                        href="#"
+                        class="book-button"
+                    >
+                        احجز الآن
+                    </a>
+
+
+                </div>
+
+
+            </article>
+
 
 
         </div>
 
     </main>
+
 
 </body>
 
