@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
   <title>Ticket arab | تذاكر الحفلات</title>
 
   <style>
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -16,19 +18,21 @@
     body {
       font-family: Arial, Tahoma, sans-serif;
       background: #07111F;
-      color: #FFFFFF;
+      color: #fff;
     }
 
-    /* ================= HEADER ================= */
+    /* HEADER */
 
     header {
       width: 100%;
-      background: #07111F;
       padding: 15px 5%;
+      background: #07111F;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+
+      border-bottom: 1px solid rgba(212,175,55,0.25);
     }
 
     .logo {
@@ -42,7 +46,8 @@
       font-size: 14px;
     }
 
-    /* ================= HERO ================= */
+
+    /* HERO */
 
     .hero {
       width: 100%;
@@ -53,13 +58,19 @@
       width: 100%;
       max-height: 430px;
       object-fit: cover;
+
       display: block;
+
       border-radius: 18px;
-      border: 1px solid rgba(212, 175, 55, 0.35);
-      box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+
+      border: 1px solid rgba(212,175,55,0.35);
+
+      box-shadow:
+        0 15px 45px rgba(0,0,0,0.4);
     }
 
-    /* ================= TITLE ================= */
+
+    /* TITLE */
 
     .section-title {
       text-align: center;
@@ -77,65 +88,98 @@
       font-size: 16px;
     }
 
-    /* ================= CONCERTS ================= */
+
+    /* CONCERTS */
 
     .concerts {
       width: 90%;
       max-width: 1250px;
+
       margin: auto;
+
       padding-bottom: 60px;
 
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
       gap: 25px;
     }
 
+
+    /* CARD */
+
     .concert-card {
       background: #0D1B2A;
+
       border-radius: 18px;
+
       overflow: hidden;
 
-      border: 1px solid rgba(212, 175, 55, 0.18);
+      border: 1px solid
+        rgba(212,175,55,0.18);
 
       transition: 0.3s ease;
 
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      box-shadow:
+        0 10px 30px rgba(0,0,0,0.25);
     }
 
     .concert-card:hover {
       transform: translateY(-7px);
-      border-color: rgba(212, 175, 55, 0.65);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+
+      border-color:
+        rgba(212,175,55,0.65);
+
+      box-shadow:
+        0 15px 40px rgba(0,0,0,0.45);
     }
+
 
     .concert-card img {
       width: 100%;
+
       aspect-ratio: 3 / 4;
+
       object-fit: cover;
+
       display: block;
     }
+
 
     .concert-info {
       padding: 18px;
     }
 
+
     .concert-info h2 {
-      color: #FFFFFF;
+      color: #fff;
+
       font-size: 22px;
+
       margin-bottom: 8px;
     }
 
-    .concert-info .artist-ar {
+
+    .artist-ar {
       color: #D4AF37;
+
       font-size: 16px;
+
       margin-bottom: 15px;
+
       font-weight: bold;
     }
 
+
     .details {
       color: #AEB8C4;
+
       font-size: 14px;
+
       line-height: 1.9;
+
       margin-bottom: 17px;
     }
 
@@ -143,43 +187,62 @@
       display: block;
     }
 
+
     .price {
       color: #D4AF37;
+
       font-size: 18px;
+
       font-weight: bold;
+
       margin-bottom: 15px;
     }
 
+
     .book-btn {
       display: block;
+
       width: 100%;
+
       text-align: center;
 
       background: #D4AF37;
+
       color: #07111F;
 
       padding: 13px 10px;
+
       border-radius: 10px;
 
       text-decoration: none;
+
       font-weight: bold;
+
       font-size: 16px;
 
       transition: 0.25s;
     }
 
+
     .book-btn:hover {
-      background: #FFFFFF;
+      background: #fff;
+
       color: #07111F;
     }
 
-    /* ================= FOOTER ================= */
+
+    /* FOOTER */
 
     footer {
-      border-top: 1px solid rgba(212, 175, 55, 0.2);
+      border-top:
+        1px solid rgba(212,175,55,0.2);
+
       text-align: center;
+
       padding: 30px 20px;
+
       color: #AEB8C4;
+
       background: #050D18;
     }
 
@@ -187,11 +250,14 @@
       color: #D4AF37;
     }
 
-    /* ================= TABLET ================= */
+
+    /* TABLET */
 
     @media (max-width: 900px) {
+
       .concerts {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+          repeat(2, 1fr);
       }
 
       .section-title h1 {
@@ -199,7 +265,8 @@
       }
     }
 
-    /* ================= MOBILE ================= */
+
+    /* MOBILE */
 
     @media (max-width: 600px) {
 
@@ -238,54 +305,78 @@
 
       .concerts {
         width: 92%;
+
         grid-template-columns: 1fr;
+
         gap: 20px;
       }
 
       .concert-info h2 {
         font-size: 21px;
       }
+
     }
+
   </style>
+
 </head>
+
 
 <body>
 
-  <!-- ================= HEADER ================= -->
+
+  <!-- HEADER -->
 
   <header>
-    <div class="logo">Ticket arab</div>
+
+    <div class="logo">
+      Ticket arab
+    </div>
 
     <div class="header-text">
       تذاكر الحفلات العربية
     </div>
+
   </header>
 
 
-  <!-- ================= HERO ================= -->
+
+  <!-- HERO -->
 
   <section class="hero">
-    <img src="./hero-banner.png" alt="Ticket arab">
+
+    <img
+      src="./hero-banner.png"
+      alt="Ticket arab"
+    >
+
   </section>
 
 
-  <!-- ================= TITLE ================= -->
+
+  <!-- TITLE -->
 
   <section class="section-title">
-    <h1>الحفلات القادمة</h1>
+
+    <h1>
+      الحفلات القادمة
+    </h1>
 
     <p>
       احجز تذكرتك لأقوى الحفلات في الوطن العربي
     </p>
+
   </section>
 
 
-  <!-- ================= CONCERTS ================= -->
+
+  <!-- CONCERTS -->
 
   <main class="concerts">
 
 
-    <!-- 1 - AMR DIAB -->
+
+    <!-- 1 AMR DIAB -->
 
     <div class="concert-card">
 
@@ -296,16 +387,28 @@
 
       <div class="concert-info">
 
-        <h2>AMR DIAB</h2>
+        <h2>
+          AMR DIAB
+        </h2>
 
         <div class="artist-ar">
           عمرو دياب
         </div>
 
         <div class="details">
-          <span>📅 7 نوفمبر 2026</span>
-          <span>📍 Coca-Cola Arena</span>
-          <span>🇦🇪 دبي - الإمارات</span>
+
+          <span>
+            📅 7 نوفمبر 2026
+          </span>
+
+          <span>
+            📍 Coca-Cola Arena
+          </span>
+
+          <span>
+            🇦🇪 دبي - الإمارات
+          </span>
+
         </div>
 
         <div class="price">
@@ -317,10 +420,12 @@
         </a>
 
       </div>
+
     </div>
 
 
-    <!-- 2 - GEORGE WASSOUF -->
+
+    <!-- 2 GEORGE WASSOUF -->
 
     <div class="concert-card">
 
@@ -331,16 +436,28 @@
 
       <div class="concert-info">
 
-        <h2>GEORGE WASSOUF</h2>
+        <h2>
+          GEORGE WASSOUF
+        </h2>
 
         <div class="artist-ar">
           جورج وسوف
         </div>
 
         <div class="details">
-          <span>📅 29 أكتوبر 2026</span>
-          <span>📍 Doha Golf Club</span>
-          <span>🇶🇦 الدوحة - قطر</span>
+
+          <span>
+            📅 29 أكتوبر 2026
+          </span>
+
+          <span>
+            📍 Doha Golf Club
+          </span>
+
+          <span>
+            🇶🇦 الدوحة - قطر
+          </span>
+
         </div>
 
         <div class="price">
@@ -352,10 +469,12 @@
         </a>
 
       </div>
+
     </div>
 
 
-    <!-- 3 - ELISSA -->
+
+    <!-- 3 ELISSA -->
 
     <div class="concert-card">
 
@@ -366,17 +485,32 @@
 
       <div class="concert-info">
 
-        <h2>ELISSA</h2>
+        <h2>
+          ELISSA
+        </h2>
 
         <div class="artist-ar">
           إليسا
         </div>
 
         <div class="details">
-          <span>📅 13 نوفمبر 2026</span>
-          <span>📍 OCEC</span>
-          <span>🇴🇲 مسقط - عمان</span>
-          <span>🕗 يبدأ الحفل 8 مساءً</span>
+
+          <span>
+            📅 13 نوفمبر 2026
+          </span>
+
+          <span>
+            📍 OCEC
+          </span>
+
+          <span>
+            🇴🇲 مسقط - عمان
+          </span>
+
+          <span>
+            🕗 يبدأ الحفل 8 مساءً
+          </span>
+
         </div>
 
         <div class="price">
@@ -388,10 +522,12 @@
         </a>
 
       </div>
+
     </div>
 
 
-    <!-- 4 - TAMER ASHOUR -->
+
+    <!-- 4 TAMER ASHOUR -->
 
     <div class="concert-card">
 
@@ -402,17 +538,32 @@
 
       <div class="concert-info">
 
-        <h2>TAMER ASHOUR</h2>
+        <h2>
+          TAMER ASHOUR
+        </h2>
 
         <div class="artist-ar">
           تامر عاشور
         </div>
 
         <div class="details">
-          <span>📅 6 نوفمبر 2026</span>
-          <span>📍 OCEC</span>
-          <span>🇴🇲 مسقط - عمان</span>
-          <span>🕘 يبدأ الحفل 9 مساءً</span>
+
+          <span>
+            📅 6 نوفمبر 2026
+          </span>
+
+          <span>
+            📍 OCEC
+          </span>
+
+          <span>
+            🇴🇲 مسقط - عمان
+          </span>
+
+          <span>
+            🕘 يبدأ الحفل 9 مساءً
+          </span>
+
         </div>
 
         <div class="price">
@@ -424,10 +575,12 @@
         </a>
 
       </div>
+
     </div>
 
 
-    <!-- 5 - TUL8TE -->
+
+    <!-- 5 TUL8TE -->
 
     <div class="concert-card">
 
@@ -438,16 +591,28 @@
 
       <div class="concert-info">
 
-        <h2>TUL8TE</h2>
+        <h2>
+          TUL8TE
+        </h2>
 
         <div class="artist-ar">
           توليت
         </div>
 
         <div class="details">
-          <span>📅 23 أكتوبر 2026</span>
-          <span>📍 Beyon Al Dana Amphitheatre</span>
-          <span>🇧🇭 المنامة - البحرين</span>
+
+          <span>
+            📅 23 أكتوبر 2026
+          </span>
+
+          <span>
+            📍 Beyon Al Dana Amphitheatre
+          </span>
+
+          <span>
+            🇧🇭 المنامة - البحرين
+          </span>
+
         </div>
 
         <div class="price">
@@ -459,10 +624,12 @@
         </a>
 
       </div>
+
     </div>
 
 
-    <!-- 6 - FADEL CHAKER -->
+
+    <!-- 6 FADEL CHAKER -->
 
     <div class="concert-card">
 
@@ -473,16 +640,28 @@
 
       <div class="concert-info">
 
-        <h2>FADEL CHAKER</h2>
+        <h2>
+          FADEL CHAKER
+        </h2>
 
         <div class="artist-ar">
           فضل شاكر
         </div>
 
         <div class="details">
-          <span>📅 22 أكتوبر 2026</span>
-          <span>📍 أبو بكر سالم</span>
-          <span>🇸🇦 الرياض - السعودية</span>
+
+          <span>
+            📅 22 أكتوبر 2026
+          </span>
+
+          <span>
+            📍 أبو بكر سالم
+          </span>
+
+          <span>
+            🇸🇦 الرياض - السعودية
+          </span>
+
         </div>
 
         <div class="price">
@@ -494,10 +673,12 @@
         </a>
 
       </div>
+
     </div>
 
 
-    <!-- 7 - NANCY AJRAM -->
+
+    <!-- 7 NANCY AJRAM -->
 
     <div class="concert-card">
 
@@ -508,16 +689,28 @@
 
       <div class="concert-info">
 
-        <h2>NANCY AJRAM</h2>
+        <h2>
+          NANCY AJRAM
+        </h2>
 
         <div class="artist-ar">
           نانسي عجرم
         </div>
 
         <div class="details">
-          <span>📅 24 أكتوبر 2026</span>
-          <span>📍 Coca-Cola Arena</span>
-          <span>🇦🇪 دبي - الإمارات</span>
+
+          <span>
+            📅 24 أكتوبر 2026
+          </span>
+
+          <span>
+            📍 Coca-Cola Arena
+          </span>
+
+          <span>
+            🇦🇪 دبي - الإمارات
+          </span>
+
         </div>
 
         <div class="price">
@@ -529,10 +722,12 @@
         </a>
 
       </div>
+
     </div>
 
 
-    <!-- 8 - RABEH SAQER -->
+
+    <!-- 8 RABEH SAQER -->
 
     <div class="concert-card">
 
@@ -543,16 +738,28 @@
 
       <div class="concert-info">
 
-        <h2>RABEH SAQER</h2>
+        <h2>
+          RABEH SAQER
+        </h2>
 
         <div class="artist-ar">
           رابح صقر
         </div>
 
         <div class="details">
-          <span>📅 25 أكتوبر 2026</span>
-          <span>📍 BLVD WORLD</span>
-          <span>🇸🇦 الرياض - السعودية</span>
+
+          <span>
+            📅 25 أكتوبر 2026
+          </span>
+
+          <span>
+            📍 BLVD WORLD
+          </span>
+
+          <span>
+            🇸🇦 الرياض - السعودية
+          </span>
+
         </div>
 
         <div class="price">
@@ -564,13 +771,69 @@
         </a>
 
       </div>
+
     </div>
+
+
+
+    <!-- 9 ISMAEL DAWAS BAND -->
+
+    <div class="concert-card">
+
+      <img
+        src="./ismael-dawas.png"
+        alt="Ismael Dawas Band"
+      >
+
+      <div class="concert-info">
+
+        <h2>
+          ISMAEL DAWAS BAND
+        </h2>
+
+        <div class="artist-ar">
+          فرقة إسماعيل دواس
+        </div>
+
+        <div class="details">
+
+          <span>
+            📅 14 نوفمبر 2026
+          </span>
+
+          <span>
+            📍 Dar Al Muharraq
+          </span>
+
+          <span>
+            🇧🇭 البحرين
+          </span>
+
+          <span>
+            🕖 الأبواب 7 مساءً - الحفل 8 مساءً
+          </span>
+
+        </div>
+
+        <div class="price">
+          تبدأ من 15 دينار
+        </div>
+
+        <a href="#" class="book-btn">
+          احجز الآن
+        </a>
+
+      </div>
+
+    </div>
+
 
 
   </main>
 
 
-  <!-- ================= FOOTER ================= -->
+
+  <!-- FOOTER -->
 
   <footer>
 
@@ -587,4 +850,5 @@
 
 
 </body>
+
 </html>
