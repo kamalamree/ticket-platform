@@ -1,378 +1,620 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ticket arab | تذاكر الحفلات</title>
+  <title>Ticket arab | تذاكر الحفلات</title>
 
-<style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-body{
-  font-family:Arial,Tahoma,sans-serif;
-  background:#07111F;
-  color:#fff;
-  line-height:1.6;
-}
+    body {
+      font-family: Arial, Tahoma, sans-serif;
+      background: #07111F;
+      color: #fff;
+      line-height: 1.6;
+    }
 
-a{
-  color:inherit;
-  text-decoration:none;
-}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-.hero{
-  width:100%;
-  overflow:hidden;
-  background:#07111F;
-}
+    /* =========================
+       HERO
+    ========================= */
 
-.hero img{
-  width:100%;
-  display:block;
-  max-height:620px;
-  object-fit:cover;
-}
+    .hero {
+      width: 100%;
+      background: #07111F;
+      overflow: hidden;
+    }
 
-.container{
-  width:min(1200px,92%);
-  margin:auto;
-}
+    .hero img {
+      width: 100%;
+      display: block;
+      max-height: 620px;
+      object-fit: cover;
+    }
 
-.section-title{
-  text-align:center;
-  margin:45px 0 25px;
-}
+    /* =========================
+       CONTAINER
+    ========================= */
 
-.section-title h1{
-  color:#D4AF37;
-  font-size:34px;
-  margin-bottom:8px;
-}
+    .container {
+      width: min(1200px, 92%);
+      margin: auto;
+    }
 
-.section-title p{
-  color:#AEB8C4;
-}
+    /* =========================
+       TITLE
+    ========================= */
 
-.concert-grid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:25px;
-  padding-bottom:60px;
-}
+    .section-title {
+      text-align: center;
+      margin: 45px 0 30px;
+    }
 
-.card{
-  background:#0D1B2A;
-  border:1px solid rgba(212,175,55,.18);
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 10px 30px rgba(0,0,0,.25);
-  transition:.25s;
-}
+    .section-title h1 {
+      color: #D4AF37;
+      font-size: 34px;
+      margin-bottom: 8px;
+    }
 
-.card:hover{
-  transform:translateY(-5px);
-  border-color:#D4AF37;
-}
+    .section-title p {
+      color: #AEB8C4;
+      font-size: 15px;
+    }
 
-.card img{
-  width:100%;
-  aspect-ratio:3/4;
-  object-fit:cover;
-  display:block;
-}
+    /* =========================
+       CONCERT GRID
+    ========================= */
 
-.card-content{
-  padding:18px;
-}
+    .concert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      padding-bottom: 60px;
+    }
 
-.card h2{
-  color:#D4AF37;
-  font-size:22px;
-  margin-bottom:8px;
-}
+    /* =========================
+       CARD
+    ========================= */
 
-.info{
-  color:#AEB8C4;
-  font-size:14px;
-  margin:5px 0;
-}
+    .card {
+      background: #0D1B2A;
+      border: 1px solid rgba(212, 175, 55, 0.18);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      transition: 0.25s ease;
+    }
 
-.price{
-  margin:12px 0;
-  color:#fff;
-  font-weight:bold;
-}
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #D4AF37;
+      box-shadow: 0 15px 35px rgba(212, 175, 55, 0.10);
+    }
 
-.book-btn{
-  display:block;
-  width:100%;
-  border:0;
-  background:linear-gradient(135deg,#D4AF37,#B8963E);
-  color:#07111F;
-  padding:13px;
-  border-radius:10px;
-  font-size:16px;
-  font-weight:bold;
-  cursor:pointer;
-  text-align:center;
-}
+    .card img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      display: block;
+    }
 
-.book-btn:hover{
-  filter:brightness(1.1);
-}
+    .card-content {
+      padding: 18px;
+    }
 
-footer{
-  text-align:center;
-  padding:30px 15px;
-  color:#AEB8C4;
-  background:#050D18;
-  border-top:1px solid rgba(255,255,255,.05);
-}
+    .card h2 {
+      color: #D4AF37;
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
 
-footer strong{
-  color:#D4AF37;
-}
+    .info {
+      color: #AEB8C4;
+      font-size: 14px;
+      margin: 5px 0;
+    }
 
-@media(max-width:900px){
-  .concert-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-}
+    .price {
+      margin: 13px 0;
+      color: #fff;
+      font-weight: bold;
+      font-size: 15px;
+    }
 
-@media(max-width:600px){
-  .hero img{
-    min-height:180px;
-    object-fit:cover;
-  }
+    /* =========================
+       BOOK BUTTON
+    ========================= */
 
-  .concert-grid{
-    grid-template-columns:1fr;
-  }
+    .book-btn {
+      display: block;
+      width: 100%;
+      border: 0;
+      background: linear-gradient(135deg, #D4AF37, #B8963E);
+      color: #07111F;
+      padding: 13px;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+      transition: 0.2s ease;
+    }
 
-  .section-title h1{
-    font-size:27px;
-  }
-}
-</style>
+    .book-btn:hover {
+      filter: brightness(1.1);
+      transform: translateY(-1px);
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      text-align: center;
+      padding: 30px 15px;
+      color: #AEB8C4;
+      background: #050D18;
+      border-top: 1px solid rgba(255,255,255,.05);
+    }
+
+    footer strong {
+      color: #D4AF37;
+    }
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .concert-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 600px) {
+
+      .hero img {
+        min-height: 180px;
+        object-fit: cover;
+      }
+
+      .concert-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h1 {
+        font-size: 27px;
+      }
+
+      .card h2 {
+        font-size: 20px;
+      }
+
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="hero">
-  <img src="./hero-banner.png" alt="Ticket arab">
-</header>
+  <!-- =========================
+       HERO
+  ========================= -->
 
-<main class="container">
+  <header class="hero">
+    <img
+      src="./hero-banner.png"
+      alt="Ticket arab"
+    >
+  </header>
 
-  <div class="section-title">
-    <h1>الحفلات القادمة</h1>
-    <p>اختار حفلتك واحجز تذكرتك بسهولة</p>
-  </div>
 
-  <section class="concert-grid">
+  <!-- =========================
+       CONCERTS
+  ========================= -->
 
-    <!-- 1 AMR DIAB -->
-    <article class="card">
-      <img src="./amr-diab.png" alt="Amr Diab">
+  <main class="container">
 
-      <div class="card-content">
-        <h2>Amr Diab</h2>
+    <div class="section-title">
 
-        <div class="info">📅 7 نوفمبر 2026</div>
-        <div class="info">📍 Coca-Cola Arena - Dubai</div>
+      <h1>الحفلات القادمة</h1>
 
-        <div class="price">
-          يبدأ من 285 AED
+      <p>
+        اختار حفلتك واحجز تذكرتك بسهولة
+      </p>
+
+    </div>
+
+
+    <section class="concert-grid">
+
+
+      <!-- =================================================
+           1 - AMR DIAB
+      ================================================== -->
+
+      <article class="card">
+
+        <img
+          src="./amr-diab.png"
+          alt="Amr Diab"
+        >
+
+        <div class="card-content">
+
+          <h2>Amr Diab</h2>
+
+          <div class="info">
+            📅 7 نوفمبر 2026
+          </div>
+
+          <div class="info">
+            📍 Coca-Cola Arena - Dubai
+          </div>
+
+          <div class="price">
+            يبدأ من 225 AED
+          </div>
+
+          <a
+            class="book-btn"
+            href="booking.html"
+          >
+            احجز الآن
+          </a>
+
         </div>
 
-        <a class="book-btn" href="booking.html">
-          احجز الآن
-        </a>
-      </div>
-    </article>
+      </article>
 
 
-    <!-- 2 GEORGE WASSOUF -->
-    <article class="card">
-      <img src="./george-wassouf.png" alt="George Wassouf">
+      <!-- =================================================
+           2 - GEORGE WASSOUF
+      ================================================== -->
 
-      <div class="card-content">
-        <h2>George Wassouf</h2>
+      <article class="card">
 
-        <div class="info">📅 29 أكتوبر 2026</div>
-        <div class="info">📍 Doha - Qatar</div>
+        <img
+          src="./george-wassouf.png"
+          alt="George Wassouf"
+        >
 
-        <div class="price">
-          التذاكر متاحة
+        <div class="card-content">
+
+          <h2>George Wassouf</h2>
+
+          <div class="info">
+            📅 29 أكتوبر 2026
+          </div>
+
+          <div class="info">
+            📍 Doha - Qatar
+          </div>
+
+          <div class="price">
+            يبدأ من 199 QAR
+          </div>
+
+          <a
+            class="book-btn"
+            href="booking-george.html"
+          >
+            احجز الآن
+          </a>
+
         </div>
 
-        <a class="book-btn" href="#">
-          احجز الآن
-        </a>
-      </div>
-    </article>
+      </article>
 
 
-    <!-- 3 ELISSA -->
-    <article class="card">
-      <img src="./elissa.png" alt="Elissa">
+      <!-- =================================================
+           3 - ELISSA
+      ================================================== -->
 
-      <div class="card-content">
-        <h2>Elissa</h2>
+      <article class="card">
 
-        <div class="info">📅 13 نوفمبر 2026</div>
-        <div class="info">📍 OCEC - Muscat</div>
+        <img
+          src="./elissa.png"
+          alt="Elissa"
+        >
 
-        <div class="price">
-          التذاكر متاحة
+        <div class="card-content">
+
+          <h2>Elissa</h2>
+
+          <div class="info">
+            📅 13 نوفمبر 2026
+          </div>
+
+          <div class="info">
+            📍 OCEC - Muscat
+          </div>
+
+          <div class="price">
+            التذاكر متاحة
+          </div>
+
+          <a
+            class="book-btn"
+            href="#"
+          >
+            احجز الآن
+          </a>
+
         </div>
 
-        <a class="book-btn" href="#">
-          احجز الآن
-        </a>
-      </div>
-    </article>
+      </article>
 
 
-    <!-- 4 TAMER ASHOUR -->
-    <article class="card">
-      <img src="./tamer-ashour.png" alt="Tamer Ashour">
+      <!-- =================================================
+           4 - TAMER ASHOUR
+      ================================================== -->
 
-      <div class="card-content">
-        <h2>Tamer Ashour</h2>
+      <article class="card">
 
-        <div class="info">📅 6 نوفمبر 2026</div>
-        <div class="info">📍 OCEC - Muscat</div>
+        <img
+          src="./tamer-ashour.png"
+          alt="Tamer Ashour"
+        >
 
-        <div class="price">
-          التذاكر متاحة
+        <div class="card-content">
+
+          <h2>Tamer Ashour</h2>
+
+          <div class="info">
+            📅 6 نوفمبر 2026
+          </div>
+
+          <div class="info">
+            📍 OCEC - Muscat
+          </div>
+
+          <div class="price">
+            التذاكر متاحة
+          </div>
+
+          <a
+            class="book-btn"
+            href="#"
+          >
+            احجز الآن
+          </a>
+
         </div>
 
-        <a class="book-btn" href="#">
-          احجز الآن
-        </a>
-      </div>
-    </article>
+      </article>
 
 
-    <!-- 5 TUL8TE -->
-    <article class="card">
-      <img src="./tul8te.png" alt="TUL8TE">
+      <!-- =================================================
+           5 - TUL8TE
+      ================================================== -->
 
-      <div class="card-content">
-        <h2>TUL8TE</h2>
+      <article class="card">
 
-        <div class="info">📅 23 أكتوبر 2026</div>
-        <div class="info">📍 Bahrain</div>
+        <img
+          src="./tul8te.png"
+          alt="TUL8TE"
+        >
 
-        <div class="price">
-          التذاكر متاحة
+        <div class="card-content">
+
+          <h2>TUL8TE</h2>
+
+          <div class="info">
+            📅 23 أكتوبر 2026
+          </div>
+
+          <div class="info">
+            📍 Bahrain
+          </div>
+
+          <div class="price">
+            التذاكر متاحة
+          </div>
+
+          <a
+            class="book-btn"
+            href="#"
+          >
+            احجز الآن
+          </a>
+
         </div>
 
-        <a class="book-btn" href="#">
-          احجز الآن
-        </a>
-      </div>
-    </article>
+      </article>
 
 
-    <!-- 6 FADEL CHAKER -->
-    <article class="card">
-      <img src="./fadel-chaker.png" alt="Fadel Chaker">
+      <!-- =================================================
+           6 - FADEL CHAKER
+      ================================================== -->
 
-      <div class="card-content">
-        <h2>Fadel Chaker</h2>
+      <article class="card">
 
-        <div class="info">📅 22 أكتوبر 2026</div>
-        <div class="info">📍 Riyadh - Saudi Arabia</div>
+        <img
+          src="./fadel-chaker.png"
+          alt="Fadel Chaker"
+        >
 
-        <div class="price">
-          التذاكر متاحة
+        <div class="card-content">
+
+          <h2>Fadel Chaker</h2>
+
+          <div class="info">
+            📅 22 أكتوبر 2026
+          </div>
+
+          <div class="info">
+            📍 Riyadh - Saudi Arabia
+          </div>
+
+          <div class="price">
+            التذاكر متاحة
+          </div>
+
+          <a
+            class="book-btn"
+            href="#"
+          >
+            احجز الآن
+          </a>
+
         </div>
 
-        <a class="book-btn" href="#">
-          احجز الآن
-        </a>
-      </div>
-    </article>
+      </article>
 
 
-    <!-- 7 NANCY -->
-    <article class="card">
-      <img src="./nancy-ajram.png" alt="Nancy Ajram">
+      <!-- =================================================
+           7 - NANCY AJRAM
+      ================================================== -->
 
-      <div class="card-content">
-        <h2>Nancy Ajram</h2>
+      <article class="card">
 
-        <div class="info">📅 24 أكتوبر 2026</div>
-        <div class="info">📍 Coca-Cola Arena - Dubai</div>
+        <img
+          src="./nancy-ajram.png"
+          alt="Nancy Ajram"
+        >
 
-        <div class="price">
-          التذاكر متاحة
+        <div class="card-content">
+
+          <h2>Nancy Ajram</h2>
+
+          <div class="info">
+            📅 24 أكتوبر 2026
+          </div>
+
+          <div class="info">
+            📍 Coca-Cola Arena - Dubai
+          </div>
+
+          <div class="price">
+            التذاكر متاحة
+          </div>
+
+          <a
+            class="book-btn"
+            href="#"
+          >
+            احجز الآن
+          </a>
+
         </div>
 
-        <a class="book-btn" href="#">
-          احجز الآن
-        </a>
-      </div>
-    </article>
+      </article>
 
 
-    <!-- 8 RABEH SAQER -->
-    <article class="card">
-      <img src="./rabeh-saqer.png" alt="Rabeh Saqer">
+      <!-- =================================================
+           8 - RABEH SAQER
+      ================================================== -->
 
-      <div class="card-content">
-        <h2>Rabeh Saqer</h2>
+      <article class="card">
 
-        <div class="info">📅 25 أكتوبر 2026</div>
-        <div class="info">📍 Riyadh - Saudi Arabia</div>
+        <img
+          src="./rabeh-saqer.png"
+          alt="Rabeh Saqer"
+        >
 
-        <div class="price">
-          التذاكر متاحة
+        <div class="card-content">
+
+          <h2>Rabeh Saqer</h2>
+
+          <div class="info">
+            📅 25 أكتوبر 2026
+          </div>
+
+          <div class="info">
+            📍 Riyadh - Saudi Arabia
+          </div>
+
+          <div class="price">
+            التذاكر متاحة
+          </div>
+
+          <a
+            class="book-btn"
+            href="#"
+          >
+            احجز الآن
+          </a>
+
         </div>
 
-        <a class="book-btn" href="#">
-          احجز الآن
-        </a>
-      </div>
-    </article>
+      </article>
 
 
-    <!-- 9 ISMAEL DAWAS -->
-    <article class="card">
-      <img src="./ismael-dawas.png" alt="Ismael Dawas Band">
+      <!-- =================================================
+           9 - ISMAEL DAWAS BAND
+      ================================================== -->
 
-      <div class="card-content">
-        <h2>Ismael Dawas Band</h2>
+      <article class="card">
 
-        <div class="info">📅 14 نوفمبر 2026</div>
-        <div class="info">📍 Bahrain</div>
+        <img
+          src="./ismael-dawas.png"
+          alt="Ismael Dawas Band"
+        >
 
-        <div class="price">
-          التذاكر متاحة
+        <div class="card-content">
+
+          <h2>Ismael Dawas Band</h2>
+
+          <div class="info">
+            📅 14 نوفمبر 2026
+          </div>
+
+          <div class="info">
+            📍 Bahrain
+          </div>
+
+          <div class="price">
+            التذاكر متاحة
+          </div>
+
+          <a
+            class="book-btn"
+            href="#"
+          >
+            احجز الآن
+          </a>
+
         </div>
 
-        <a class="book-btn" href="#">
-          احجز الآن
-        </a>
-      </div>
-    </article>
+      </article>
 
-  </section>
 
-</main>
+    </section>
 
-<footer>
-  <strong>Ticket arab</strong>
-  <br>
-  كل الحفلات في مكان واحد
-</footer>
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <div>
+      <strong>Ticket arab</strong>
+    </div>
+
+    <div>
+      جميع الحقوق محفوظة © 2026
+    </div>
+
+  </footer>
 
 </body>
 </html>
