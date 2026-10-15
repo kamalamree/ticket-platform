@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Ticket arab | تذاكر الحفلات</title>
 
 <style>
@@ -61,7 +62,7 @@ a{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:25px;
-  padding-bottom:50px;
+  padding-bottom:60px;
 }
 
 .card{
@@ -125,416 +126,6 @@ a{
   filter:brightness(1.1);
 }
 
-/* ==============================
-   BOOKING
-============================== */
-
-.booking{
-  display:none;
-  padding:45px 0 70px;
-  background:#050D18;
-}
-
-.booking.active{
-  display:block;
-}
-
-.booking-header{
-  text-align:center;
-  margin-bottom:25px;
-}
-
-.booking-header h2{
-  color:#D4AF37;
-  font-size:30px;
-}
-
-.booking-header p{
-  color:#AEB8C4;
-  margin-top:5px;
-}
-
-.booking-layout{
-  display:grid;
-  grid-template-columns:1fr 340px;
-  gap:25px;
-  align-items:start;
-}
-
-/* MAP */
-
-.map-panel{
-  background:#0D1B2A;
-  border:1px solid rgba(212,175,55,.2);
-  border-radius:18px;
-  padding:18px;
-  overflow:hidden;
-}
-
-.map-toolbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:10px;
-  margin-bottom:15px;
-  flex-wrap:wrap;
-}
-
-.map-toolbar strong{
-  color:#D4AF37;
-}
-
-.zoom-buttons{
-  display:flex;
-  gap:8px;
-}
-
-.zoom-buttons button{
-  width:40px;
-  height:40px;
-  border:1px solid #D4AF37;
-  background:#07111F;
-  color:#D4AF37;
-  border-radius:8px;
-  cursor:pointer;
-  font-size:20px;
-}
-
-.map-viewport{
-  width:100%;
-  height:650px;
-  overflow:auto;
-  border-radius:14px;
-  background:#07111F;
-  border:1px solid rgba(255,255,255,.08);
-  position:relative;
-  cursor:grab;
-}
-
-.map-viewport:active{
-  cursor:grabbing;
-}
-
-.map{
-  width:900px;
-  min-height:800px;
-  margin:auto;
-  padding:40px;
-  transform-origin:top center;
-  transition:transform .2s;
-  position:relative;
-}
-
-/* STAGE */
-
-.stage{
-  width:390px;
-  height:75px;
-  margin:0 auto 28px;
-  border-radius:0 0 50% 50%;
-  background:linear-gradient(180deg,#D4AF37,#9b7620);
-  color:#07111F;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-weight:bold;
-  font-size:23px;
-  box-shadow:0 12px 35px rgba(212,175,55,.2);
-}
-
-/* FAN PIT */
-
-.fanpit{
-  width:420px;
-  height:105px;
-  margin:0 auto 35px;
-  border:2px solid #D4AF37;
-  border-radius:14px;
-  background:rgba(212,175,55,.12);
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-direction:column;
-  cursor:pointer;
-  transition:.2s;
-}
-
-.fanpit:hover{
-  background:rgba(212,175,55,.25);
-}
-
-.fanpit.selected{
-  background:#2c9c64;
-  border-color:#65e39e;
-}
-
-.fanpit-title{
-  font-size:20px;
-  font-weight:bold;
-}
-
-.fanpit-price{
-  color:#D4AF37;
-  font-weight:bold;
-}
-
-/* SECTIONS */
-
-.arena{
-  width:760px;
-  margin:auto;
-  position:relative;
-  padding:25px 0 50px;
-}
-
-.section{
-  position:absolute;
-  background:#12253A;
-  border:1px solid rgba(255,255,255,.12);
-  border-radius:22px;
-  padding:15px;
-  text-align:center;
-}
-
-.section-title-small{
-  color:#D4AF37;
-  font-weight:bold;
-  margin-bottom:10px;
-}
-
-/* positions */
-
-.section.top{
-  top:0;
-  left:50%;
-  transform:translateX(-50%);
-  width:280px;
-  min-height:130px;
-}
-
-.section.left{
-  top:120px;
-  left:0;
-  width:210px;
-  min-height:260px;
-}
-
-.section.right{
-  top:120px;
-  right:0;
-  width:210px;
-  min-height:260px;
-}
-
-.section.bottom{
-  top:400px;
-  left:50%;
-  transform:translateX(-50%);
-  width:300px;
-  min-height:150px;
-}
-
-.section.side-left{
-  top:420px;
-  left:60px;
-  width:190px;
-  min-height:120px;
-}
-
-.section.side-right{
-  top:420px;
-  right:60px;
-  width:190px;
-  min-height:120px;
-}
-
-/* seats */
-
-.seats{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:5px;
-}
-
-.seat{
-  width:20px;
-  height:20px;
-  border-radius:50%;
-  border:0;
-  cursor:pointer;
-  font-size:0;
-  transition:.15s;
-}
-
-.seat:hover{
-  transform:scale(1.25);
-}
-
-.seat.regular{
-  background:#78909C;
-}
-
-.seat.silver{
-  background:#BFC7CF;
-}
-
-.seat.gold{
-  background:#D4AF37;
-}
-
-.seat.premium{
-  background:#A879FF;
-}
-
-.seat.premium-diamond{
-  background:#48C6FF;
-}
-
-.seat.vip{
-  background:#F2F2F2;
-  box-shadow:0 0 5px rgba(255,255,255,.6);
-}
-
-.seat.selected{
-  background:#2ecc71 !important;
-  box-shadow:0 0 10px #2ecc71;
-  transform:scale(1.25);
-}
-
-/* LEGEND */
-
-.legend{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:15px;
-  margin-top:25px;
-}
-
-.legend-item{
-  display:flex;
-  align-items:center;
-  gap:6px;
-  color:#AEB8C4;
-  font-size:13px;
-}
-
-.dot{
-  width:14px;
-  height:14px;
-  border-radius:50%;
-}
-
-/* SUMMARY */
-
-.summary{
-  background:#0D1B2A;
-  border:1px solid rgba(212,175,55,.2);
-  border-radius:18px;
-  padding:22px;
-  position:sticky;
-  top:20px;
-}
-
-.summary h3{
-  color:#D4AF37;
-  font-size:22px;
-  margin-bottom:15px;
-}
-
-.summary-row{
-  display:flex;
-  justify-content:space-between;
-  border-bottom:1px solid rgba(255,255,255,.08);
-  padding:10px 0;
-  color:#AEB8C4;
-}
-
-.summary-row strong{
-  color:#fff;
-}
-
-.total{
-  display:flex;
-  justify-content:space-between;
-  margin-top:20px;
-  font-size:22px;
-  font-weight:bold;
-  color:#D4AF37;
-}
-
-.continue-btn{
-  width:100%;
-  margin-top:20px;
-  border:0;
-  border-radius:10px;
-  padding:14px;
-  background:linear-gradient(135deg,#D4AF37,#B8963E);
-  color:#07111F;
-  font-weight:bold;
-  font-size:16px;
-  cursor:pointer;
-}
-
-.continue-btn:disabled{
-  opacity:.4;
-  cursor:not-allowed;
-}
-
-.close-booking{
-  margin-top:10px;
-  width:100%;
-  padding:12px;
-  background:transparent;
-  border:1px solid #555;
-  color:#AEB8C4;
-  border-radius:10px;
-  cursor:pointer;
-}
-
-.note{
-  color:#7f8b98;
-  font-size:12px;
-  margin-top:15px;
-  line-height:1.7;
-}
-
-/* CHECKOUT */
-
-.checkout{
-  display:none;
-  margin-top:25px;
-  background:#0D1B2A;
-  border:1px solid rgba(212,175,55,.2);
-  border-radius:18px;
-  padding:25px;
-}
-
-.checkout.active{
-  display:block;
-}
-
-.checkout h3{
-  color:#D4AF37;
-  margin-bottom:15px;
-}
-
-.checkout input{
-  width:100%;
-  padding:14px;
-  margin:7px 0;
-  background:#07111F;
-  color:#fff;
-  border:1px solid #27384A;
-  border-radius:8px;
-  outline:none;
-}
-
-.checkout input:focus{
-  border-color:#D4AF37;
-}
-
 footer{
   text-align:center;
   padding:30px 15px;
@@ -547,20 +138,9 @@ footer strong{
   color:#D4AF37;
 }
 
-/* MOBILE */
-
 @media(max-width:900px){
   .concert-grid{
     grid-template-columns:repeat(2,1fr);
-  }
-
-  .booking-layout{
-    grid-template-columns:1fr;
-  }
-
-  .summary{
-    position:relative;
-    top:auto;
   }
 }
 
@@ -577,29 +157,16 @@ footer strong{
   .section-title h1{
     font-size:27px;
   }
-
-  .map-viewport{
-    height:560px;
-  }
-
-  .map{
-    transform:scale(.78);
-    transform-origin:top center;
-    margin-left:-80px;
-  }
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
 <header class="hero">
   <img src="./hero-banner.png" alt="Ticket arab">
 </header>
 
-
-<!-- CONCERTS -->
 <main class="container">
 
   <div class="section-title">
@@ -612,14 +179,18 @@ footer strong{
     <!-- 1 AMR DIAB -->
     <article class="card">
       <img src="./amr-diab.png" alt="Amr Diab">
+
       <div class="card-content">
         <h2>Amr Diab</h2>
+
         <div class="info">📅 7 نوفمبر 2026</div>
         <div class="info">📍 Coca-Cola Arena - Dubai</div>
-        <div class="price">يبدأ من 285 AED</div>
 
-        <a class="book-btn" href="#amr-booking"
-           onclick="openBooking();return false;">
+        <div class="price">
+          يبدأ من 285 AED
+        </div>
+
+        <a class="book-btn" href="booking.html">
           احجز الآن
         </a>
       </div>
@@ -629,12 +200,20 @@ footer strong{
     <!-- 2 GEORGE WASSOUF -->
     <article class="card">
       <img src="./george-wassouf.png" alt="George Wassouf">
+
       <div class="card-content">
         <h2>George Wassouf</h2>
+
         <div class="info">📅 29 أكتوبر 2026</div>
         <div class="info">📍 Doha - Qatar</div>
-        <div class="price">التذاكر متاحة</div>
-        <a class="book-btn" href="#">احجز الآن</a>
+
+        <div class="price">
+          التذاكر متاحة
+        </div>
+
+        <a class="book-btn" href="#">
+          احجز الآن
+        </a>
       </div>
     </article>
 
@@ -642,12 +221,20 @@ footer strong{
     <!-- 3 ELISSA -->
     <article class="card">
       <img src="./elissa.png" alt="Elissa">
+
       <div class="card-content">
         <h2>Elissa</h2>
+
         <div class="info">📅 13 نوفمبر 2026</div>
         <div class="info">📍 OCEC - Muscat</div>
-        <div class="price">التذاكر متاحة</div>
-        <a class="book-btn" href="#">احجز الآن</a>
+
+        <div class="price">
+          التذاكر متاحة
+        </div>
+
+        <a class="book-btn" href="#">
+          احجز الآن
+        </a>
       </div>
     </article>
 
@@ -655,12 +242,20 @@ footer strong{
     <!-- 4 TAMER ASHOUR -->
     <article class="card">
       <img src="./tamer-ashour.png" alt="Tamer Ashour">
+
       <div class="card-content">
         <h2>Tamer Ashour</h2>
+
         <div class="info">📅 6 نوفمبر 2026</div>
         <div class="info">📍 OCEC - Muscat</div>
-        <div class="price">التذاكر متاحة</div>
-        <a class="book-btn" href="#">احجز الآن</a>
+
+        <div class="price">
+          التذاكر متاحة
+        </div>
+
+        <a class="book-btn" href="#">
+          احجز الآن
+        </a>
       </div>
     </article>
 
@@ -668,12 +263,20 @@ footer strong{
     <!-- 5 TUL8TE -->
     <article class="card">
       <img src="./tul8te.png" alt="TUL8TE">
+
       <div class="card-content">
         <h2>TUL8TE</h2>
+
         <div class="info">📅 23 أكتوبر 2026</div>
         <div class="info">📍 Bahrain</div>
-        <div class="price">التذاكر متاحة</div>
-        <a class="book-btn" href="#">احجز الآن</a>
+
+        <div class="price">
+          التذاكر متاحة
+        </div>
+
+        <a class="book-btn" href="#">
+          احجز الآن
+        </a>
       </div>
     </article>
 
@@ -681,12 +284,20 @@ footer strong{
     <!-- 6 FADEL CHAKER -->
     <article class="card">
       <img src="./fadel-chaker.png" alt="Fadel Chaker">
+
       <div class="card-content">
         <h2>Fadel Chaker</h2>
+
         <div class="info">📅 22 أكتوبر 2026</div>
         <div class="info">📍 Riyadh - Saudi Arabia</div>
-        <div class="price">التذاكر متاحة</div>
-        <a class="book-btn" href="#">احجز الآن</a>
+
+        <div class="price">
+          التذاكر متاحة
+        </div>
+
+        <a class="book-btn" href="#">
+          احجز الآن
+        </a>
       </div>
     </article>
 
@@ -694,666 +305,74 @@ footer strong{
     <!-- 7 NANCY -->
     <article class="card">
       <img src="./nancy-ajram.png" alt="Nancy Ajram">
+
       <div class="card-content">
         <h2>Nancy Ajram</h2>
+
         <div class="info">📅 24 أكتوبر 2026</div>
         <div class="info">📍 Coca-Cola Arena - Dubai</div>
-        <div class="price">التذاكر متاحة</div>
-        <a class="book-btn" href="#">احجز الآن</a>
+
+        <div class="price">
+          التذاكر متاحة
+        </div>
+
+        <a class="book-btn" href="#">
+          احجز الآن
+        </a>
       </div>
     </article>
 
 
-    <!-- 8 RABEH -->
+    <!-- 8 RABEH SAQER -->
     <article class="card">
       <img src="./rabeh-saqer.png" alt="Rabeh Saqer">
+
       <div class="card-content">
         <h2>Rabeh Saqer</h2>
+
         <div class="info">📅 25 أكتوبر 2026</div>
         <div class="info">📍 Riyadh - Saudi Arabia</div>
-        <div class="price">التذاكر متاحة</div>
-        <a class="book-btn" href="#">احجز الآن</a>
+
+        <div class="price">
+          التذاكر متاحة
+        </div>
+
+        <a class="book-btn" href="#">
+          احجز الآن
+        </a>
       </div>
     </article>
 
 
-    <!-- 9 ISMAEL -->
+    <!-- 9 ISMAEL DAWAS -->
     <article class="card">
       <img src="./ismael-dawas.png" alt="Ismael Dawas Band">
+
       <div class="card-content">
         <h2>Ismael Dawas Band</h2>
+
         <div class="info">📅 14 نوفمبر 2026</div>
         <div class="info">📍 Bahrain</div>
-        <div class="price">التذاكر متاحة</div>
-        <a class="book-btn" href="#">احجز الآن</a>
+
+        <div class="price">
+          التذاكر متاحة
+        </div>
+
+        <a class="book-btn" href="#">
+          احجز الآن
+        </a>
       </div>
     </article>
 
   </section>
+
 </main>
-
-
-<!-- =========================================
-     AMR DIAB BOOKING
-========================================= -->
-
-<section id="amr-booking" class="booking">
-
-<div class="container">
-
-  <div class="booking-header">
-    <h2>احجز حفلة عمرو دياب</h2>
-    <p>
-      Coca-Cola Arena — Dubai
-      <br>
-      7 November 2026
-    </p>
-  </div>
-
-
-  <div class="booking-layout">
-
-    <!-- MAP -->
-    <div class="map-panel">
-
-      <div class="map-toolbar">
-        <strong>اختار مكانك</strong>
-
-        <div class="zoom-buttons">
-          <button onclick="zoomMap(0.1)">+</button>
-          <button onclick="zoomMap(-0.1)">−</button>
-          <button onclick="resetZoom()">↺</button>
-        </div>
-      </div>
-
-
-      <div class="map-viewport">
-
-        <div id="seatMap" class="map">
-
-          <div class="stage">
-            AMR DIAB — STAGE
-          </div>
-
-
-          <!-- FAN PIT -->
-          <div
-            id="fanPit"
-            class="fanpit"
-            onclick="selectFanPit()"
-          >
-            <div class="fanpit-title">
-              DIAMOND / FAN PIT
-            </div>
-
-            <div class="fanpit-price">
-              585 AED
-            </div>
-
-            <div style="font-size:12px;color:#AEB8C4">
-              منطقة وقوف
-            </div>
-          </div>
-
-
-          <div class="arena">
-
-            <!-- TOP -->
-            <div class="section top">
-
-              <div class="section-title-small">
-                PREMIUM DIAMOND
-              </div>
-
-              <div class="seats">
-                <button class="seat premium-diamond"
-                  data-category="Premium Diamond"
-                  data-price="785"
-                  onclick="selectSeat(this)">
-                </button>
-
-                <button class="seat premium-diamond"
-                  data-category="Premium Diamond"
-                  data-price="785"
-                  onclick="selectSeat(this)">
-                </button>
-
-                <button class="seat premium-diamond"
-                  data-category="Premium Diamond"
-                  data-price="785"
-                  onclick="selectSeat(this)">
-                </button>
-
-                <button class="seat premium-diamond"
-                  data-category="Premium Diamond"
-                  data-price="785"
-                  onclick="selectSeat(this)">
-                </button>
-
-                <button class="seat premium-diamond"
-                  data-category="Premium Diamond"
-                  data-price="785"
-                  onclick="selectSeat(this)">
-                </button>
-
-                <button class="seat premium-diamond"
-                  data-category="Premium Diamond"
-                  data-price="785"
-                  onclick="selectSeat(this)">
-                </button>
-
-                <button class="seat premium-diamond"
-                  data-category="Premium Diamond"
-                  data-price="785"
-                  onclick="selectSeat(this)">
-                </button>
-
-                <button class="seat premium-diamond"
-                  data-category="Premium Diamond"
-                  data-price="785"
-                  onclick="selectSeat(this)">
-                </button>
-
-                <button class="seat premium-diamond"
-                  data-category="Premium Diamond"
-                  data-price="785"
-                  onclick="selectSeat(this)">
-                </button>
-
-                <button class="seat premium-diamond"
-                  data-category="Premium Diamond"
-                  data-price="785"
-                  onclick="selectSeat(this)">
-                </button>
-              </div>
-            </div>
-
-
-            <!-- LEFT -->
-            <div class="section left">
-
-              <div class="section-title-small">
-                SILVER
-              </div>
-
-              <div class="seats">
-
-                <script>
-                  for(let i=0;i<35;i++){
-                    document.write(`
-                      <button
-                        class="seat silver"
-                        data-category="Silver"
-                        data-price="385"
-                        onclick="selectSeat(this)">
-                      </button>
-                    `);
-                  }
-                </script>
-
-              </div>
-            </div>
-
-
-            <!-- RIGHT -->
-            <div class="section right">
-
-              <div class="section-title-small">
-                GOLD
-              </div>
-
-              <div class="seats">
-
-                <script>
-                  for(let i=0;i<35;i++){
-                    document.write(`
-                      <button
-                        class="seat gold"
-                        data-category="Gold"
-                        data-price="485"
-                        onclick="selectSeat(this)">
-                      </button>
-                    `);
-                  }
-                </script>
-
-              </div>
-            </div>
-
-
-            <!-- BOTTOM -->
-            <div class="section bottom">
-
-              <div class="section-title-small">
-                PREMIUM
-              </div>
-
-              <div class="seats">
-
-                <script>
-                  for(let i=0;i<24;i++){
-                    document.write(`
-                      <button
-                        class="seat premium"
-                        data-category="Premium"
-                        data-price="685"
-                        onclick="selectSeat(this)">
-                      </button>
-                    `);
-                  }
-                </script>
-
-              </div>
-            </div>
-
-
-            <!-- SIDE LEFT -->
-            <div class="section side-left">
-
-              <div class="section-title-small">
-                REGULAR
-              </div>
-
-              <div class="seats">
-
-                <script>
-                  for(let i=0;i<18;i++){
-                    document.write(`
-                      <button
-                        class="seat regular"
-                        data-category="Regular"
-                        data-price="285"
-                        onclick="selectSeat(this)">
-                      </button>
-                    `);
-                  }
-                </script>
-
-              </div>
-            </div>
-
-
-            <!-- SIDE RIGHT -->
-            <div class="section side-right">
-
-              <div class="section-title-small">
-                VIP
-              </div>
-
-              <div class="seats">
-
-                <script>
-                  for(let i=0;i<18;i++){
-                    document.write(`
-                      <button
-                        class="seat vip"
-                        data-category="VIP"
-                        data-price="1065"
-                        onclick="selectSeat(this)">
-                      </button>
-                    `);
-                  }
-                </script>
-
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <!-- LEGEND -->
-
-      <div class="legend">
-
-        <div class="legend-item">
-          <span class="dot" style="background:#78909C"></span>
-          Regular — 285 AED
-        </div>
-
-        <div class="legend-item">
-          <span class="dot" style="background:#BFC7CF"></span>
-          Silver — 385 AED
-        </div>
-
-        <div class="legend-item">
-          <span class="dot" style="background:#D4AF37"></span>
-          Gold — 485 AED
-        </div>
-
-        <div class="legend-item">
-          <span class="dot" style="background:#A879FF"></span>
-          Premium — 685 AED
-        </div>
-
-        <div class="legend-item">
-          <span class="dot" style="background:#48C6FF"></span>
-          Premium Diamond — 785 AED
-        </div>
-
-        <div class="legend-item">
-          <span class="dot" style="background:#F2F2F2"></span>
-          VIP — 1065 AED
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- SUMMARY -->
-
-    <aside class="summary">
-
-      <h3>ملخص الحجز</h3>
-
-      <div class="summary-row">
-        <span>المقاعد</span>
-        <strong id="seatCount">0</strong>
-      </div>
-
-      <div class="summary-row">
-        <span>Fan Pit</span>
-        <strong id="fanPitCount">0</strong>
-      </div>
-
-      <div class="summary-row">
-        <span>التذاكر</span>
-        <strong id="ticketCount">0</strong>
-      </div>
-
-      <div class="total">
-        <span>الإجمالي</span>
-        <span id="totalPrice">0 AED</span>
-      </div>
-
-      <button
-        id="continueBtn"
-        class="continue-btn"
-        disabled
-        onclick="showCheckout()">
-        متابعة الحجز
-      </button>
-
-      <button
-        class="close-booking"
-        onclick="closeBooking()">
-        رجوع للحفلات
-      </button>
-
-      <div class="note">
-        ملاحظة: خريطة المقاعد الحالية نموذج تفاعلي لواجهة Ticket arab.
-        سيتم ربطها بالخريطة والتوزيع النهائي الرسمي للحفلة عند اعتماد بيانات
-        المقاعد النهائية.
-      </div>
-
-    </aside>
-
-  </div>
-
-
-  <!-- CHECKOUT -->
-
-  <div id="checkout" class="checkout">
-
-    <h3>بيانات الحجز</h3>
-
-    <p style="color:#AEB8C4;margin-bottom:12px">
-      بعد تأكيد البيانات هنربط الخطوة دي بالدفع الإلكتروني.
-    </p>
-
-    <input
-      id="customerName"
-      type="text"
-      placeholder="الاسم بالكامل">
-
-    <input
-      id="customerEmail"
-      type="email"
-      placeholder="البريد الإلكتروني">
-
-    <input
-      type="tel"
-      placeholder="رقم الهاتف">
-
-    <button
-      class="continue-btn"
-      onclick="finishDemo()">
-      تأكيد البيانات
-    </button>
-
-  </div>
-
-</div>
-
-</section>
-
 
 <footer>
   <strong>Ticket arab</strong>
   <br>
   كل الحفلات في مكان واحد
 </footer>
-
-
-<script>
-
-/* =========================
-   BOOKING OPEN / CLOSE
-========================= */
-
-function openBooking(){
-
-  const booking = document.getElementById("amr-booking");
-
-  booking.classList.add("active");
-
-  setTimeout(()=>{
-    booking.scrollIntoView({
-      behavior:"smooth",
-      block:"start"
-    });
-  },50);
-}
-
-
-function closeBooking(){
-
-  document.getElementById("amr-booking")
-    .classList.remove("active");
-
-  document.getElementById("checkout")
-    .classList.remove("active");
-
-  window.scrollTo({
-    top:0,
-    behavior:"smooth"
-  });
-}
-
-
-/* =========================
-   SEAT SELECTION
-========================= */
-
-let selectedSeats = [];
-
-let fanPitSelected = false;
-
-let zoomLevel = 1;
-
-
-function selectSeat(seat){
-
-  const category = seat.dataset.category;
-
-  const price = Number(seat.dataset.price);
-
-
-  if(seat.classList.contains("selected")){
-
-    seat.classList.remove("selected");
-
-    const index = selectedSeats.indexOf(seat);
-
-    if(index !== -1){
-      selectedSeats.splice(index,1);
-    }
-
-  }else{
-
-    seat.classList.add("selected");
-
-    selectedSeats.push(seat);
-
-  }
-
-
-  updateSummary();
-}
-
-
-/* =========================
-   FAN PIT
-========================= */
-
-function selectFanPit(){
-
-  const box = document.getElementById("fanPit");
-
-  fanPitSelected = !fanPitSelected;
-
-  if(fanPitSelected){
-    box.classList.add("selected");
-  }else{
-    box.classList.remove("selected");
-  }
-
-  updateSummary();
-}
-
-
-/* =========================
-   SUMMARY
-========================= */
-
-function updateSummary(){
-
-  let total = 0;
-
-  selectedSeats.forEach(seat=>{
-    total += Number(seat.dataset.price);
-  });
-
-
-  if(fanPitSelected){
-    total += 585;
-  }
-
-
-  const seatCount =
-    selectedSeats.length;
-
-  const fanCount =
-    fanPitSelected ? 1 : 0;
-
-  const ticketCount =
-    seatCount + fanCount;
-
-
-  document.getElementById("seatCount")
-    .textContent = seatCount;
-
-  document.getElementById("fanPitCount")
-    .textContent = fanCount;
-
-  document.getElementById("ticketCount")
-    .textContent = ticketCount;
-
-  document.getElementById("totalPrice")
-    .textContent = total + " AED";
-
-
-  document.getElementById("continueBtn")
-    .disabled = ticketCount === 0;
-}
-
-
-/* =========================
-   ZOOM
-========================= */
-
-function zoomMap(amount){
-
-  zoomLevel += amount;
-
-  if(zoomLevel < .6)
-    zoomLevel = .6;
-
-  if(zoomLevel > 1.6)
-    zoomLevel = 1.6;
-
-  document.getElementById("seatMap")
-    .style.transform =
-      `scale(${zoomLevel})`;
-}
-
-
-function resetZoom(){
-
-  zoomLevel = 1;
-
-  document.getElementById("seatMap")
-    .style.transform =
-      "scale(1)";
-}
-
-
-/* =========================
-   CHECKOUT
-========================= */
-
-function showCheckout(){
-
-  const checkout =
-    document.getElementById("checkout");
-
-  checkout.classList.add("active");
-
-  checkout.scrollIntoView({
-    behavior:"smooth",
-    block:"center"
-  });
-}
-
-
-function finishDemo(){
-
-  const name =
-    document.getElementById("customerName").value.trim();
-
-  const email =
-    document.getElementById("customerEmail").value.trim();
-
-
-  if(!name || !email){
-
-    alert("من فضلك اكتب الاسم والبريد الإلكتروني.");
-
-    return;
-  }
-
-
-  alert(
-    "تم تجهيز الحجز بنجاح كنسخة تجريبية.\n\n" +
-    "الخطوة التالية هي ربط الدفع الإلكتروني وإرسال التذكرة."
-  );
-}
-
-</script>
 
 </body>
 </html>
