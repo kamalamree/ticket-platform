@@ -5,10 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>حجز جورج وسوف | Ticket arab</title>
+  <title>حجز عمرو دياب | Ticket arab</title>
 
   <style>
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -19,7 +18,7 @@
       font-family: Arial, Tahoma, sans-serif;
       background: #07111F;
       color: #fff;
-      line-height: 1.6;
+      min-height: 100vh;
     }
 
     .container {
@@ -28,7 +27,6 @@
     }
 
     /* HEADER */
-
     .header {
       text-align: center;
       padding: 35px 15px 20px;
@@ -36,27 +34,25 @@
 
     .logo {
       color: #D4AF37;
-      font-size: 28px;
+      font-size: 30px;
       font-weight: bold;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
 
     .header h1 {
-      color: #D4AF37;
-      font-size: 32px;
+      font-size: 30px;
+      color: #fff;
       margin-bottom: 8px;
     }
 
     .header p {
       color: #AEB8C4;
-      font-size: 15px;
     }
 
     /* EVENT */
-
     .event-card {
       background: #0D1B2A;
-      border: 1px solid rgba(212,175,55,.2);
+      border: 1px solid rgba(212,175,55,.25);
       border-radius: 18px;
       overflow: hidden;
       margin-bottom: 25px;
@@ -65,9 +61,8 @@
     .event-image {
       width: 100%;
       display: block;
-      aspect-ratio: 3 / 4;
-      object-fit: cover;
       max-height: 650px;
+      object-fit: cover;
     }
 
     .event-info {
@@ -78,6 +73,7 @@
     .event-info h2 {
       color: #D4AF37;
       margin-bottom: 10px;
+      font-size: 25px;
     }
 
     .event-info p {
@@ -86,7 +82,6 @@
     }
 
     /* TICKETS */
-
     .tickets {
       display: grid;
       gap: 14px;
@@ -95,18 +90,18 @@
     .ticket {
       background: #0D1B2A;
       border: 1px solid rgba(212,175,55,.18);
-      border-radius: 14px;
-      padding: 17px;
+      border-radius: 15px;
+      padding: 18px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 15px;
     }
 
     .ticket-info h3 {
       color: #D4AF37;
-      margin-bottom: 4px;
-      font-size: 19px;
+      font-size: 20px;
+      margin-bottom: 5px;
     }
 
     .ticket-info p {
@@ -114,14 +109,13 @@
       font-size: 14px;
     }
 
-    .ticket-price {
+    .price {
       color: #fff;
       font-weight: bold;
-      margin-top: 5px;
+      margin-top: 6px;
     }
 
     /* QUANTITY */
-
     .quantity {
       display: flex;
       align-items: center;
@@ -129,13 +123,13 @@
     }
 
     .quantity button {
-      width: 38px;
-      height: 38px;
-      border-radius: 8px;
+      width: 40px;
+      height: 40px;
+      border-radius: 9px;
       border: 1px solid #D4AF37;
       background: #07111F;
       color: #D4AF37;
-      font-size: 21px;
+      font-size: 23px;
       cursor: pointer;
     }
 
@@ -145,22 +139,19 @@
     }
 
     .quantity span {
-      min-width: 25px;
+      width: 28px;
       text-align: center;
       font-size: 18px;
       font-weight: bold;
     }
 
     /* SUMMARY */
-
     .summary {
       background: #0D1B2A;
-      border: 1px solid rgba(212,175,55,.2);
+      border: 1px solid rgba(212,175,55,.25);
       border-radius: 18px;
       padding: 22px;
-      margin: 25px 0 50px;
-      position: sticky;
-      bottom: 15px;
+      margin: 25px 0;
     }
 
     .summary h2 {
@@ -171,28 +162,27 @@
     .summary-row {
       display: flex;
       justify-content: space-between;
+      color: #AEB8C4;
       padding: 9px 0;
       border-bottom: 1px solid rgba(255,255,255,.08);
-      color: #AEB8C4;
     }
 
     .total {
       display: flex;
       justify-content: space-between;
-      margin-top: 18px;
+      color: #D4AF37;
       font-size: 23px;
       font-weight: bold;
-      color: #D4AF37;
+      margin-top: 18px;
     }
 
     .continue {
-      display: block;
       width: 100%;
-      margin-top: 20px;
-      padding: 14px;
-      border: 0;
+      border: none;
       border-radius: 10px;
-      background: linear-gradient(135deg,#D4AF37,#B8963E);
+      padding: 15px;
+      margin-top: 20px;
+      background: linear-gradient(135deg, #D4AF37, #B8963E);
       color: #07111F;
       font-size: 17px;
       font-weight: bold;
@@ -207,7 +197,8 @@
       display: block;
       text-align: center;
       color: #AEB8C4;
-      margin: 20px 0 40px;
+      text-decoration: none;
+      margin: 25px 0 40px;
     }
 
     .back:hover {
@@ -225,12 +216,10 @@
       color: #D4AF37;
     }
 
-    /* MOBILE */
-
-    @media(max-width:600px) {
+    @media (max-width: 600px) {
 
       .header h1 {
-        font-size: 26px;
+        font-size: 25px;
       }
 
       .ticket {
@@ -242,20 +231,12 @@
         justify-content: center;
       }
 
-      .summary {
-        position: static;
-      }
-
     }
-
   </style>
 </head>
 
 
 <body>
-
-
-  <!-- HEADER -->
 
   <header class="header">
 
@@ -264,7 +245,7 @@
     </div>
 
     <h1>
-      حجز حفلة جورج وسوف
+      حجز حفلة عمرو دياب
     </h1>
 
     <p>
@@ -274,32 +255,29 @@
   </header>
 
 
-
   <main class="container">
 
-
-    <!-- EVENT -->
+    <!-- بيانات الحفلة -->
 
     <section class="event-card">
 
       <img
         class="event-image"
-        src="./george-wassouf.png"
-        alt="George Wassouf"
-      >
+        src="./amr-diab.png"
+        alt="Amr Diab">
 
       <div class="event-info">
 
         <h2>
-          George Wassouf
+          AMR DIAB
         </h2>
 
         <p>
-          📅 29 أكتوبر 2026
+          📅 7 نوفمبر 2026
         </p>
 
         <p>
-          📍 Doha Golf Club - Doha, Qatar
+          📍 Coca-Cola Arena - Dubai, UAE
         </p>
 
       </div>
@@ -307,8 +285,7 @@
     </section>
 
 
-
-    <!-- TICKETS -->
+    <!-- فئات التذاكر -->
 
     <section class="tickets">
 
@@ -319,38 +296,33 @@
 
         <div class="ticket-info">
 
-          <h3>
-            Regular
-          </h3>
+          <h3>Regular</h3>
 
           <p>
             تذكرة دخول عادية
           </p>
 
-          <div class="ticket-price">
-            199 QAR
+          <div class="price">
+            225 AED
           </div>
 
         </div>
 
         <div class="quantity">
 
-          <button onclick="changeQty('regular',-1)">
+          <button onclick="changeQty('regular', -1)">
             −
           </button>
 
-          <span id="regular">
-            0
-          </span>
+          <span id="regular">0</span>
 
-          <button onclick="changeQty('regular',1)">
+          <button onclick="changeQty('regular', 1)">
             +
           </button>
 
         </div>
 
       </div>
-
 
 
       <!-- SILVER -->
@@ -359,38 +331,33 @@
 
         <div class="ticket-info">
 
-          <h3>
-            Silver
-          </h3>
+          <h3>Silver</h3>
 
           <p>
             فئة فضية
           </p>
 
-          <div class="ticket-price">
-            299 QAR
+          <div class="price">
+            325 AED
           </div>
 
         </div>
 
         <div class="quantity">
 
-          <button onclick="changeQty('silver',-1)">
+          <button onclick="changeQty('silver', -1)">
             −
           </button>
 
-          <span id="silver">
-            0
-          </span>
+          <span id="silver">0</span>
 
-          <button onclick="changeQty('silver',1)">
+          <button onclick="changeQty('silver', 1)">
             +
           </button>
 
         </div>
 
       </div>
-
 
 
       <!-- GOLD -->
@@ -399,38 +366,33 @@
 
         <div class="ticket-info">
 
-          <h3>
-            Gold
-          </h3>
+          <h3>Gold</h3>
 
           <p>
             فئة ذهبية
           </p>
 
-          <div class="ticket-price">
-            399 QAR
+          <div class="price">
+            425 AED
           </div>
 
         </div>
 
         <div class="quantity">
 
-          <button onclick="changeQty('gold',-1)">
+          <button onclick="changeQty('gold', -1)">
             −
           </button>
 
-          <span id="gold">
-            0
-          </span>
+          <span id="gold">0</span>
 
-          <button onclick="changeQty('gold',1)">
+          <button onclick="changeQty('gold', 1)">
             +
           </button>
 
         </div>
 
       </div>
-
 
 
       <!-- DIAMOND -->
@@ -439,38 +401,33 @@
 
         <div class="ticket-info">
 
-          <h3>
-            Diamond / Fan Pit
-          </h3>
+          <h3>Diamond / Fan Pit</h3>
 
           <p>
             منطقة قريبة من المسرح
           </p>
 
-          <div class="ticket-price">
-            499 QAR
+          <div class="price">
+            525 AED
           </div>
 
         </div>
 
         <div class="quantity">
 
-          <button onclick="changeQty('diamond',-1)">
+          <button onclick="changeQty('diamond', -1)">
             −
           </button>
 
-          <span id="diamond">
-            0
-          </span>
+          <span id="diamond">0</span>
 
-          <button onclick="changeQty('diamond',1)">
+          <button onclick="changeQty('diamond', 1)">
             +
           </button>
 
         </div>
 
       </div>
-
 
 
       <!-- PREMIUM -->
@@ -479,38 +436,33 @@
 
         <div class="ticket-info">
 
-          <h3>
-            Premium
-          </h3>
+          <h3>Premium</h3>
 
           <p>
             فئة مميزة
           </p>
 
-          <div class="ticket-price">
-            599 QAR
+          <div class="price">
+            625 AED
           </div>
 
         </div>
 
         <div class="quantity">
 
-          <button onclick="changeQty('premium',-1)">
+          <button onclick="changeQty('premium', -1)">
             −
           </button>
 
-          <span id="premium">
-            0
-          </span>
+          <span id="premium">0</span>
 
-          <button onclick="changeQty('premium',1)">
+          <button onclick="changeQty('premium', 1)">
             +
           </button>
 
         </div>
 
       </div>
-
 
 
       <!-- PREMIUM DIAMOND -->
@@ -519,38 +471,33 @@
 
         <div class="ticket-info">
 
-          <h3>
-            Premium Diamond
-          </h3>
+          <h3>Premium Diamond</h3>
 
           <p>
             فئة مميزة جدًا
           </p>
 
-          <div class="ticket-price">
-            699 QAR
+          <div class="price">
+            725 AED
           </div>
 
         </div>
 
         <div class="quantity">
 
-          <button onclick="changeQty('premiumDiamond',-1)">
+          <button onclick="changeQty('premiumDiamond', -1)">
             −
           </button>
 
-          <span id="premiumDiamond">
-            0
-          </span>
+          <span id="premiumDiamond">0</span>
 
-          <button onclick="changeQty('premiumDiamond',1)">
+          <button onclick="changeQty('premiumDiamond', 1)">
             +
           </button>
 
         </div>
 
       </div>
-
 
 
       <!-- VIP -->
@@ -559,31 +506,27 @@
 
         <div class="ticket-info">
 
-          <h3>
-            VIP
-          </h3>
+          <h3>VIP</h3>
 
           <p>
             أعلى فئة
           </p>
 
-          <div class="ticket-price">
-            899 QAR
+          <div class="price">
+            995 AED
           </div>
 
         </div>
 
         <div class="quantity">
 
-          <button onclick="changeQty('vip',-1)">
+          <button onclick="changeQty('vip', -1)">
             −
           </button>
 
-          <span id="vip">
-            0
-          </span>
+          <span id="vip">0</span>
 
-          <button onclick="changeQty('vip',1)">
+          <button onclick="changeQty('vip', 1)">
             +
           </button>
 
@@ -591,12 +534,10 @@
 
       </div>
 
-
     </section>
 
 
-
-    <!-- SUMMARY -->
+    <!-- الملخص -->
 
     <section class="summary">
 
@@ -605,9 +546,17 @@
       </h2>
 
       <div class="summary-row">
-        <span>عدد التذاكر</span>
-        <strong id="totalTickets">0</strong>
+
+        <span>
+          عدد التذاكر
+        </span>
+
+        <strong id="totalTickets">
+          0
+        </strong>
+
       </div>
+
 
       <div class="total">
 
@@ -616,7 +565,7 @@
         </span>
 
         <span>
-          <span id="totalPrice">0</span> QAR
+          <span id="totalPrice">0</span> AED
         </span>
 
       </div>
@@ -624,9 +573,10 @@
 
       <button
         class="continue"
-        onclick="continueBooking()"
-      >
+        onclick="continueBooking()">
+
         متابعة الحجز
+
       </button>
 
     </section>
@@ -634,14 +584,13 @@
 
     <a
       class="back"
-      href="index.html"
-    >
+      href="index.html">
+
       ← العودة للحفلات
+
     </a>
 
-
   </main>
-
 
 
   <footer>
@@ -655,24 +604,23 @@
   </footer>
 
 
-
   <script>
 
     const prices = {
 
-      regular: 199,
+      regular: 225,
 
-      silver: 299,
+      silver: 325,
 
-      gold: 399,
+      gold: 425,
 
-      diamond: 499,
+      diamond: 525,
 
-      premium: 599,
+      premium: 625,
 
-      premiumDiamond: 699,
+      premiumDiamond: 725,
 
-      vip: 899
+      vip: 995
 
     };
 
@@ -698,25 +646,25 @@
 
     function changeQty(type, amount) {
 
-      let newValue =
+      let value =
         quantities[type] + amount;
 
 
-      if (newValue < 0) {
-        newValue = 0;
+      if (value < 0) {
+        value = 0;
       }
 
 
-      if (newValue > 10) {
-        newValue = 10;
+      if (value > 10) {
+        value = 10;
       }
 
 
-      quantities[type] = newValue;
+      quantities[type] = value;
 
 
       document.getElementById(type).textContent =
-        newValue;
+        value;
 
 
       updateSummary();
@@ -746,7 +694,8 @@
 
 
       document.getElementById("totalPrice")
-        .textContent = totalPrice.toLocaleString();
+        .textContent =
+        totalPrice.toLocaleString();
 
     }
 
@@ -770,7 +719,9 @@
 
       if (totalTickets === 0) {
 
-        alert("من فضلك اختار تذكرة واحدة على الأقل.");
+        alert(
+          "من فضلك اختار تذكرة واحدة على الأقل."
+        );
 
         return;
 
@@ -779,13 +730,13 @@
 
       const bookingData = {
 
-        event: "George Wassouf",
+        event: "Amr Diab",
 
-        date: "29 October 2026",
+        date: "7 November 2026",
 
-        location: "Doha Golf Club - Doha, Qatar",
+        location: "Coca-Cola Arena - Dubai, UAE",
 
-        currency: "QAR",
+        currency: "AED",
 
         quantities: quantities,
 
@@ -809,6 +760,6 @@
 
   </script>
 
-
 </body>
+
 </html>
