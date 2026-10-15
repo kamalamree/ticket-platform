@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>حجز عمرو دياب | Ticket arab</title>
+
+<style>
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial,Tahoma,sans-serif;
+  background:#050D18;
+  color:#fff;
+  line-height:1.6;
+}
+
+.container{
+  width:min(1250px,94%);
+  margin:auto;
+}
+
+.header{
+  padding:22px 0;
+  text-align:center;
+  border-bottom:1px solid rgba(212,175,55,.2);
+}
+
+.logo{
+  color:#D4AF37;
+  font-size:28px;
+  font-weight:bold;
+}
+
+.back{
+  display:inline-block;
+  margin-top:10px;
+  color:#AEB8C4;
+}
+
+.title{
+  text-align:center;
+  padding:30px 0 20px;
+}
+
+.title h1{
+  color:#D4AF37;
+  font-size:32px;
+}
+
+.title p{
+  color:#AEB8C4;
+  margin-top:5px;
+}
+
+/* LAYOUT */
+
+.booking-layout{
+  display:grid;
+  grid-template-columns:1fr 330px;
+  gap:25px;
+  align-items:start;
+}
+
+/* MAP */
+
+.map-panel{
+  background:#0D1B2A;
+  border:1px solid rgba(212,175,55,.2);
+  border-radius:18px;
+  padding:18px;
+}
+
+.toolbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  margin-bottom:15px;
+  flex-wrap:wrap;
+}
+
+.toolbar strong{
+  color:#D4AF37;
+}
+
+.zoom{
+  display:flex;
+  gap:8px;
+}
+
+.zoom button{
+  width:42px;
+  height:42px;
+  border:1px solid #D4AF37;
+  background:#07111F;
+  color:#D4AF37;
+  border-radius:8px;
+  cursor:pointer;
+  font-size:20px;
+}
+
+.map-viewport{
+  width:100%;
+  height:650px;
+  overflow:auto;
+  border-radius:14px;
+  background:#07111F;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.map{
+  width:900px;
+  min-height:850px;
+  margin:auto;
+  padding:40px;
+  transform-origin:top center;
+  transition:.2s;
+}
+
+/* STAGE */
+
+.stage{
+  width:390px;
+  height:75px;
+  margin:0 auto 28px;
+
+  border-radius:0 0 50% 50%;
+
+  background:
+  linear-gradient(
+    180deg,
+    #D4AF37,
+    #9b7620
+  );
+
+  color:#07111F;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-weight:bold;
+  font-size:23px;
+
+  box-shadow:
+  0 12px 35px
+  rgba(212,175,55,.2);
+}
+
+/* FAN PIT */
+
+.fanpit{
+  width:420px;
+  height:110px;
+
+  margin:0 auto 35px;
+
+  border:2px solid #D4AF37;
+
+  border-radius:14px;
+
+  background:
+  rgba(212,175,55,.12);
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+
+  cursor:pointer;
+
+  transition:.2s;
+}
+
+.fanpit:hover{
+  background:
+  rgba(212,175,55,.25);
+}
+
+.fanpit.selected{
+  background:#2c9c64;
+  border-color:#65e39e;
+}
+
+.fanpit-title{
+  font-size:20px;
+  font-weight:bold;
+}
+
+.fanpit-price{
+  color:#D4AF37;
+  font-weight:bold;
+}
+
+/* ARENA */
+
+.arena{
+  width:760px;
+  height:620px;
+  margin:auto;
+  position:relative;
+}
+
+.section{
+  position:absolute;
+
+  background:#12253A;
+
+  border:1px solid
+  rgba(255,255,255,.12);
+
+  border-radius:22px;
+
+  padding:15px;
+
+  text-align:center;
+}
+
+.section-title{
+  color:#D4AF37;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+/* POSITIONS */
+
+.top{
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:280px;
+  min-height:130px;
+}
+
+.left{
+  top:120px;
+  left:0;
+  width:210px;
+  min-height:260px;
+}
+
+.right{
+  top:120px;
+  right:0;
+  width:210px;
+  min-height:260px;
+}
+
+.bottom{
+  top:400px;
+  left:50%;
+  transform:translateX(-50%);
+  width:300px;
+  min-height:150px;
+}
+
+.side-left{
+  top:420px;
+  left:60px;
+  width:190px;
+  min-height:120px;
+}
+
+.side-right{
+  top:420px;
+  right:60px;
+  width:190px;
+  min-height:120px;
+}
+
+/* SEATS */
+
+.seats{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:5px;
+}
+
+.seat{
+  width:20px;
+  height:20px;
+
+  border-radius:50%;
+
+  border:0;
+
+  cursor:pointer;
+
+  transition:.15s;
+}
+
+.seat:hover{
+  transform:scale(1.25);
+}
+
+.seat.regular{
+  background:#78909C;
+}
+
+.seat.silver{
+  background:#BFC7CF;
+}
+
+.seat.gold{
+  background:#D4AF37;
+}
+
+.seat.premium{
+  background:#A879FF;
+}
+
+.seat.premium-diamond{
+  background:#48C6FF;
+}
+
+.seat.vip{
+  background:#F2F2F2;
+
+  box-shadow:
+  0 0 5px
+  rgba(255,255,255,.6);
+}
+
+.seat.selected{
+  background:#2ecc71 !important;
+
+  box-shadow:
+  0 0 10px #2ecc71;
+
+  transform:scale(1.25);
+}
+
+/* SUMMARY */
+
+.summary{
+  background:#0D1B2A;
+
+  border:1px solid
+  rgba(212,175,55,.2);
+
+  border-radius:18px;
+
+  padding:22px;
+
+  position:sticky;
+  top:20px;
+}
+
+.summary h2{
+  color:#D4AF37;
+  margin-bottom:15px;
+}
+
+.row{
+  display:flex;
+  justify-content:space-between;
+
+  padding:12px 0;
+
+  border-bottom:
+  1px solid
+  rgba(255,255,255,.08);
+
+  color:#AEB8C4;
+}
+
+.row strong{
+  color:#fff;
+}
+
+.total{
+  display:flex;
+  justify-content:space-between;
+
+  margin-top:20px;
+
+  font-size:22px;
+
+  font-weight:bold;
+
+  color:#D4AF37;
+}
+
+.continue{
+  width:100%;
+
+  margin-top:20px;
+
+  border:0;
+
+  border-radius:10px;
+
+  padding:14px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #D4AF37,
+    #B8963E
+  );
+
+  color:#07111F;
+
+  font-weight:bold;
+
+  font-size:16px;
+
+  cursor:pointer;
+}
+
+.continue:disabled{
+  opacity:.4;
+  cursor:not-allowed;
+}
+
+.checkout{
+  display:none;
+
+  margin-top:20px;
+
+  padding:20px;
+
+  background:#0D1B2A;
+
+  border:1px solid
+  rgba(212,175,55,.2);
+
+  border-radius:18px;
+}
+
+.checkout.active{
+  display:block;
+}
+
+.checkout h2{
+  color:#D4AF37;
+  margin-bottom:15px;
+}
+
+.checkout input{
+  width:100%;
+
+  padding:14px;
+
+  margin:7px 0;
+
+  background:#07111F;
+
+  color:#fff;
+
+  border:1px solid #27384A;
+
+  border-radius:8px;
+
+  outline:none;
+}
+
+.checkout input:focus{
+  border-color:#D4AF37;
+}
+
+.note{
+  color:#7f8b98;
+
+  font-size:12px;
+
+  margin-top:15px;
+
+  line-height:1.7;
+}
+
+footer{
+  text-align:center;
+
+  padding:30px 15px;
+
+  margin-top:40px;
+
+  color:#AEB8C4;
+
+  background:#050D18;
+
+  border-top:
+  1px solid
+  rgba(255,255,255,.05);
+}
+
+footer strong{
+  color:#D4AF37;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+  .booking-layout{
+    grid-template-columns:1fr;
+  }
+
+  .summary{
+    position:relative;
+    top:auto;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .title h1{
+    font-size:26px;
+  }
+
+  .map-viewport{
+    height:560px;
+  }
+
+  .map{
+    transform:scale(.78);
+    transform-origin:top center;
+    margin-left:-80px;
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="header">
+
+  <div class="container">
+
+    <div class="logo">
+      Ticket arab
+    </div>
+
+    <a class="back" href="index.html">
+      ← الرجوع للحفلات
+    </a>
+
+  </div>
+
+</header>
+
+
+<div class="container">
+
+  <div class="title">
+
+    <h1>
+      حجز حفلة عمرو دياب
+    </h1>
+
+    <p>
+      Coca-Cola Arena — Dubai
+      <br>
+      7 November 2026
+    </p>
+
+  </div>
+
+
+  <div class="booking-layout">
+
+
+    <!-- MAP -->
+
+    <div class="map-panel">
+
+      <div class="toolbar">
+
+        <strong>
+          اختار مكانك
+        </strong>
+
+        <div class="zoom">
+
+          <button onclick="zoomMap(.1)">
+            +
+          </button>
+
+          <button onclick="zoomMap(-.1)">
+            −
+          </button>
+
+          <button onclick="resetZoom()">
+            ↺
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="map-viewport">
+
+        <div id="seatMap" class="map">
+
+
+          <!-- STAGE -->
+
+          <div class="stage">
+            AMR DIAB — STAGE
+          </div>
+
+
+          <!-- FAN PIT -->
+
+          <div
+            id="fanPit"
+            class="fanpit"
+            onclick="selectFanPit()"
+          >
+
+            <div class="fanpit-title">
+              DIAMOND / FAN PIT
+            </div>
+
+            <div class="fanpit-price">
+              585 AED
+            </div>
+
+            <div style="font-size:12px;color:#AEB8C4">
+              منطقة وقوف
+            </div>
+
+          </div>
+
+
+          <div class="arena">
+
+
+            <!-- PREMIUM DIAMOND -->
+
+            <div class="section top">
+
+              <div class="section-title">
+                PREMIUM DIAMOND
+              </div>
+
+              <div
+                class="seats"
+                data-count="10"
+                data-category="Premium Diamond"
+                data-price="785"
+                data-class="premium-diamond">
+              </div>
+
+            </div>
+
+
+            <!-- SILVER -->
+
+            <div class="section left">
+
+              <div class="section-title">
+                SILVER
+              </div>
+
+              <div
+                class="seats"
+                data-count="35"
+                data-category="Silver"
+                data-price="385"
+                data-class="silver">
+              </div>
+
+            </div>
+
+
+            <!-- GOLD -->
+
+            <div class="section right">
+
+              <div class="section-title">
+                GOLD
+              </div>
+
+              <div
+                class="seats"
+                data-count="35"
+                data-category="Gold"
+                data-price="485"
+                data-class="gold">
+              </div>
+
+            </div>
+
+
+            <!-- PREMIUM -->
+
+            <div class="section bottom">
+
+              <div class="section-title">
+                PREMIUM
+              </div>
+
+              <div
+                class="seats"
+                data-count="24"
+                data-category="Premium"
+                data-price="685"
+                data-class="premium">
+              </div>
+
+            </div>
+
+
+            <!-- REGULAR -->
+
+            <div class="section side-left">
+
+              <div class="section-title">
+                REGULAR
+              </div>
+
+              <div
+                class="seats"
+                data-count="18"
+                data-category="Regular"
+                data-price="285"
+                data-class="regular">
+              </div>
+
+            </div>
+
+
+            <!-- VIP -->
+
+            <div class="section side-right">
+
+              <div class="section-title">
+                VIP
+              </div>
+
+              <div
+                class="seats"
+                data-count="18"
+                data-category="VIP"
+                data-price="1065"
+                data-class="vip">
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- LEGEND -->
+
+      <div style="
+        display:flex;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:15px;
+        margin-top:25px;
+        color:#AEB8C4;
+        font-size:13px;
+      ">
+
+        <span>⚪ Regular — 285 AED</span>
+        <span>⚪ Silver — 385 AED</span>
+        <span>🟡 Gold — 485 AED</span>
+        <span>🟣 Premium — 685 AED</span>
+        <span>🔵 Premium Diamond — 785 AED</span>
+        <span>⚪ VIP — 1065 AED</span>
+
+      </div>
+
+    </div>
+
+
+    <!-- SUMMARY -->
+
+    <aside class="summary">
+
+      <h2>
+        ملخص الحجز
+      </h2>
+
+      <div class="row">
+        <span>المقاعد</span>
+        <strong id="seatCount">0</strong>
+      </div>
+
+      <div class="row">
+        <span>Fan Pit</span>
+        <strong id="fanPitCount">0</strong>
+      </div>
+
+      <div class="row">
+        <span>التذاكر</span>
+        <strong id="ticketCount">0</strong>
+      </div>
+
+      <div class="total">
+        <span>الإجمالي</span>
+        <span id="totalPrice">
+          0 AED
+        </span>
+      </div>
+
+      <button
+        id="continueBtn"
+        class="continue"
+        disabled
+        onclick="showCheckout()"
+      >
+        متابعة الحجز
+      </button>
+
+      <div class="note">
+
+        ملاحظة: خريطة المقاعد الحالية
+        نموذج تفاعلي لواجهة Ticket arab،
+        وليست الخريطة الرسمية النهائية للحفلة.
+
+      </div>
+
+    </aside>
+
+  </div>
+
+
+  <!-- CHECKOUT -->
+
+  <div id="checkout" class="checkout">
+
+    <h2>
+      بيانات الحجز
+    </h2>
+
+    <input
+      id="customerName"
+      type="text"
+      placeholder="الاسم بالكامل"
+    >
+
+    <input
+      id="customerEmail"
+      type="email"
+      placeholder="البريد الإلكتروني"
+    >
+
+    <input
+      id="customerPhone"
+      type="tel"
+      placeholder="رقم الهاتف"
+    >
+
+    <button
+      class="continue"
+      onclick="finishDemo()"
+    >
+      تأكيد البيانات
+    </button>
+
+  </div>
+
+</div>
+
+
+<footer>
+
+  <strong>
+    Ticket arab
+  </strong>
+
+  <br>
+
+  كل الحفلات في مكان واحد
+
+</footer>
+
+
+<script>
+
+/* =========================
+   BUILD SEATS
+========================= */
+
+document.querySelectorAll(".seats").forEach(container => {
+
+  const count =
+    Number(container.dataset.count);
+
+  const category =
+    container.dataset.category;
+
+  const price =
+    container.dataset.price;
+
+  const seatClass =
+    container.dataset.class;
+
+  for(let i = 0; i < count; i++){
+
+    const seat =
+      document.createElement("button");
+
+    seat.className =
+      "seat " + seatClass;
+
+    seat.dataset.category =
+      category;
+
+    seat.dataset.price =
+      price;
+
+    seat.addEventListener(
+      "click",
+      function(){
+        selectSeat(this);
+      }
+    );
+
+    container.appendChild(seat);
+  }
+
+});
+
+
+/* =========================
+   SEAT SELECTION
+========================= */
+
+let selectedSeats = [];
+
+let fanPitSelected = false;
+
+let zoomLevel = 1;
+
+
+function selectSeat(seat){
+
+  if(seat.classList.contains("selected")){
+
+    seat.classList.remove("selected");
+
+    const index =
+      selectedSeats.indexOf(seat);
+
+    if(index !== -1){
+
+      selectedSeats.splice(
+        index,
+        1
+      );
+
+    }
+
+  }else{
+
+    seat.classList.add("selected");
+
+    selectedSeats.push(seat);
+
+  }
+
+  updateSummary();
+
+}
+
+
+/* =========================
+   FAN PIT
+========================= */
+
+function selectFanPit(){
+
+  const box =
+    document.getElementById("fanPit");
+
+  fanPitSelected =
+    !fanPitSelected;
+
+  if(fanPitSelected){
+
+    box.classList.add("selected");
+
+  }else{
+
+    box.classList.remove("selected");
+
+  }
+
+  updateSummary();
+
+}
+
+
+/* =========================
+   SUMMARY
+========================= */
+
+function updateSummary(){
+
+  let total = 0;
+
+  selectedSeats.forEach(seat => {
+
+    total +=
+      Number(seat.dataset.price);
+
+  });
+
+
+  if(fanPitSelected){
+
+    total += 585;
+
+  }
+
+
+  const seatCount =
+    selectedSeats.length;
+
+  const fanCount =
+    fanPitSelected ? 1 : 0;
+
+  const ticketCount =
+    seatCount + fanCount;
+
+
+  document.getElementById(
+    "seatCount"
+  ).textContent =
+    seatCount;
+
+
+  document.getElementById(
+    "fanPitCount"
+  ).textContent =
+    fanCount;
+
+
+  document.getElementById(
+    "ticketCount"
+  ).textContent =
+    ticketCount;
+
+
+  document.getElementById(
+    "totalPrice"
+  ).textContent =
+    total + " AED";
+
+
+  document.getElementById(
+    "continueBtn"
+  ).disabled =
+    ticketCount === 0;
+
+}
+
+
+/* =========================
+   ZOOM
+========================= */
+
+function zoomMap(amount){
+
+  zoomLevel += amount;
+
+  if(zoomLevel < .6){
+    zoomLevel = .6;
+  }
+
+  if(zoomLevel > 1.6){
+    zoomLevel = 1.6;
+  }
+
+  document.getElementById(
+    "seatMap"
+  ).style.transform =
+    `scale(${zoomLevel})`;
+
+}
+
+
+function resetZoom(){
+
+  zoomLevel = 1;
+
+  document.getElementById(
+    "seatMap"
+  ).style.transform =
+    "scale(1)";
+
+}
+
+
+/* =========================
+   CHECKOUT
+========================= */
+
+function showCheckout(){
+
+  const checkout =
+    document.getElementById(
+      "checkout"
+    );
+
+  checkout.classList.add(
+    "active"
+  );
+
+  checkout.scrollIntoView({
+    behavior:"smooth",
+    block:"center"
+  });
+
+}
+
+
+function finishDemo(){
+
+  const name =
+    document.getElementById(
+      "customerName"
+    ).value.trim();
+
+  const email =
+    document.getElementById(
+      "customerEmail"
+    ).value.trim();
+
+  const phone =
+    document.getElementById(
+      "customerPhone"
+    ).value.trim();
+
+
+  if(!name || !email || !phone){
+
+    alert(
+      "من فضلك اكتب الاسم والبريد الإلكتروني ورقم الهاتف."
+    );
+
+    return;
+
+  }
+
+
+  alert(
+    "تم تجهيز الحجز بنجاح كنسخة تجريبية.\n\n" +
+    "الخطوة التالية هي ربط الدفع الإلكتروني وإرسال التذكرة."
+  );
+
+}
+
+</script>
+
+</body>
+</html>
