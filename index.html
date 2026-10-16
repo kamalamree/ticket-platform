@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +26,6 @@
       text-decoration: none;
     }
 
-    /* HERO */
     .hero {
       width: 100%;
       background: #07111F;
@@ -39,13 +39,11 @@
       object-fit: cover;
     }
 
-    /* CONTAINER */
     .container {
       width: min(1200px, 92%);
       margin: auto;
     }
 
-    /* TITLE */
     .section-title {
       text-align: center;
       margin: 45px 0 30px;
@@ -62,7 +60,6 @@
       font-size: 15px;
     }
 
-    /* CONCERT GRID */
     .concert-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -70,7 +67,6 @@
       padding-bottom: 60px;
     }
 
-    /* CARD */
     .card {
       background: #0D1B2A;
       border: 1px solid rgba(212, 175, 55, 0.18);
@@ -116,7 +112,6 @@
       font-size: 15px;
     }
 
-    /* BOOK BUTTON */
     .book-btn {
       display: block;
       width: 100%;
@@ -137,7 +132,6 @@
       transform: translateY(-1px);
     }
 
-    /* FOOTER */
     footer {
       text-align: center;
       padding: 30px 15px;
@@ -150,15 +144,14 @@
       color: #D4AF37;
     }
 
-    /* TABLET */
     @media (max-width: 900px) {
       .concert-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
 
-    /* MOBILE */
     @media (max-width: 600px) {
+
       .hero img {
         min-height: 180px;
         object-fit: cover;
@@ -179,33 +172,45 @@
   </style>
 </head>
 
+
 <body>
 
   <!-- HERO -->
+
   <header class="hero">
+
     <img
       src="./hero-banner.png"
       alt="Ticket arab"
     >
+
   </header>
 
 
   <!-- CONCERTS -->
+
   <main class="container">
 
     <div class="section-title">
-      <h1>الحفلات القادمة</h1>
+
+      <h1>
+        الحفلات القادمة
+      </h1>
 
       <p>
         اختار حفلتك واحجز تذكرتك بسهولة
       </p>
+
     </div>
 
 
     <section class="concert-grid">
 
 
+      <!-- ========================= -->
       <!-- 1 - AMR DIAB -->
+      <!-- ========================= -->
+
       <article class="card">
 
         <img
@@ -215,7 +220,9 @@
 
         <div class="card-content">
 
-          <h2>Amr Diab</h2>
+          <h2>
+            Amr Diab
+          </h2>
 
           <div class="info">
             📅 7 نوفمبر 2026
@@ -231,7 +238,7 @@
 
           <a
             class="book-btn"
-            href="booking-amr.html"
+            href="./booking-amr.html"
           >
             احجز الآن
           </a>
@@ -241,7 +248,10 @@
       </article>
 
 
+      <!-- ========================= -->
       <!-- 2 - GEORGE WASSOUF -->
+      <!-- ========================= -->
+
       <article class="card">
 
         <img
@@ -251,7 +261,9 @@
 
         <div class="card-content">
 
-          <h2>George Wassouf</h2>
+          <h2>
+            George Wassouf
+          </h2>
 
           <div class="info">
             📅 29 أكتوبر 2026
@@ -267,7 +279,7 @@
 
           <a
             class="book-btn"
-            href="booking.html?event=george"
+            href="./booking-george.html"
           >
             احجز الآن
           </a>
@@ -277,7 +289,10 @@
       </article>
 
 
+      <!-- ========================= -->
       <!-- 3 - ELISSA -->
+      <!-- ========================= -->
+
       <article class="card">
 
         <img
@@ -287,7 +302,9 @@
 
         <div class="card-content">
 
-          <h2>Elissa</h2>
+          <h2>
+            Elissa
+          </h2>
 
           <div class="info">
             📅 13 نوفمبر 2026
@@ -303,7 +320,7 @@
 
           <a
             class="book-btn"
-            href="booking.html?event=elissa"
+            href="./booking-elissa.html"
           >
             احجز الآن
           </a>
@@ -313,7 +330,10 @@
       </article>
 
 
+      <!-- ========================= -->
       <!-- 4 - TAMER ASHOUR -->
+      <!-- ========================= -->
+
       <article class="card">
 
         <img
@@ -323,7 +343,9 @@
 
         <div class="card-content">
 
-          <h2>Tamer Ashour</h2>
+          <h2>
+            Tamer Ashour
+          </h2>
 
           <div class="info">
             📅 6 نوفمبر 2026
@@ -339,7 +361,7 @@
 
           <a
             class="book-btn"
-            href="booking.html?event=tamer"
+            href="./booking-tamer.html"
           >
             احجز الآن
           </a>
@@ -349,7 +371,10 @@
       </article>
 
 
+      <!-- ========================= -->
       <!-- 5 - TUL8TE -->
+      <!-- ========================= -->
+
       <article class="card">
 
         <img
@@ -359,7 +384,9 @@
 
         <div class="card-content">
 
-          <h2>TUL8TE</h2>
+          <h2>
+            TUL8TE
+          </h2>
 
           <div class="info">
             📅 23 أكتوبر 2026
@@ -375,7 +402,7 @@
 
           <a
             class="book-btn"
-            href="booking.html?event=tul8te"
+            href="./booking-tul8te.html"
           >
             احجز الآن
           </a>
@@ -385,7 +412,10 @@
       </article>
 
 
+      <!-- ========================= -->
       <!-- 6 - FADEL CHAKER -->
+      <!-- ========================= -->
+
       <article class="card">
 
         <img
@@ -395,7 +425,9 @@
 
         <div class="card-content">
 
-          <h2>Fadel Chaker</h2>
+          <h2>
+            Fadel Chaker
+          </h2>
 
           <div class="info">
             📅 22 أكتوبر 2026
@@ -411,7 +443,7 @@
 
           <a
             class="book-btn"
-            href="booking.html?event=fadel"
+            href="./booking-fadel.html"
           >
             احجز الآن
           </a>
@@ -421,7 +453,10 @@
       </article>
 
 
+      <!-- ========================= -->
       <!-- 7 - NANCY AJRAM -->
+      <!-- ========================= -->
+
       <article class="card">
 
         <img
@@ -431,7 +466,9 @@
 
         <div class="card-content">
 
-          <h2>Nancy Ajram</h2>
+          <h2>
+            Nancy Ajram
+          </h2>
 
           <div class="info">
             📅 24 أكتوبر 2026
@@ -447,7 +484,7 @@
 
           <a
             class="book-btn"
-            href="booking.html?event=nancy"
+            href="./booking-nancy.html"
           >
             احجز الآن
           </a>
@@ -457,7 +494,10 @@
       </article>
 
 
+      <!-- ========================= -->
       <!-- 8 - RABEH SAQER -->
+      <!-- ========================= -->
+
       <article class="card">
 
         <img
@@ -467,7 +507,9 @@
 
         <div class="card-content">
 
-          <h2>Rabeh Saqer</h2>
+          <h2>
+            Rabeh Saqer
+          </h2>
 
           <div class="info">
             📅 25 أكتوبر 2026
@@ -483,7 +525,7 @@
 
           <a
             class="book-btn"
-            href="booking.html?event=rabeh"
+            href="./booking-rabeh.html"
           >
             احجز الآن
           </a>
@@ -493,7 +535,10 @@
       </article>
 
 
+      <!-- ========================= -->
       <!-- 9 - ISMAEL DAWAS BAND -->
+      <!-- ========================= -->
+
       <article class="card">
 
         <img
@@ -503,7 +548,9 @@
 
         <div class="card-content">
 
-          <h2>Ismael Dawas Band</h2>
+          <h2>
+            Ismael Dawas Band
+          </h2>
 
           <div class="info">
             📅 14 نوفمبر 2026
@@ -519,7 +566,7 @@
 
           <a
             class="book-btn"
-            href="booking.html?event=ismael"
+            href="./booking-ismael.html"
           >
             احجز الآن
           </a>
@@ -535,10 +582,13 @@
 
 
   <!-- FOOTER -->
+
   <footer>
 
     <div>
-      <strong>Ticket arab</strong>
+      <strong>
+        Ticket arab
+      </strong>
     </div>
 
     <div>
@@ -548,4 +598,5 @@
   </footer>
 
 </body>
+
 </html>
