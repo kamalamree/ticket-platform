@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>اختيار التذاكر - Ticket arab</title>
 
   <style>
+
     * {
       box-sizing: border-box;
     }
@@ -169,6 +174,7 @@
     }
 
     @media (max-width: 600px) {
+
       .ticket {
         flex-direction: column;
         align-items: stretch;
@@ -181,223 +187,439 @@
       .event-title {
         font-size: 23px;
       }
+
     }
+
   </style>
+
 </head>
+
 
 <body>
 
+
   <div class="header">
-    <div class="logo">Ticket arab</div>
+
+    <div class="logo">
+      Ticket arab
+    </div>
+
   </div>
+
 
   <div class="container">
 
     <div id="eventArea"></div>
 
-    <h2 class="tickets-title">اختر فئة التذكرة</h2>
+    <h2 class="tickets-title">
+      اختر فئة التذكرة
+    </h2>
 
     <div id="ticketsArea"></div>
 
     <div class="summary">
+
       <div class="summary-row">
-        <span>عدد التذاكر</span>
-        <span id="totalTickets">0</span>
+
+        <span>
+          عدد التذاكر
+        </span>
+
+        <span id="totalTickets">
+          0
+        </span>
+
       </div>
+
 
       <div class="summary-row total">
-        <span>الإجمالي</span>
-        <span id="totalPrice">0</span>
+
+        <span>
+          الإجمالي
+        </span>
+
+        <span id="totalPrice">
+          0
+        </span>
+
       </div>
 
-      <button class="continue-btn" onclick="continueBooking()">
+
+      <button
+        class="continue-btn"
+        onclick="continueBooking()"
+      >
         متابعة الحجز
       </button>
+
     </div>
 
   </div>
 
+
 <script>
+
+
+/* =========================================================
+   بيانات كل الحفلات
+========================================================= */
 
 const events = {
 
+
   amr: {
-    title: "عمرو دياب",
+
+    title: "Amr Diab",
+
     image: "./amr-diab.png",
+
     date: "7 نوفمبر 2026",
-    location: "Coca-Cola Arena - دبي، الإمارات",
+
+    location: "Coca-Cola Arena - Dubai, UAE",
+
     currency: "AED",
+
     tickets: [
+
       ["Regular", 275],
+
       ["Silver", 375],
+
       ["Gold", 475],
+
       ["Diamond / Fan Pit", 575],
+
       ["Premium", 675],
+
       ["Premium Diamond", 745],
+
       ["VIP", 1045]
+
     ]
+
   },
+
 
   george: {
-    title: "جورج وسوف",
+
+    title: "George Wassouf",
+
     image: "./george-wassouf.png",
+
     date: "29 أكتوبر 2026",
-    location: "Doha Golf Club - الدوحة، قطر",
+
+    location: "Doha Golf Club - Doha, Qatar",
+
     currency: "QAR",
+
     tickets: [
+
       ["Regular", 199],
+
       ["Silver", 299],
+
       ["Gold", 399],
+
       ["Diamond / Fan Pit", 499],
+
       ["Premium", 599],
+
       ["Premium Diamond", 699],
+
       ["VIP", 849]
+
     ]
+
   },
+
 
   elissa: {
-    title: "إليسا",
+
+    title: "Elissa",
+
     image: "./elissa.png",
+
     date: "13 نوفمبر 2026",
-    location: "OCEC - مسقط، سلطنة عمان",
+
+    location: "OCEC - Muscat, Oman",
+
     currency: "OMR",
+
     tickets: [
+
       ["Regular", 25],
+
       ["Silver", 29],
+
       ["Gold", 50.20],
+
       ["Diamond / Fan Pit", 81.60],
+
       ["Premium", 106],
+
       ["Premium Diamond", 122],
+
       ["VIP", 142.50]
+
     ]
+
   },
+
 
   tamer: {
-    title: "تامر عاشور",
+
+    title: "Tamer Ashour",
+
     image: "./tamer-ashour.png",
+
     date: "6 نوفمبر 2026",
-    location: "OCEC - مسقط، سلطنة عمان",
+
+    location: "OCEC - Muscat, Oman",
+
     currency: "OMR",
+
     tickets: [
+
       ["Regular", 5],
+
       ["Silver", 10],
+
       ["Gold", 20],
+
       ["Diamond / Fan Pit", 25],
+
       ["Premium", 35],
+
       ["Premium Diamond", 45],
+
       ["VIP", 65]
+
     ]
+
   },
+
 
   tul8te: {
+
     title: "TUL8TE",
+
     image: "./tul8te.png",
+
     date: "23 أكتوبر 2026",
-    location: "Beyon Al Dana Amphitheatre - المنامة، البحرين",
+
+    location: "Beyon Al Dana Amphitheatre - Bahrain",
+
     currency: "BHD",
+
     tickets: [
+
       ["Regular", 8],
+
       ["Silver", 12],
+
       ["Gold", 16],
+
       ["Diamond / Fan Pit", 20],
+
       ["Premium", 25],
+
       ["Premium Diamond", 30],
+
       ["VIP", 50]
+
     ]
+
   },
+
 
   fadel: {
-    title: "فضل شاكر",
+
+    title: "Fadel Chaker",
+
     image: "./fadel-chaker.png",
+
     date: "22 أكتوبر 2026",
-    location: "أبو بكر سالم - الرياض، السعودية",
+
+    location: "Riyadh - Saudi Arabia",
+
     currency: "SAR",
+
     tickets: [
+
       ["Regular", 455],
+
       ["Silver", 675],
+
       ["Gold", 930],
+
       ["Diamond / Fan Pit", 1480],
+
       ["Premium", 2825],
+
       ["Premium Diamond", 3400],
+
       ["VIP", 3700]
+
     ]
+
   },
+
 
   nancy: {
-    title: "نانسي عجرم",
+
+    title: "Nancy Ajram",
+
     image: "./nancy-ajram.png",
+
     date: "24 أكتوبر 2026",
-    location: "Coca-Cola Arena - دبي، الإمارات",
+
+    location: "Coca-Cola Arena - Dubai, UAE",
+
     currency: "AED",
+
     tickets: [
+
       ["Regular / Bronze", 190],
+
       ["Silver", 295],
+
       ["Gold", 400],
+
       ["Premium / Platinum", 475],
+
       ["VIP", 999],
+
       ["Elevate Deck", 1230],
+
       ["Royal", 2080]
+
     ]
+
   },
+
 
   rabeh: {
-    title: "رابح صقر",
+
+    title: "Rabeh Saqer",
+
     image: "./rabeh-saqer.png",
+
     date: "25 أكتوبر 2026",
-    location: "الرياض، السعودية",
+
+    location: "Riyadh - Saudi Arabia",
+
     currency: "SAR",
+
     tickets: [
+
       ["Regular", 299],
+
       ["Silver", 399],
+
       ["Gold", 499],
+
       ["Diamond / Fan Pit", 599],
+
       ["Premium", 699],
+
       ["Premium Diamond", 799],
+
       ["VIP", 999]
+
     ]
+
   },
 
+
   ismael: {
+
     title: "Ismael Dawas Band",
+
     image: "./ismael-dawas.png",
+
     date: "14 نوفمبر 2026",
-    location: "Dar Al Muharraq - البحرين",
+
+    location: "Dar Al Muharraq - Bahrain",
+
     currency: "BHD",
+
     tickets: [
+
       ["Regular", 4.9],
+
       ["Silver", 7],
+
       ["Gold", 10],
+
       ["Diamond / Fan Pit", 13],
+
       ["Premium", 16],
+
       ["Premium Diamond", 20],
+
       ["VIP", 30]
+
     ]
+
   }
 
 };
 
 
+/* =========================================================
+   قراءة اسم الحفلة من الرابط
+========================================================= */
+
 const params = new URLSearchParams(window.location.search);
-const eventKey = params.get("event") || "amr";
+
+const eventKey = params.get("event");
+
+
+/* =========================================================
+   لو مفيش event في الرابط
+========================================================= */
+
+if (!eventKey || !events[eventKey]) {
+
+  document.getElementById("eventArea").innerHTML = `
+
+    <div class="empty">
+
+      <h2>
+        لم يتم اختيار حفلة
+      </h2>
+
+      <p>
+        برجاء العودة واختيار الحفلة مرة أخرى.
+      </p>
+
+    </div>
+
+  `;
+
+  document.getElementById("ticketsArea").innerHTML = "";
+
+}
+
+
+/* =========================================================
+   اختيار الحفلة المطلوبة
+========================================================= */
 
 const event = events[eventKey];
 
 let quantities = [];
 
-if (!event) {
 
-  document.getElementById("eventArea").innerHTML = `
-    <div class="empty">
-      <h2>الحفلة غير موجودة</h2>
-      <p>برجاء العودة واختيار حفلة صحيحة.</p>
-    </div>
-  `;
-
-} else {
+if (event) {
 
   quantities = new Array(event.tickets.length).fill(0);
 
+
+  /* عرض بيانات الحفلة */
+
   document.getElementById("eventArea").innerHTML = `
+
     <div class="event-card">
 
       <img
@@ -413,19 +635,30 @@ if (!event) {
         </h1>
 
         <div class="event-details">
-          📅 ${event.date}<br>
+
+          📅 ${event.date}
+
+          <br>
+
           📍 ${event.location}
+
         </div>
 
       </div>
 
     </div>
+
   `;
+
 
   renderTickets();
 
 }
 
+
+/* =========================================================
+   عرض فئات التذاكر
+========================================================= */
 
 function renderTickets() {
 
@@ -433,36 +666,51 @@ function renderTickets() {
 
   area.innerHTML = "";
 
+
   event.tickets.forEach((ticket, index) => {
 
     const name = ticket[0];
+
     const price = ticket[1];
+
 
     area.innerHTML += `
 
       <div class="ticket">
 
         <div>
+
           <div class="ticket-name">
             ${name}
           </div>
 
           <div class="ticket-price">
-            ${formatPrice(price)} ${event.currency}
+
+            ${formatPrice(price)}
+            ${event.currency}
+
           </div>
+
         </div>
+
 
         <div class="quantity">
 
-          <button onclick="changeQuantity(${index}, -1)">
+          <button
+            onclick="changeQuantity(${index}, -1)"
+          >
             −
           </button>
 
+
           <span id="qty-${index}">
-            ${quantities[index]}
+            0
           </span>
 
-          <button onclick="changeQuantity(${index}, 1)">
+
+          <button
+            onclick="changeQuantity(${index}, 1)"
+          >
             +
           </button>
 
@@ -474,103 +722,165 @@ function renderTickets() {
 
   });
 
+
   updateSummary();
 
 }
 
+
+/* =========================================================
+   زيادة / تقليل عدد التذاكر
+========================================================= */
 
 function changeQuantity(index, amount) {
 
   const newValue = quantities[index] + amount;
 
+
   if (newValue < 0) {
     return;
   }
 
+
   if (newValue > 10) {
-    alert("الحد الأقصى 10 تذاكر من نفس الفئة.");
+
+    alert(
+      "الحد الأقصى 10 تذاكر من نفس الفئة."
+    );
+
     return;
+
   }
+
 
   quantities[index] = newValue;
 
-  document.getElementById(`qty-${index}`).textContent = newValue;
+
+  document.getElementById(
+    `qty-${index}`
+  ).textContent = newValue;
+
 
   updateSummary();
 
 }
 
 
+/* =========================================================
+   تحديث الإجمالي
+========================================================= */
+
 function updateSummary() {
 
   let totalTickets = 0;
+
   let totalPrice = 0;
+
 
   event.tickets.forEach((ticket, index) => {
 
     const price = ticket[1];
+
     const quantity = quantities[index];
 
+
     totalTickets += quantity;
+
     totalPrice += price * quantity;
 
   });
 
-  document.getElementById("totalTickets").textContent =
-    totalTickets;
 
-  document.getElementById("totalPrice").textContent =
+  document.getElementById(
+    "totalTickets"
+  ).textContent = totalTickets;
+
+
+  document.getElementById(
+    "totalPrice"
+  ).textContent =
     `${formatPrice(totalPrice)} ${event.currency}`;
 
 }
 
 
+/* =========================================================
+   تنسيق السعر
+========================================================= */
+
 function formatPrice(price) {
 
   if (Number.isInteger(price)) {
+
     return price;
+
   }
 
+
   return price.toFixed(2);
+
 }
 
+
+/* =========================================================
+   متابعة الحجز
+========================================================= */
 
 function continueBooking() {
 
   let selectedTickets = [];
+
   let totalTickets = 0;
+
   let totalPrice = 0;
+
 
   event.tickets.forEach((ticket, index) => {
 
     const quantity = quantities[index];
 
+
     if (quantity > 0) {
 
       selectedTickets.push({
+
         category: ticket[0],
+
         price: ticket[1],
+
         quantity: quantity
+
       });
 
+
       totalTickets += quantity;
-      totalPrice += ticket[1] * quantity;
+
+      totalPrice +=
+        ticket[1] * quantity;
 
     }
 
   });
 
+
   if (totalTickets === 0) {
 
-    alert("من فضلك اختر تذكرة واحدة على الأقل.");
+    alert(
+      "من فضلك اختر تذكرة واحدة على الأقل."
+    );
 
     return;
+
   }
 
 
   const bookingData = {
 
+    eventKey: eventKey,
+
     event: event.title,
+
+    image: event.image,
 
     date: event.date,
 
@@ -594,12 +904,21 @@ function continueBooking() {
 
 
   alert(
-    `تم اختيار ${totalTickets} تذكرة.\n\nالإجمالي: ${formatPrice(totalPrice)} ${event.currency}\n\nسننتقل للدفع في الخطوة التالية.`
+
+    `تم اختيار ${totalTickets} تذكرة.
+
+الإجمالي:
+${formatPrice(totalPrice)} ${event.currency}
+
+سننتقل للدفع في الخطوة التالية.`
+
   );
 
 }
 
+
 </script>
 
 </body>
+
 </html>
