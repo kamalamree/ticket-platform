@@ -7,41 +7,43 @@
   <title>حجز جورج وسوف | Ticket arab</title>
 
   <style>
-    *{box-sizing:border-box}
+    *{
+      box-sizing:border-box;
+    }
 
     body{
       margin:0;
       font-family:Arial,Tahoma,sans-serif;
       background:#07111F;
-      color:white
+      color:white;
     }
 
     .container{
       width:92%;
       max-width:1100px;
-      margin:auto
+      margin:auto;
     }
 
     header{
       padding:22px 0;
-      border-bottom:1px solid rgba(212,175,55,.2)
+      border-bottom:1px solid rgba(212,175,55,.2);
     }
 
     .logo{
       color:#D4AF37;
       font-size:27px;
       font-weight:bold;
-      text-decoration:none
+      text-decoration:none;
     }
 
     .back{
       color:#AEB8C4;
       text-decoration:none;
-      font-size:14px
+      font-size:14px;
     }
 
     .event{
-      padding:35px 0
+      padding:35px 0;
     }
 
     .event-box{
@@ -51,31 +53,34 @@
       background:#0D1B2A;
       border:1px solid rgba(212,175,55,.2);
       border-radius:18px;
-      padding:25px
+      padding:25px;
     }
 
+    /* صورة جورج بنفس مقاس صورة عمرو */
     .poster{
       width:100%;
+      height:480px;
+      object-fit:cover;
       border-radius:14px;
-      display:block
+      display:block;
     }
 
     .event-info h1{
       margin-top:0;
       font-size:34px;
-      color:#D4AF37
+      color:#D4AF37;
     }
 
     .details{
       color:#AEB8C4;
       line-height:2;
       font-size:16px;
-      margin-bottom:25px
+      margin-bottom:25px;
     }
 
     .section-title{
       font-size:22px;
-      margin:25px 0 15px
+      margin:25px 0 15px;
     }
 
     .ticket{
@@ -86,23 +91,23 @@
       border:1px solid rgba(255,255,255,.08);
       border-radius:12px;
       padding:14px 16px;
-      margin-bottom:10px
+      margin-bottom:10px;
     }
 
     .ticket-name{
-      font-weight:bold
+      font-weight:bold;
     }
 
     .price{
       color:#D4AF37;
       font-size:14px;
-      margin-top:5px
+      margin-top:5px;
     }
 
     .quantity{
       display:flex;
       align-items:center;
-      gap:10px
+      gap:10px;
     }
 
     .quantity button{
@@ -114,23 +119,23 @@
       color:#07111F;
       font-size:20px;
       font-weight:bold;
-      cursor:pointer
+      cursor:pointer;
     }
 
     .quantity span{
       width:25px;
       text-align:center;
-      font-weight:bold
+      font-weight:bold;
     }
 
     .email-box{
-      margin-top:25px
+      margin-top:25px;
     }
 
     .email-box label{
       display:block;
       margin-bottom:8px;
-      color:#AEB8C4
+      color:#AEB8C4;
     }
 
     .email-box input{
@@ -141,11 +146,11 @@
       background:#07111F;
       color:white;
       font-size:16px;
-      outline:none
+      outline:none;
     }
 
     .email-box input:focus{
-      border-color:#D4AF37
+      border-color:#D4AF37;
     }
 
     .total-box{
@@ -156,13 +161,13 @@
       border-radius:12px;
       display:flex;
       justify-content:space-between;
-      align-items:center
+      align-items:center;
     }
 
     .total{
       color:#D4AF37;
       font-size:25px;
-      font-weight:bold
+      font-weight:bold;
     }
 
     .continue{
@@ -175,36 +180,39 @@
       color:#07111F;
       font-size:18px;
       font-weight:bold;
-      cursor:pointer
+      cursor:pointer;
     }
 
     .continue:hover{
-      background:#B8963E
+      background:#B8963E;
     }
 
     .note{
       text-align:center;
       color:#7F8B98;
       font-size:13px;
-      margin-top:12px
+      margin-top:12px;
     }
 
     @media(max-width:750px){
+
       .event-box{
-        grid-template-columns:1fr
+        grid-template-columns:1fr;
       }
 
       .poster{
+        width:100%;
+        height:480px;
         max-width:350px;
-        margin:auto
+        margin:auto;
       }
 
       .event-info h1{
-        font-size:28px
+        font-size:28px;
       }
 
       .ticket{
-        gap:10px
+        gap:10px;
       }
     }
   </style>
@@ -214,8 +222,15 @@
 
 <header>
   <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
-    <a href="index.html" class="logo">Ticket arab</a>
-    <a href="index.html" class="back">← العودة للحفلات</a>
+    
+    <a href="index.html" class="logo">
+      Ticket arab
+    </a>
+
+    <a href="index.html" class="back">
+      ← العودة للحفلات
+    </a>
+
   </div>
 </header>
 
@@ -224,7 +239,11 @@
   <div class="event-box">
 
     <div>
-      <img src="./george-wassouf.png" alt="جورج وسوف" class="poster">
+      <img
+        src="./george-wassouf.png"
+        alt="جورج وسوف"
+        class="poster"
+      >
     </div>
 
     <div class="event-info">
@@ -237,13 +256,17 @@
         🇶🇦 الدوحة، قطر
       </div>
 
-      <h2 class="section-title">اختر فئة التذكرة</h2>
+      <h2 class="section-title">
+        اختر فئة التذكرة
+      </h2>
 
+      <!-- Regular -->
       <div class="ticket">
         <div>
           <div class="ticket-name">Regular</div>
           <div class="price">199 QAR</div>
         </div>
+
         <div class="quantity">
           <button onclick="changeQuantity(0,-1)">−</button>
           <span id="q0">0</span>
@@ -251,11 +274,13 @@
         </div>
       </div>
 
+      <!-- Silver -->
       <div class="ticket">
         <div>
           <div class="ticket-name">Silver</div>
           <div class="price">299 QAR</div>
         </div>
+
         <div class="quantity">
           <button onclick="changeQuantity(1,-1)">−</button>
           <span id="q1">0</span>
@@ -263,11 +288,13 @@
         </div>
       </div>
 
+      <!-- Gold -->
       <div class="ticket">
         <div>
           <div class="ticket-name">Gold</div>
           <div class="price">399 QAR</div>
         </div>
+
         <div class="quantity">
           <button onclick="changeQuantity(2,-1)">−</button>
           <span id="q2">0</span>
@@ -275,11 +302,13 @@
         </div>
       </div>
 
+      <!-- Platinum -->
       <div class="ticket">
         <div>
           <div class="ticket-name">Platinum</div>
           <div class="price">499 QAR</div>
         </div>
+
         <div class="quantity">
           <button onclick="changeQuantity(3,-1)">−</button>
           <span id="q3">0</span>
@@ -287,11 +316,13 @@
         </div>
       </div>
 
+      <!-- Premium -->
       <div class="ticket">
         <div>
           <div class="ticket-name">Premium</div>
           <div class="price">599 QAR</div>
         </div>
+
         <div class="quantity">
           <button onclick="changeQuantity(4,-1)">−</button>
           <span id="q4">0</span>
@@ -299,11 +330,13 @@
         </div>
       </div>
 
+      <!-- Premium VIP -->
       <div class="ticket">
         <div>
           <div class="ticket-name">Premium VIP</div>
           <div class="price">699 QAR</div>
         </div>
+
         <div class="quantity">
           <button onclick="changeQuantity(5,-1)">−</button>
           <span id="q5">0</span>
@@ -311,11 +344,13 @@
         </div>
       </div>
 
+      <!-- VIP -->
       <div class="ticket">
         <div>
           <div class="ticket-name">VIP</div>
           <div class="price">849 QAR</div>
         </div>
+
         <div class="quantity">
           <button onclick="changeQuantity(6,-1)">−</button>
           <span id="q6">0</span>
@@ -323,21 +358,36 @@
         </div>
       </div>
 
+      <!-- Email -->
       <div class="email-box">
-        <label for="email">البريد الإلكتروني لاستلام التذكرة</label>
+
+        <label for="email">
+          البريد الإلكتروني لاستلام التذكرة
+        </label>
+
         <input
           type="email"
           id="email"
           placeholder="example@email.com"
         >
+
       </div>
 
+      <!-- Total -->
       <div class="total-box">
+
         <span>الإجمالي</span>
-        <span class="total" id="total">0 QAR</span>
+
+        <span class="total" id="total">
+          0 QAR
+        </span>
+
       </div>
 
-      <button class="continue" onclick="continueBooking()">
+      <button
+        class="continue"
+        onclick="continueBooking()"
+      >
         متابعة الحجز
       </button>
 
@@ -346,6 +396,7 @@
       </div>
 
     </div>
+
   </div>
 
 </main>
@@ -363,10 +414,16 @@ const prices = [
 ];
 
 const quantities = [
-  0,0,0,0,0,0,0
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0
 ];
 
-function changeQuantity(index,change){
+function changeQuantity(index, change){
 
   quantities[index] += change;
 
@@ -378,7 +435,7 @@ function changeQuantity(index,change){
     quantities[index] = 10;
   }
 
-  document.getElementById("q"+index).textContent =
+  document.getElementById("q" + index).textContent =
     quantities[index];
 
   calculateTotal();
@@ -388,8 +445,10 @@ function calculateTotal(){
 
   let total = 0;
 
-  for(let i=0;i<prices.length;i++){
+  for(let i = 0; i < prices.length; i++){
+
     total += prices[i] * quantities[i];
+
   }
 
   document.getElementById("total").textContent =
@@ -403,33 +462,42 @@ function continueBooking(){
 
   let ticketsSelected = false;
 
-  for(let i=0;i<quantities.length;i++){
+  for(let i = 0; i < quantities.length; i++){
 
     if(quantities[i] > 0){
+
       ticketsSelected = true;
       break;
+
     }
 
   }
 
   if(!ticketsSelected){
+
     alert("من فضلك اختر تذكرة واحدة على الأقل.");
     return;
+
   }
 
   if(!email){
+
     alert("من فضلك اكتب البريد الإلكتروني.");
     return;
+
   }
 
   if(!email.includes("@")){
+
     alert("من فضلك اكتب بريد إلكتروني صحيح.");
     return;
+
   }
 
   alert(
     "تم تجهيز الحجز بنجاح. خطوة الدفع هنضيفها بعد ما نخلص صفحات الحفلات."
   );
+
 }
 
 </script>
