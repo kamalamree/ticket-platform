@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>حجز عمرو دياب | Ticket arab</title>
+  <title>حجز فضل شاكر | Ticket arab</title>
 
   <style>
     * {
@@ -24,7 +24,6 @@
       margin: auto;
     }
 
-    /* Header */
     header {
       padding: 22px 0;
       border-bottom: 1px solid rgba(212, 175, 55, 0.2);
@@ -43,7 +42,6 @@
       font-size: 14px;
     }
 
-    /* Event */
     .event {
       padding: 35px 0;
     }
@@ -82,7 +80,6 @@
       margin: 25px 0 15px;
     }
 
-    /* Tickets */
     .ticket {
       display: flex;
       justify-content: space-between;
@@ -128,7 +125,6 @@
       font-weight: bold;
     }
 
-    /* Email */
     .email-box {
       margin-top: 25px;
     }
@@ -154,7 +150,6 @@
       border-color: #D4AF37;
     }
 
-    /* Total */
     .total-box {
       margin-top: 25px;
       padding: 18px;
@@ -196,7 +191,6 @@
       margin-top: 12px;
     }
 
-    /* Mobile */
     @media (max-width: 750px) {
       .event-box {
         grid-template-columns: 1fr;
@@ -233,18 +227,18 @@
 
       <!-- صورة الحفلة -->
       <div>
-        <img src="./amr-diab.png" alt="عمرو دياب" class="poster">
+        <img src="./fadel-chaker.png" alt="فضل شاكر" class="poster">
       </div>
 
       <!-- بيانات الحفلة -->
       <div class="event-info">
 
-        <h1>عمرو دياب</h1>
+        <h1>فضل شاكر</h1>
 
         <div class="details">
-          📅 <strong>7 نوفمبر 2026</strong><br>
-          📍 Coca-Cola Arena<br>
-          🇦🇪 دبي، الإمارات
+          📅 <strong>22 أكتوبر 2026</strong><br>
+          📍 أبو بكر سالم - الرياض<br>
+          🇸🇦 الرياض، السعودية
         </div>
 
         <h2 class="section-title">اختر فئة التذكرة</h2>
@@ -252,7 +246,7 @@
         <div class="ticket">
           <div>
             <div class="ticket-name">Regular</div>
-            <div class="price">275 AED</div>
+            <div class="price">455 SAR</div>
           </div>
 
           <div class="quantity">
@@ -265,7 +259,7 @@
         <div class="ticket">
           <div>
             <div class="ticket-name">Silver</div>
-            <div class="price">375 AED</div>
+            <div class="price">675 SAR</div>
           </div>
 
           <div class="quantity">
@@ -278,7 +272,7 @@
         <div class="ticket">
           <div>
             <div class="ticket-name">Gold</div>
-            <div class="price">475 AED</div>
+            <div class="price">930 SAR</div>
           </div>
 
           <div class="quantity">
@@ -290,8 +284,8 @@
 
         <div class="ticket">
           <div>
-            <div class="ticket-name">Diamond / Fan Pit</div>
-            <div class="price">575 AED</div>
+            <div class="ticket-name">Platinum</div>
+            <div class="price">1,480 SAR</div>
           </div>
 
           <div class="quantity">
@@ -303,8 +297,8 @@
 
         <div class="ticket">
           <div>
-            <div class="ticket-name">Premium</div>
-            <div class="price">675 AED</div>
+            <div class="ticket-name">VIP</div>
+            <div class="price">2,825 SAR</div>
           </div>
 
           <div class="quantity">
@@ -316,8 +310,8 @@
 
         <div class="ticket">
           <div>
-            <div class="ticket-name">Premium Diamond</div>
-            <div class="price">745 AED</div>
+            <div class="ticket-name">Premium VIP</div>
+            <div class="price">3,400 SAR</div>
           </div>
 
           <div class="quantity">
@@ -329,8 +323,8 @@
 
         <div class="ticket">
           <div>
-            <div class="ticket-name">VIP</div>
-            <div class="price">1045 AED</div>
+            <div class="ticket-name">Royal VIP</div>
+            <div class="price">3,700 SAR</div>
           </div>
 
           <div class="quantity">
@@ -351,7 +345,7 @@
 
         <div class="total-box">
           <span>الإجمالي</span>
-          <span class="total" id="total">0 AED</span>
+          <span class="total" id="total">0 SAR</span>
         </div>
 
         <button class="continue" onclick="continueBooking()">
@@ -370,13 +364,13 @@
   <script>
 
     const prices = [
-      275,
-      375,
-      475,
-      575,
+      455,
       675,
-      745,
-      1045
+      930,
+      1480,
+      2825,
+      3400,
+      3700
     ];
 
     const quantities = [
@@ -410,7 +404,7 @@
       }
 
       document.getElementById("total").textContent =
-        total.toLocaleString("en-US") + " AED";
+        total.toLocaleString("en-US") + " SAR";
     }
 
     function continueBooking() {
@@ -449,4 +443,3 @@
 
 </body>
 </html>
-
