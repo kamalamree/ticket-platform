@@ -1,210 +1,252 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>حجز إسماعيل دواس | Ticket arab</title>
+  <title>حجز Ismael Dawas Band | Ticket arab</title>
 
   <style>
-    *{box-sizing:border-box}
-
-    body{
-      margin:0;
-      font-family:Arial,Tahoma,sans-serif;
-      background:#07111F;
-      color:white
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Tahoma, sans-serif;
     }
 
-    .container{
-      width:92%;
-      max-width:1100px;
-      margin:auto
+    body {
+      background: #07111f;
+      color: #ffffff;
+      min-height: 100vh;
     }
 
-    header{
-      padding:22px 0;
-      border-bottom:1px solid rgba(212,175,55,.2)
+    header {
+      background: #0b1728;
+      border-bottom: 1px solid #c9a44c;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .logo{
-      color:#D4AF37;
-      font-size:27px;
-      font-weight:bold;
-      text-decoration:none
+    .logo {
+      color: #d8b45a;
+      font-size: 26px;
+      font-weight: bold;
     }
 
-    .back{
-      color:#AEB8C4;
-      text-decoration:none;
-      font-size:14px
+    .back {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 15px;
     }
 
-    .event{
-      padding:35px 0
+    .back:hover {
+      color: #d8b45a;
     }
 
-    .event-box{
-      display:grid;
-      grid-template-columns:320px 1fr;
-      gap:35px;
-      background:#0D1B2A;
-      border:1px solid rgba(212,175,55,.2);
-      border-radius:18px;
-      padding:25px
+    .container {
+      width: 92%;
+      max-width: 1100px;
+      margin: 40px auto;
     }
 
-    .poster{
-      width:100%;
-      border-radius:14px;
-      display:block
+    .event-box {
+      background: #0d1b2e;
+      border: 1px solid rgba(216, 180, 90, 0.35);
+      border-radius: 18px;
+      padding: 25px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 30px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
     }
 
-    .event-info h1{
-      margin-top:0;
-      font-size:34px;
-      color:#D4AF37
+    .poster {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      border-radius: 14px;
+      display: block;
     }
 
-    .details{
-      color:#AEB8C4;
-      line-height:2;
-      font-size:16px;
-      margin-bottom:25px
+    .event-info h1 {
+      color: #d8b45a;
+      font-size: 30px;
+      margin-bottom: 12px;
     }
 
-    .section-title{
-      font-size:22px;
-      margin:25px 0 15px
+    .event-details {
+      color: #c8d0dc;
+      line-height: 1.9;
+      margin-bottom: 25px;
+      font-size: 15px;
     }
 
-    .ticket{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      background:#07111F;
-      border:1px solid rgba(255,255,255,.08);
-      border-radius:12px;
-      padding:14px 16px;
-      margin-bottom:10px
+    .ticket-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
     }
 
-    .ticket-name{
-      font-weight:bold
+    .ticket-row {
+      background: #111f33;
+      border: 1px solid rgba(216, 180, 90, 0.2);
+      border-radius: 12px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
     }
 
-    .price{
-      color:#D4AF37;
-      font-size:14px;
-      margin-top:5px
+    .ticket-name {
+      font-weight: bold;
+      font-size: 15px;
+      margin-bottom: 5px;
     }
 
-    .quantity{
-      display:flex;
-      align-items:center;
-      gap:10px
+    .ticket-price {
+      color: #d8b45a;
+      font-weight: bold;
+      white-space: nowrap;
     }
 
-    .quantity button{
-      width:34px;
-      height:34px;
-      border:none;
-      border-radius:8px;
-      background:#D4AF37;
-      color:#07111F;
-      font-size:20px;
-      font-weight:bold;
-      cursor:pointer
+    .counter {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    .quantity span{
-      width:25px;
-      text-align:center;
-      font-weight:bold
+    .counter button {
+      width: 32px;
+      height: 32px;
+      border: none;
+      border-radius: 8px;
+      background: #d8b45a;
+      color: #07111f;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
     }
 
-    .email-box{
-      margin-top:25px
+    .counter button:hover {
+      background: #f0cf77;
     }
 
-    .email-box label{
-      display:block;
-      margin-bottom:8px;
-      color:#AEB8C4
+    .counter span {
+      min-width: 20px;
+      text-align: center;
+      font-weight: bold;
     }
 
-    .email-box input{
-      width:100%;
-      padding:14px;
-      border-radius:10px;
-      border:1px solid rgba(255,255,255,.12);
-      background:#07111F;
-      color:white;
-      font-size:16px;
-      outline:none
+    .email-box {
+      margin-top: 25px;
     }
 
-    .email-box input:focus{
-      border-color:#D4AF37
+    .email-box label {
+      display: block;
+      margin-bottom: 8px;
+      color: #d8b45a;
+      font-weight: bold;
     }
 
-    .total-box{
-      margin-top:25px;
-      padding:18px;
-      background:rgba(212,175,55,.08);
-      border:1px solid rgba(212,175,55,.25);
-      border-radius:12px;
-      display:flex;
-      justify-content:space-between;
-      align-items:center
+    .email-box input {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid #34465e;
+      background: #081526;
+      color: white;
+      outline: none;
+      font-size: 15px;
     }
 
-    .total{
-      color:#D4AF37;
-      font-size:25px;
-      font-weight:bold
+    .email-box input:focus {
+      border-color: #d8b45a;
     }
 
-    .continue{
-      width:100%;
-      margin-top:15px;
-      padding:16px;
-      border:none;
-      border-radius:12px;
-      background:#D4AF37;
-      color:#07111F;
-      font-size:18px;
-      font-weight:bold;
-      cursor:pointer
+    .total-box {
+      margin-top: 22px;
+      background: #081526;
+      border: 1px solid rgba(216, 180, 90, 0.35);
+      border-radius: 12px;
+      padding: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .continue:hover{
-      background:#B8963E
+    .total-title {
+      font-size: 17px;
+      font-weight: bold;
     }
 
-    .note{
-      text-align:center;
-      color:#7F8B98;
-      font-size:13px;
-      margin-top:12px
+    .total {
+      color: #d8b45a;
+      font-size: 24px;
+      font-weight: bold;
     }
 
-    @media(max-width:750px){
-      .event-box{
-        grid-template-columns:1fr
+    .continue-btn {
+      width: 100%;
+      margin-top: 18px;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      background: #d8b45a;
+      color: #07111f;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .continue-btn:hover {
+      background: #f0cf77;
+    }
+
+    @media (max-width: 800px) {
+      .event-box {
+        grid-template-columns: 1fr;
       }
 
-      .poster{
-        max-width:350px;
-        margin:auto
+      .poster {
+        height: auto;
+        max-height: 600px;
+        object-fit: contain;
+        background: #081526;
       }
 
-      .event-info h1{
-        font-size:28px
+      .event-info h1 {
+        font-size: 25px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      header {
+        padding: 15px 4%;
       }
 
-      .ticket{
-        gap:10px
+      .logo {
+        font-size: 22px;
+      }
+
+      .container {
+        width: 94%;
+        margin: 25px auto;
+      }
+
+      .event-box {
+        padding: 16px;
+      }
+
+      .ticket-row {
+        flex-wrap: wrap;
+      }
+
+      .ticket-price {
+        margin-right: auto;
       }
     }
   </style>
@@ -213,226 +255,384 @@
 <body>
 
 <header>
-  <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
-    <a href="index.html" class="logo">Ticket arab</a>
-    <a href="index.html" class="back">← العودة للحفلات</a>
+
+  <div class="logo">
+    Ticket arab
   </div>
+
+  <a href="./index.html" class="back">
+    ← العودة للحفلات
+  </a>
+
 </header>
 
-<main class="container event">
+
+<div class="container">
 
   <div class="event-box">
 
-    <div>
-      <img src="./ismael-dawas.png" alt="إسماعيل دواس" class="poster">
-    </div>
+    <img
+      src="./ismael-dawas.png"
+      alt="Ismael Dawas Band"
+      class="poster"
+    >
+
 
     <div class="event-info">
 
-      <h1>إسماعيل دواس</h1>
+      <h1>
+        حفل Ismael Dawas Band في البحرين
+      </h1>
 
-      <div class="details">
-        📅 <strong>14 نوفمبر 2026</strong><br>
-        🚪 فتح الأبواب: 7:00 مساءً<br>
-        🎤 بداية الحفل: 8:00 مساءً<br>
-        📍 Dar Al Muharraq<br>
-        🇧🇭 البحرين
-      </div>
 
-      <h2 class="section-title">اختر فئة التذكرة</h2>
+      <div class="event-details">
 
-      <div class="ticket">
         <div>
-          <div class="ticket-name">Regular</div>
-          <div class="price">4.9 BHD</div>
+          📅 السبت 14 نوفمبر 2026
         </div>
-        <div class="quantity">
-          <button onclick="changeQuantity(0,-1)">−</button>
-          <span id="q0">0</span>
-          <button onclick="changeQuantity(0,1)">+</button>
+
+        <div>
+          📍 Dar Al Muharraq - Bahrain
         </div>
+
+        <div>
+          🎤 Ismael Dawas Band
+        </div>
+
+        <div>
+          🕗 الأبواب 7:00 مساءً - الحفل 8:00 مساءً
+        </div>
+
       </div>
 
-      <div class="ticket">
-        <div>
-          <div class="ticket-name">Silver</div>
-          <div class="price">7 BHD</div>
+
+      <div class="ticket-list">
+
+
+        <!-- Regular -->
+
+        <div class="ticket-row">
+
+          <div>
+            <div class="ticket-name">Regular</div>
+            <div class="ticket-price">4.9 BHD</div>
+          </div>
+
+          <div class="counter">
+            <button onclick="changeQty(0, -1)">−</button>
+            <span id="qty0">0</span>
+            <button onclick="changeQty(0, 1)">+</button>
+          </div>
+
         </div>
-        <div class="quantity">
-          <button onclick="changeQuantity(1,-1)">−</button>
-          <span id="q1">0</span>
-          <button onclick="changeQuantity(1,1)">+</button>
+
+
+        <!-- Silver -->
+
+        <div class="ticket-row">
+
+          <div>
+            <div class="ticket-name">Silver</div>
+            <div class="ticket-price">7 BHD</div>
+          </div>
+
+          <div class="counter">
+            <button onclick="changeQty(1, -1)">−</button>
+            <span id="qty1">0</span>
+            <button onclick="changeQty(1, 1)">+</button>
+          </div>
+
         </div>
+
+
+        <!-- Gold -->
+
+        <div class="ticket-row">
+
+          <div>
+            <div class="ticket-name">Gold</div>
+            <div class="ticket-price">10 BHD</div>
+          </div>
+
+          <div class="counter">
+            <button onclick="changeQty(2, -1)">−</button>
+            <span id="qty2">0</span>
+            <button onclick="changeQty(2, 1)">+</button>
+          </div>
+
+        </div>
+
+
+        <!-- Platinum -->
+
+        <div class="ticket-row">
+
+          <div>
+            <div class="ticket-name">Platinum</div>
+            <div class="ticket-price">13 BHD</div>
+          </div>
+
+          <div class="counter">
+            <button onclick="changeQty(3, -1)">−</button>
+            <span id="qty3">0</span>
+            <button onclick="changeQty(3, 1)">+</button>
+          </div>
+
+        </div>
+
+
+        <!-- Premium -->
+
+        <div class="ticket-row">
+
+          <div>
+            <div class="ticket-name">Premium</div>
+            <div class="ticket-price">16 BHD</div>
+          </div>
+
+          <div class="counter">
+            <button onclick="changeQty(4, -1)">−</button>
+            <span id="qty4">0</span>
+            <button onclick="changeQty(4, 1)">+</button>
+          </div>
+
+        </div>
+
+
+        <!-- Premium VIP -->
+
+        <div class="ticket-row">
+
+          <div>
+            <div class="ticket-name">Premium VIP</div>
+            <div class="ticket-price">20 BHD</div>
+          </div>
+
+          <div class="counter">
+            <button onclick="changeQty(5, -1)">−</button>
+            <span id="qty5">0</span>
+            <button onclick="changeQty(5, 1)">+</button>
+          </div>
+
+        </div>
+
+
+        <!-- VIP -->
+
+        <div class="ticket-row">
+
+          <div>
+            <div class="ticket-name">VIP</div>
+            <div class="ticket-price">30 BHD</div>
+          </div>
+
+          <div class="counter">
+            <button onclick="changeQty(6, -1)">−</button>
+            <span id="qty6">0</span>
+            <button onclick="changeQty(6, 1)">+</button>
+          </div>
+
+        </div>
+
       </div>
 
-      <div class="ticket">
-        <div>
-          <div class="ticket-name">Gold</div>
-          <div class="price">10 BHD</div>
-        </div>
-        <div class="quantity">
-          <button onclick="changeQuantity(2,-1)">−</button>
-          <span id="q2">0</span>
-          <button onclick="changeQuantity(2,1)">+</button>
-        </div>
-      </div>
-
-      <div class="ticket">
-        <div>
-          <div class="ticket-name">Platinum</div>
-          <div class="price">13 BHD</div>
-        </div>
-        <div class="quantity">
-          <button onclick="changeQuantity(3,-1)">−</button>
-          <span id="q3">0</span>
-          <button onclick="changeQuantity(3,1)">+</button>
-        </div>
-      </div>
-
-      <div class="ticket">
-        <div>
-          <div class="ticket-name">Premium</div>
-          <div class="price">16 BHD</div>
-        </div>
-        <div class="quantity">
-          <button onclick="changeQuantity(4,-1)">−</button>
-          <span id="q4">0</span>
-          <button onclick="changeQuantity(4,1)">+</button>
-        </div>
-      </div>
-
-      <div class="ticket">
-        <div>
-          <div class="ticket-name">Premium VIP</div>
-          <div class="price">20 BHD</div>
-        </div>
-        <div class="quantity">
-          <button onclick="changeQuantity(5,-1)">−</button>
-          <span id="q5">0</span>
-          <button onclick="changeQuantity(5,1)">+</button>
-        </div>
-      </div>
-
-      <div class="ticket">
-        <div>
-          <div class="ticket-name">VIP</div>
-          <div class="price">30 BHD</div>
-        </div>
-        <div class="quantity">
-          <button onclick="changeQuantity(6,-1)">−</button>
-          <span id="q6">0</span>
-          <button onclick="changeQuantity(6,1)">+</button>
-        </div>
-      </div>
 
       <div class="email-box">
-        <label for="email">البريد الإلكتروني لاستلام التذكرة</label>
+
+        <label for="email">
+          البريد الإلكتروني
+        </label>
+
         <input
           type="email"
           id="email"
           placeholder="example@email.com"
         >
+
       </div>
+
 
       <div class="total-box">
-        <span>الإجمالي</span>
-        <span class="total" id="total">0 BHD</span>
+
+        <div class="total-title">
+          الإجمالي
+        </div>
+
+        <div class="total">
+          <span id="total">0</span>
+          BHD
+        </div>
+
       </div>
 
-      <button class="continue" onclick="continueBooking()">
+
+      <button
+        class="continue-btn"
+        onclick="continueBooking()"
+      >
         متابعة الحجز
       </button>
 
-      <div class="note">
-        سيتم إرسال تفاصيل الحجز والتذكرة على البريد الإلكتروني.
-      </div>
-
     </div>
+
   </div>
 
-</main>
+</div>
+
 
 <script>
 
-const prices = [
-  4.9,
-  7,
-  10,
-  13,
-  16,
-  20,
-  30
-];
+  const prices = [
+    4.9,
+    7,
+    10,
+    13,
+    16,
+    20,
+    30
+  ];
 
-const quantities = [
-  0,0,0,0,0,0,0
-];
 
-function changeQuantity(index,change){
+  const quantities = [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ];
 
-  quantities[index] += change;
 
-  if(quantities[index] < 0){
-    quantities[index] = 0;
-  }
+  function changeQty(index, amount) {
 
-  if(quantities[index] > 10){
-    quantities[index] = 10;
-  }
+    let newValue =
+      quantities[index] + amount;
 
-  document.getElementById("q"+index).textContent =
-    quantities[index];
 
-  calculateTotal();
-}
-
-function calculateTotal(){
-
-  let total = 0;
-
-  for(let i=0;i<prices.length;i++){
-    total += prices[i] * quantities[i];
-  }
-
-  document.getElementById("total").textContent =
-    total.toLocaleString("en-US") + " BHD";
-}
-
-function continueBooking(){
-
-  const email =
-    document.getElementById("email").value.trim();
-
-  let ticketsSelected = false;
-
-  for(let i=0;i<quantities.length;i++){
-
-    if(quantities[i] > 0){
-      ticketsSelected = true;
-      break;
+    if (newValue < 0) {
+      newValue = 0;
     }
 
+
+    if (newValue > 10) {
+      newValue = 10;
+    }
+
+
+    quantities[index] = newValue;
+
+
+    document.getElementById(
+      "qty" + index
+    ).textContent = newValue;
+
+
+    calculateTotal();
+
   }
 
-  if(!ticketsSelected){
-    alert("من فضلك اختر تذكرة واحدة على الأقل.");
-    return;
+
+  function calculateTotal() {
+
+    let total = 0;
+
+
+    for (
+      let i = 0;
+      i < prices.length;
+      i++
+    ) {
+
+      total +=
+        prices[i] * quantities[i];
+
+    }
+
+
+    document.getElementById(
+      "total"
+    ).textContent =
+      total.toLocaleString(
+        "en-US",
+        {
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 2
+        }
+      );
+
   }
 
-  if(!email){
-    alert("من فضلك اكتب البريد الإلكتروني.");
-    return;
-  }
 
-  if(!email.includes("@")){
-    alert("من فضلك اكتب بريد إلكتروني صحيح.");
-    return;
-  }
+  function continueBooking() {
 
-  alert(
-    "تم تجهيز الحجز بنجاح. خطوة الدفع هنضيفها بعد ما نخلص صفحات الحفلات."
-  );
-}
+    const totalTickets =
+      quantities.reduce(
+        (sum, value) =>
+          sum + value,
+        0
+      );
+
+
+    const email =
+      document
+        .getElementById("email")
+        .value
+        .trim();
+
+
+    if (totalTickets === 0) {
+
+      alert(
+        "من فضلك اختر تذكرة واحدة على الأقل."
+      );
+
+      return;
+    }
+
+
+    if (!email) {
+
+      alert(
+        "من فضلك اكتب البريد الإلكتروني."
+      );
+
+      return;
+    }
+
+
+    const emailPattern =
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+    if (!emailPattern.test(email)) {
+
+      alert(
+        "من فضلك اكتب بريد إلكتروني صحيح."
+      );
+
+      return;
+    }
+
+
+    const total =
+      quantities.reduce(
+        (sum, qty, index) =>
+          sum +
+          qty * prices[index],
+        0
+      );
+
+
+    alert(
+      "تم تسجيل طلب الحجز بنجاح.\n\n" +
+      "الإجمالي: " +
+      total.toLocaleString("en-US") +
+      " BHD\n\n" +
+      "سيتم إضافة الدفع الإلكتروني لاحقًا."
+    );
+
+  }
 
 </script>
 
