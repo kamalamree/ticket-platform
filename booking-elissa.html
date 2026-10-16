@@ -1,1 +1,736 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>حجز حفلة إليسا | Ticket arab</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Tahoma, sans-serif;
+      background: #07111F;
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: min(900px, 92%);
+      margin: auto;
+    }
+
+    .header {
+      text-align: center;
+      padding: 35px 15px 20px;
+    }
+
+    .logo {
+      color: #D4AF37;
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+
+    .header h1 {
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      color: #AEB8C4;
+    }
+
+    .event-card {
+      background: #0D1B2A;
+      border: 1px solid rgba(212,175,55,.25);
+      border-radius: 18px;
+      overflow: hidden;
+      margin-bottom: 25px;
+    }
+
+    .event-image {
+      width: 100%;
+      display: block;
+      max-height: 650px;
+      object-fit: cover;
+    }
+
+    .event-info {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .event-info h2 {
+      color: #D4AF37;
+      margin-bottom: 10px;
+      font-size: 25px;
+    }
+
+    .event-info p {
+      color: #AEB8C4;
+      margin: 5px 0;
+    }
+
+    .tickets {
+      display: grid;
+      gap: 14px;
+    }
+
+    .ticket {
+      background: #0D1B2A;
+      border: 1px solid rgba(212,175,55,.18);
+      border-radius: 15px;
+      padding: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .ticket-info h3 {
+      color: #D4AF37;
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .ticket-info p {
+      color: #AEB8C4;
+      font-size: 14px;
+    }
+
+    .price {
+      color: #fff;
+      font-weight: bold;
+      margin-top: 6px;
+    }
+
+    .quantity {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .quantity button {
+      width: 40px;
+      height: 40px;
+      border-radius: 9px;
+      border: 1px solid #D4AF37;
+      background: #07111F;
+      color: #D4AF37;
+      font-size: 23px;
+      cursor: pointer;
+    }
+
+    .quantity button:hover {
+      background: #D4AF37;
+      color: #07111F;
+    }
+
+    .quantity span {
+      width: 28px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .summary {
+      background: #0D1B2A;
+      border: 1px solid rgba(212,175,55,.25);
+      border-radius: 18px;
+      padding: 22px;
+      margin: 25px 0;
+    }
+
+    .summary h2 {
+      color: #D4AF37;
+      margin-bottom: 15px;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      color: #AEB8C4;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .total {
+      display: flex;
+      justify-content: space-between;
+      color: #D4AF37;
+      font-size: 23px;
+      font-weight: bold;
+      margin-top: 18px;
+    }
+
+    .continue {
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      padding: 15px;
+      margin-top: 20px;
+      background: linear-gradient(135deg, #D4AF37, #B8963E);
+      color: #07111F;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .back {
+      display: block;
+      text-align: center;
+      color: #AEB8C4;
+      text-decoration: none;
+      margin: 25px 0 40px;
+    }
+
+    .back:hover {
+      color: #D4AF37;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #050D18;
+      color: #AEB8C4;
+    }
+
+    footer strong {
+      color: #D4AF37;
+    }
+
+    @media (max-width: 600px) {
+
+      .header h1 {
+        font-size: 25px;
+      }
+
+      .ticket {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .quantity {
+        justify-content: center;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+
+    <div class="logo">
+      Ticket arab
+    </div>
+
+    <h1>
+      حجز حفلة إليسا
+    </h1>
+
+    <p>
+      اختار فئة التذكرة والعدد المطلوب
+    </p>
+
+  </header>
+
+
+  <main class="container">
+
+    <section class="event-card">
+
+      <img
+        class="event-image"
+        src="./elissa.png"
+        alt="Elissa">
+
+      <div class="event-info">
+
+        <h2>
+          ELISSA
+        </h2>
+
+        <p>
+          📅 13 نوفمبر 2026
+        </p>
+
+        <p>
+          📍 OCEC - Muscat, Oman
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <section class="tickets">
+
+
+      <div class="ticket">
+
+        <div class="ticket-info">
+
+          <h3>Regular</h3>
+
+          <p>
+            تذكرة دخول عادية
+          </p>
+
+          <div class="price">
+            25 OMR
+          </div>
+
+        </div>
+
+        <div class="quantity">
+
+          <button onclick="changeQty('regular', -1)">
+            −
+          </button>
+
+          <span id="regular">0</span>
+
+          <button onclick="changeQty('regular', 1)">
+            +
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="ticket">
+
+        <div class="ticket-info">
+
+          <h3>Silver</h3>
+
+          <p>
+            فئة فضية
+          </p>
+
+          <div class="price">
+            29 OMR
+          </div>
+
+        </div>
+
+        <div class="quantity">
+
+          <button onclick="changeQty('silver', -1)">
+            −
+          </button>
+
+          <span id="silver">0</span>
+
+          <button onclick="changeQty('silver', 1)">
+            +
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="ticket">
+
+        <div class="ticket-info">
+
+          <h3>Gold</h3>
+
+          <p>
+            فئة ذهبية
+          </p>
+
+          <div class="price">
+            50.20 OMR
+          </div>
+
+        </div>
+
+        <div class="quantity">
+
+          <button onclick="changeQty('gold', -1)">
+            −
+          </button>
+
+          <span id="gold">0</span>
+
+          <button onclick="changeQty('gold', 1)">
+            +
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="ticket">
+
+        <div class="ticket-info">
+
+          <h3>Diamond / Fan Pit</h3>
+
+          <p>
+            منطقة قريبة من المسرح
+          </p>
+
+          <div class="price">
+            81.60 OMR
+          </div>
+
+        </div>
+
+        <div class="quantity">
+
+          <button onclick="changeQty('diamond', -1)">
+            −
+          </button>
+
+          <span id="diamond">0</span>
+
+          <button onclick="changeQty('diamond', 1)">
+            +
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="ticket">
+
+        <div class="ticket-info">
+
+          <h3>Premium</h3>
+
+          <p>
+            فئة مميزة
+          </p>
+
+          <div class="price">
+            106 OMR
+          </div>
+
+        </div>
+
+        <div class="quantity">
+
+          <button onclick="changeQty('premium', -1)">
+            −
+          </button>
+
+          <span id="premium">0</span>
+
+          <button onclick="changeQty('premium', 1)">
+            +
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="ticket">
+
+        <div class="ticket-info">
+
+          <h3>Premium Diamond</h3>
+
+          <p>
+            فئة مميزة جدًا
+          </p>
+
+          <div class="price">
+            122 OMR
+          </div>
+
+        </div>
+
+        <div class="quantity">
+
+          <button onclick="changeQty('premiumDiamond', -1)">
+            −
+          </button>
+
+          <span id="premiumDiamond">0</span>
+
+          <button onclick="changeQty('premiumDiamond', 1)">
+            +
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="ticket">
+
+        <div class="ticket-info">
+
+          <h3>VIP</h3>
+
+          <p>
+            أعلى فئة
+          </p>
+
+          <div class="price">
+            142.50 OMR
+          </div>
+
+        </div>
+
+        <div class="quantity">
+
+          <button onclick="changeQty('vip', -1)">
+            −
+          </button>
+
+          <span id="vip">0</span>
+
+          <button onclick="changeQty('vip', 1)">
+            +
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="summary">
+
+      <h2>
+        ملخص الحجز
+      </h2>
+
+      <div class="summary-row">
+
+        <span>
+          عدد التذاكر
+        </span>
+
+        <strong id="totalTickets">
+          0
+        </strong>
+
+      </div>
+
+
+      <div class="total">
+
+        <span>
+          الإجمالي
+        </span>
+
+        <span>
+          <span id="totalPrice">0</span> OMR
+        </span>
+
+      </div>
+
+
+      <button
+        class="continue"
+        onclick="continueBooking()">
+
+        متابعة الحجز
+
+      </button>
+
+    </section>
+
+
+    <a
+      class="back"
+      href="index.html">
+
+      ← العودة للحفلات
+
+    </a>
+
+  </main>
+
+
+  <footer>
+
+    <strong>Ticket arab</strong>
+
+    <br>
+
+    جميع الحقوق محفوظة © 2026
+
+  </footer>
+
+
+  <script>
+
+    const prices = {
+
+      regular: 25,
+
+      silver: 29,
+
+      gold: 50.20,
+
+      diamond: 81.60,
+
+      premium: 106,
+
+      premiumDiamond: 122,
+
+      vip: 142.50
+
+    };
+
+
+    const quantities = {
+
+      regular: 0,
+
+      silver: 0,
+
+      gold: 0,
+
+      diamond: 0,
+
+      premium: 0,
+
+      premiumDiamond: 0,
+
+      vip: 0
+
+    };
+
+
+    function changeQty(type, amount) {
+
+      let value =
+        quantities[type] + amount;
+
+
+      if (value < 0) {
+        value = 0;
+      }
+
+
+      if (value > 10) {
+        value = 10;
+      }
+
+
+      quantities[type] = value;
+
+
+      document.getElementById(type).textContent =
+        value;
+
+
+      updateSummary();
+
+    }
+
+
+    function updateSummary() {
+
+      let totalTickets = 0;
+
+      let totalPrice = 0;
+
+
+      Object.keys(quantities).forEach(function(type) {
+
+        totalTickets += quantities[type];
+
+        totalPrice +=
+          quantities[type] * prices[type];
+
+      });
+
+
+      document.getElementById("totalTickets")
+        .textContent = totalTickets;
+
+
+      document.getElementById("totalPrice")
+        .textContent = totalPrice.toFixed(2);
+
+    }
+
+
+    function continueBooking() {
+
+      let totalTickets = 0;
+
+      let totalPrice = 0;
+
+
+      Object.keys(quantities).forEach(function(type) {
+
+        totalTickets += quantities[type];
+
+        totalPrice +=
+          quantities[type] * prices[type];
+
+      });
+
+
+      if (totalTickets === 0) {
+
+        alert(
+          "من فضلك اختار تذكرة واحدة على الأقل."
+        );
+
+        return;
+
+      }
+
+
+      const bookingData = {
+
+        event: "Elissa",
+
+        date: "13 November 2026",
+
+        location: "OCEC - Muscat, Oman",
+
+        currency: "OMR",
+
+        quantities: quantities,
+
+        totalTickets: totalTickets,
+
+        totalPrice: totalPrice
+
+      };
+
+
+      localStorage.setItem(
+        "ticketArabBooking",
+        JSON.stringify(bookingData)
+      );
+
+
+      alert(
+        "تم حفظ اختيارك بنجاح.\n\n" +
+        "عدد التذاكر: " + totalTickets +
+        "\nالإجمالي: " + totalPrice.toFixed(2) + " OMR"
+      );
+
+    }
+
+  </script>
+
+</body>
+
+</html>
