@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,118 +10,133 @@
   <style>
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Tahoma, sans-serif;
     }
 
     body {
-      margin: 0;
-      font-family: Arial, Tahoma, sans-serif;
-      background: #07111F;
-      color: white;
+      background: #07111f;
+      color: #ffffff;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #0b1728;
+      border-bottom: 1px solid #c9a44c;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #d8b45a;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .back {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .back:hover {
+      color: #d8b45a;
     }
 
     .container {
       width: 92%;
       max-width: 1100px;
-      margin: auto;
-    }
-
-    header {
-      padding: 22px 0;
-      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-    }
-
-    .logo {
-      color: #D4AF37;
-      font-size: 27px;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .back {
-      color: #AEB8C4;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    .event {
-      padding: 35px 0;
+      margin: 40px auto;
     }
 
     .event-box {
-      display: grid;
-      grid-template-columns: 320px 1fr;
-      gap: 35px;
-      background: #0D1B2A;
-      border: 1px solid rgba(212, 175, 55, 0.2);
+      background: #0d1b2e;
+      border: 1px solid rgba(216, 180, 90, 0.35);
       border-radius: 18px;
       padding: 25px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 30px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
     }
 
     .poster {
       width: 100%;
+      height: 480px;
+      object-fit: cover;
       border-radius: 14px;
       display: block;
     }
 
     .event-info h1 {
-      margin-top: 0;
-      font-size: 34px;
-      color: #D4AF37;
+      color: #d8b45a;
+      font-size: 30px;
+      margin-bottom: 12px;
     }
 
-    .details {
-      color: #AEB8C4;
-      line-height: 2;
-      font-size: 16px;
+    .event-details {
+      color: #c8d0dc;
+      line-height: 1.9;
       margin-bottom: 25px;
+      font-size: 15px;
     }
 
-    .section-title {
-      font-size: 22px;
-      margin: 25px 0 15px;
-    }
-
-    .ticket {
+    .ticket-list {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #07111F;
-      border: 1px solid rgba(255,255,255,0.08);
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .ticket-row {
+      background: #111f33;
+      border: 1px solid rgba(216, 180, 90, 0.2);
       border-radius: 12px;
       padding: 14px 16px;
-      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
     }
 
     .ticket-name {
       font-weight: bold;
+      font-size: 15px;
+      margin-bottom: 5px;
     }
 
-    .price {
-      color: #D4AF37;
-      font-size: 14px;
-      margin-top: 5px;
+    .ticket-price {
+      color: #d8b45a;
+      font-weight: bold;
+      white-space: nowrap;
     }
 
-    .quantity {
+    .counter {
       display: flex;
       align-items: center;
       gap: 10px;
     }
 
-    .quantity button {
-      width: 34px;
-      height: 34px;
+    .counter button {
+      width: 32px;
+      height: 32px;
       border: none;
       border-radius: 8px;
-      background: #D4AF37;
-      color: #07111F;
+      background: #d8b45a;
+      color: #07111f;
       font-size: 20px;
       font-weight: bold;
       cursor: pointer;
     }
 
-    .quantity span {
-      width: 25px;
+    .counter button:hover {
+      background: #f0cf77;
+    }
+
+    .counter span {
+      min-width: 20px;
       text-align: center;
       font-weight: bold;
     }
@@ -132,81 +148,105 @@
     .email-box label {
       display: block;
       margin-bottom: 8px;
-      color: #AEB8C4;
+      color: #d8b45a;
+      font-weight: bold;
     }
 
     .email-box input {
       width: 100%;
       padding: 14px;
       border-radius: 10px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: #07111F;
+      border: 1px solid #34465e;
+      background: #081526;
       color: white;
-      font-size: 16px;
       outline: none;
+      font-size: 15px;
     }
 
     .email-box input:focus {
-      border-color: #D4AF37;
+      border-color: #d8b45a;
     }
 
     .total-box {
-      margin-top: 25px;
-      padding: 18px;
-      background: rgba(212, 175, 55, 0.08);
-      border: 1px solid rgba(212, 175, 55, 0.25);
+      margin-top: 22px;
+      background: #081526;
+      border: 1px solid rgba(216, 180, 90, 0.35);
       border-radius: 12px;
+      padding: 18px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    .total {
-      color: #D4AF37;
-      font-size: 25px;
+    .total-title {
+      font-size: 17px;
       font-weight: bold;
     }
 
-    .continue {
+    .total {
+      color: #d8b45a;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .continue-btn {
       width: 100%;
-      margin-top: 15px;
-      padding: 16px;
+      margin-top: 18px;
+      padding: 15px;
       border: none;
-      border-radius: 12px;
-      background: #D4AF37;
-      color: #07111F;
-      font-size: 18px;
+      border-radius: 10px;
+      background: #d8b45a;
+      color: #07111f;
+      font-size: 17px;
       font-weight: bold;
       cursor: pointer;
     }
 
-    .continue:hover {
-      background: #B8963E;
+    .continue-btn:hover {
+      background: #f0cf77;
     }
 
-    .note {
-      text-align: center;
-      color: #7F8B98;
-      font-size: 13px;
-      margin-top: 12px;
-    }
-
-    @media (max-width: 750px) {
+    @media (max-width: 800px) {
       .event-box {
         grid-template-columns: 1fr;
       }
 
       .poster {
-        max-width: 350px;
-        margin: auto;
+        height: auto;
+        max-height: 600px;
+        object-fit: contain;
+        background: #081526;
       }
 
       .event-info h1 {
-        font-size: 28px;
+        font-size: 25px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      header {
+        padding: 15px 4%;
       }
 
-      .ticket {
-        gap: 10px;
+      .logo {
+        font-size: 22px;
+      }
+
+      .container {
+        width: 94%;
+        margin: 25px auto;
+      }
+
+      .event-box {
+        padding: 16px;
+      }
+
+      .ticket-row {
+        flex-wrap: wrap;
+      }
+
+      .ticket-price {
+        margin-right: auto;
       }
     }
   </style>
@@ -214,232 +254,410 @@
 
 <body>
 
-  <header>
-    <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
-      <a href="index.html" class="logo">Ticket arab</a>
-      <a href="index.html" class="back">← العودة للحفلات</a>
-    </div>
-  </header>
+<header>
 
-  <main class="container event">
+  <div class="logo">
+    Ticket arab
+  </div>
 
-    <div class="event-box">
+  <a href="./index.html" class="back">
+    ← العودة للحفلات
+  </a>
 
-      <!-- صورة الحفلة -->
-      <div>
-        <img src="./elissa.png" alt="إليسا" class="poster">
-      </div>
+</header>
 
-      <!-- بيانات الحفلة -->
-      <div class="event-info">
 
-        <h1>إليسا</h1>
+<div class="container">
 
-        <div class="details">
-          📅 <strong>13 نوفمبر 2026</strong><br>
-          📍 OCEC<br>
-          🇴🇲 مسقط، عُمان
+  <div class="event-box">
+
+    <img
+      src="./elissa.png"
+      alt="Elissa"
+      class="poster"
+    >
+
+
+    <div class="event-info">
+
+      <h1>
+        حفل إليسا في مسقط
+      </h1>
+
+
+      <div class="event-details">
+
+        <div>
+          📅 الجمعة 13 نوفمبر 2026
         </div>
 
-        <h2 class="section-title">اختر فئة التذكرة</h2>
+        <div>
+          📍 OCEC - Muscat, Oman
+        </div>
 
-        <div class="ticket">
+        <div>
+          🎤 حفل إليسا
+        </div>
+
+      </div>
+
+
+      <div class="ticket-list">
+
+
+        <!-- Regular -->
+
+        <div class="ticket-row">
+
           <div>
             <div class="ticket-name">Regular</div>
-            <div class="price">25 OMR</div>
+            <div class="ticket-price">20 OMR</div>
           </div>
 
-          <div class="quantity">
-            <button onclick="changeQuantity(0, -1)">−</button>
-            <span id="q0">0</span>
-            <button onclick="changeQuantity(0, 1)">+</button>
+          <div class="counter">
+
+            <button onclick="changeQty(0, -1)">−</button>
+
+            <span id="qty0">0</span>
+
+            <button onclick="changeQty(0, 1)">+</button>
+
           </div>
+
         </div>
 
-        <div class="ticket">
+
+        <!-- Silver -->
+
+        <div class="ticket-row">
+
           <div>
             <div class="ticket-name">Silver</div>
-            <div class="price">29 OMR</div>
+            <div class="ticket-price">29 OMR</div>
           </div>
 
-          <div class="quantity">
-            <button onclick="changeQuantity(1, -1)">−</button>
-            <span id="q1">0</span>
-            <button onclick="changeQuantity(1, 1)">+</button>
+          <div class="counter">
+
+            <button onclick="changeQty(1, -1)">−</button>
+
+            <span id="qty1">0</span>
+
+            <button onclick="changeQty(1, 1)">+</button>
+
           </div>
+
         </div>
 
-        <div class="ticket">
+
+        <!-- Gold -->
+
+        <div class="ticket-row">
+
           <div>
             <div class="ticket-name">Gold</div>
-            <div class="price">50.20 OMR</div>
+            <div class="ticket-price">40 OMR</div>
           </div>
 
-          <div class="quantity">
-            <button onclick="changeQuantity(2, -1)">−</button>
-            <span id="q2">0</span>
-            <button onclick="changeQuantity(2, 1)">+</button>
+          <div class="counter">
+
+            <button onclick="changeQty(2, -1)">−</button>
+
+            <span id="qty2">0</span>
+
+            <button onclick="changeQty(2, 1)">+</button>
+
           </div>
+
         </div>
 
-        <div class="ticket">
+
+        <!-- Platinum -->
+
+        <div class="ticket-row">
+
           <div>
             <div class="ticket-name">Platinum</div>
-            <div class="price">81.60 OMR</div>
+            <div class="ticket-price">71 OMR</div>
           </div>
 
-          <div class="quantity">
-            <button onclick="changeQuantity(3, -1)">−</button>
-            <span id="q3">0</span>
-            <button onclick="changeQuantity(3, 1)">+</button>
+          <div class="counter">
+
+            <button onclick="changeQty(3, -1)">−</button>
+
+            <span id="qty3">0</span>
+
+            <button onclick="changeQty(3, 1)">+</button>
+
           </div>
+
         </div>
 
-        <div class="ticket">
+
+        <!-- Premium -->
+
+        <div class="ticket-row">
+
           <div>
             <div class="ticket-name">Premium</div>
-            <div class="price">106 OMR</div>
+            <div class="ticket-price">96 OMR</div>
           </div>
 
-          <div class="quantity">
-            <button onclick="changeQuantity(4, -1)">−</button>
-            <span id="q4">0</span>
-            <button onclick="changeQuantity(4, 1)">+</button>
+          <div class="counter">
+
+            <button onclick="changeQty(4, -1)">−</button>
+
+            <span id="qty4">0</span>
+
+            <button onclick="changeQty(4, 1)">+</button>
+
           </div>
+
         </div>
 
-        <div class="ticket">
+
+        <!-- Premium VIP -->
+
+        <div class="ticket-row">
+
           <div>
             <div class="ticket-name">Premium VIP</div>
-            <div class="price">122 OMR</div>
+            <div class="ticket-price">112 OMR</div>
           </div>
 
-          <div class="quantity">
-            <button onclick="changeQuantity(5, -1)">−</button>
-            <span id="q5">0</span>
-            <button onclick="changeQuantity(5, 1)">+</button>
+          <div class="counter">
+
+            <button onclick="changeQty(5, -1)">−</button>
+
+            <span id="qty5">0</span>
+
+            <button onclick="changeQty(5, 1)">+</button>
+
           </div>
+
         </div>
 
-        <div class="ticket">
+
+        <!-- VIP -->
+
+        <div class="ticket-row">
+
           <div>
             <div class="ticket-name">VIP</div>
-            <div class="price">142.50 OMR</div>
+            <div class="ticket-price">132 OMR</div>
           </div>
 
-          <div class="quantity">
-            <button onclick="changeQuantity(6, -1)">−</button>
-            <span id="q6">0</span>
-            <button onclick="changeQuantity(6, 1)">+</button>
+          <div class="counter">
+
+            <button onclick="changeQty(6, -1)">−</button>
+
+            <span id="qty6">0</span>
+
+            <button onclick="changeQty(6, 1)">+</button>
+
           </div>
-        </div>
 
-        <div class="email-box">
-          <label for="email">البريد الإلكتروني لاستلام التذكرة</label>
-          <input
-            type="email"
-            id="email"
-            placeholder="example@email.com"
-          >
-        </div>
-
-        <div class="total-box">
-          <span>الإجمالي</span>
-          <span class="total" id="total">0 OMR</span>
-        </div>
-
-        <button class="continue" onclick="continueBooking()">
-          متابعة الحجز
-        </button>
-
-        <div class="note">
-          سيتم إرسال تفاصيل الحجز والتذكرة على البريد الإلكتروني.
         </div>
 
       </div>
+
+
+      <div class="email-box">
+
+        <label for="email">
+          البريد الإلكتروني
+        </label>
+
+        <input
+          type="email"
+          id="email"
+          placeholder="example@email.com"
+        >
+
+      </div>
+
+
+      <div class="total-box">
+
+        <div class="total-title">
+          الإجمالي
+        </div>
+
+        <div class="total">
+          <span id="total">0</span>
+          OMR
+        </div>
+
+      </div>
+
+
+      <button
+        class="continue-btn"
+        onclick="continueBooking()"
+      >
+        متابعة الحجز
+      </button>
+
     </div>
 
-  </main>
+  </div>
 
-  <script>
+</div>
 
-    const prices = [
-      25,
-      29,
-      50.20,
-      81.60,
-      106,
-      122,
-      142.50
-    ];
 
-    const quantities = [
-      0, 0, 0, 0, 0, 0, 0
-    ];
+<script>
 
-    function changeQuantity(index, change) {
+  const prices = [
+    20,
+    29,
+    40,
+    71,
+    96,
+    112,
+    132
+  ];
 
-      quantities[index] += change;
 
-      if (quantities[index] < 0) {
-        quantities[index] = 0;
-      }
+  const quantities = [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ];
 
-      if (quantities[index] > 10) {
-        quantities[index] = 10;
-      }
 
-      document.getElementById("q" + index).textContent =
-        quantities[index];
+  function changeQty(index, amount) {
 
-      calculateTotal();
+    let newValue =
+      quantities[index] + amount;
+
+
+    if (newValue < 0) {
+      newValue = 0;
     }
 
-    function calculateTotal() {
 
-      let total = 0;
-
-      for (let i = 0; i < prices.length; i++) {
-        total += prices[i] * quantities[i];
-      }
-
-      document.getElementById("total").textContent =
-        total.toLocaleString("en-US") + " OMR";
+    if (newValue > 10) {
+      newValue = 10;
     }
 
-    function continueBooking() {
 
-      const email = document.getElementById("email").value.trim();
+    quantities[index] = newValue;
 
-      let ticketsSelected = false;
 
-      for (let i = 0; i < quantities.length; i++) {
-        if (quantities[i] > 0) {
-          ticketsSelected = true;
-          break;
+    document.getElementById(
+      "qty" + index
+    ).textContent = newValue;
+
+
+    calculateTotal();
+
+  }
+
+
+  function calculateTotal() {
+
+    let total = 0;
+
+
+    for (
+      let i = 0;
+      i < prices.length;
+      i++
+    ) {
+
+      total +=
+        prices[i] * quantities[i];
+
+    }
+
+
+    document.getElementById(
+      "total"
+    ).textContent =
+      total.toLocaleString(
+        "en-US",
+        {
+          maximumFractionDigits: 2
         }
-      }
+      );
 
-      if (!ticketsSelected) {
-        alert("من فضلك اختر تذكرة واحدة على الأقل.");
-        return;
-      }
+  }
 
-      if (!email) {
-        alert("من فضلك اكتب البريد الإلكتروني.");
-        return;
-      }
 
-      if (!email.includes("@")) {
-        alert("من فضلك اكتب بريد إلكتروني صحيح.");
-        return;
-      }
+  function continueBooking() {
 
-      alert("تم تجهيز الحجز بنجاح. خطوة الدفع هنضيفها بعد ما نخلص صفحات الحفلات.");
+    const totalTickets =
+      quantities.reduce(
+        (sum, value) =>
+          sum + value,
+        0
+      );
 
+
+    const email =
+      document
+        .getElementById("email")
+        .value
+        .trim();
+
+
+    if (totalTickets === 0) {
+
+      alert(
+        "من فضلك اختر تذكرة واحدة على الأقل."
+      );
+
+      return;
     }
 
-  </script>
+
+    if (!email) {
+
+      alert(
+        "من فضلك اكتب البريد الإلكتروني."
+      );
+
+      return;
+    }
+
+
+    const emailPattern =
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+
+    if (!emailPattern.test(email)) {
+
+      alert(
+        "من فضلك اكتب بريد إلكتروني صحيح."
+      );
+
+      return;
+    }
+
+
+    const total =
+      quantities.reduce(
+        (sum, qty, index) =>
+          sum +
+          qty * prices[index],
+        0
+      );
+
+
+    alert(
+      "تم تسجيل طلب الحجز بنجاح.\n\n" +
+      "الإجمالي: " +
+      total.toLocaleString("en-US") +
+      " OMR\n\n" +
+      "سيتم إضافة الدفع الإلكتروني لاحقًا."
+    );
+
+  }
+
+</script>
 
 </body>
 </html>
