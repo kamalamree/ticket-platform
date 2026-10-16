@@ -144,6 +144,49 @@
       color: #D4AF37;
     }
 
+    /* MAIN NAVIGATION */
+    .main-nav {
+      width: 100%;
+      background: #050D18;
+      border-top: 1px solid rgba(212,175,55,.12);
+      border-bottom: 1px solid rgba(212,175,55,.18);
+    }
+
+    .main-nav-inner {
+      width: min(1200px, 92%);
+      margin: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 0;
+      flex-wrap: wrap;
+    }
+
+    .main-nav a {
+      color: #D7DEE7;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: bold;
+      transition: .2s ease;
+    }
+
+    .main-nav a:hover {
+      color: #D4AF37;
+      background: rgba(212,175,55,.08);
+    }
+
+    .main-nav .resale-link {
+      color: #07111F;
+      background: linear-gradient(135deg, #D4AF37, #B8963E);
+    }
+
+    .main-nav .resale-link:hover {
+      color: #07111F;
+      filter: brightness(1.1);
+    }
+
     @media (max-width: 900px) {
       .concert-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -168,6 +211,16 @@
       .card h2 {
         font-size: 20px;
       }
+
+      .main-nav-inner {
+        gap: 4px;
+        padding: 10px 5px;
+      }
+
+      .main-nav a {
+        padding: 8px 10px;
+        font-size: 13px;
+      }
     }
   </style>
 </head>
@@ -187,9 +240,30 @@
   </header>
 
 
+  <!-- MAIN NAVIGATION -->
+
+  <nav class="main-nav">
+    <div class="main-nav-inner">
+
+      <a href="index.html">الرئيسية</a>
+
+      <a href="#concerts">الحفلات والفعاليات</a>
+
+      <a href="my-tickets.html">تذاكري</a>
+
+      <a href="resale.html" class="resale-link">إعادة بيع تذكرتي</a>
+
+      <a href="contact.html">تواصل معنا</a>
+
+      <a href="faq.html">الأسئلة الشائعة</a>
+
+    </div>
+  </nav>
+
+
   <!-- CONCERTS -->
 
-  <main class="container">
+  <main class="container" id="concerts">
 
     <div class="section-title">
 
