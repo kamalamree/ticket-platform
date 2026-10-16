@@ -1,1 +1,449 @@
-شسيشسيشسي
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>George Wassouf | Ticket arab</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Tahoma, sans-serif;
+      background: #07111F;
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    .page {
+      width: min(1100px, 92%);
+      margin: 40px auto;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: #D4AF37;
+      font-weight: bold;
+    }
+
+    .booking-box {
+      background: #0D1B2A;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0,0,0,.3);
+    }
+
+    .artist-image {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .content {
+      padding: 30px;
+    }
+
+    h1 {
+      color: #D4AF37;
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .info {
+      color: #AEB8C4;
+      margin: 6px 0;
+    }
+
+    .tickets {
+      margin-top: 30px;
+    }
+
+    .tickets h2 {
+      color: #D4AF37;
+      margin-bottom: 18px;
+    }
+
+    .ticket {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      background: #07111F;
+      border: 1px solid rgba(212,175,55,.15);
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 12px;
+    }
+
+    .ticket-name {
+      font-weight: bold;
+    }
+
+    .ticket-price {
+      color: #D4AF37;
+      font-weight: bold;
+      margin-top: 3px;
+    }
+
+    .quantity {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .quantity button {
+      width: 35px;
+      height: 35px;
+      border: none;
+      border-radius: 8px;
+      background: #D4AF37;
+      color: #07111F;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .quantity span {
+      min-width: 25px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .email-box {
+      margin-top: 30px;
+    }
+
+    .email-box label {
+      display: block;
+      margin-bottom: 8px;
+      color: #D4AF37;
+      font-weight: bold;
+    }
+
+    .email-box input {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(212,175,55,.25);
+      background: #07111F;
+      color: white;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .total {
+      margin-top: 25px;
+      padding: 18px;
+      background: #07111F;
+      border-radius: 12px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+      color: #D4AF37;
+    }
+
+    .continue {
+      width: 100%;
+      margin-top: 20px;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #D4AF37, #B8963E);
+      color: #07111F;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .continue:hover {
+      filter: brightness(1.1);
+    }
+
+    @media (max-width: 600px) {
+
+      .page {
+        width: 94%;
+        margin: 20px auto;
+      }
+
+      .content {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .ticket {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .quantity {
+        align-self: flex-end;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <a href="index.html" class="back">
+      ← العودة للحفلات
+    </a>
+
+    <section class="booking-box">
+
+      <img
+        src="./george-wassouf.png"
+        alt="George Wassouf"
+        class="artist-image"
+      >
+
+      <div class="content">
+
+        <h1>George Wassouf</h1>
+
+        <div class="info">
+          📅 29 أكتوبر 2026
+        </div>
+
+        <div class="info">
+          📍 Doha Golf Club - Doha, Qatar
+        </div>
+
+
+        <div class="tickets">
+
+          <h2>اختر نوع التذكرة</h2>
+
+
+          <div class="ticket">
+            <div>
+              <div class="ticket-name">Regular</div>
+              <div class="ticket-price">199 QAR</div>
+            </div>
+
+            <div class="quantity">
+              <button onclick="changeQuantity(0, -1)">−</button>
+              <span id="qty-0">0</span>
+              <button onclick="changeQuantity(0, 1)">+</button>
+            </div>
+          </div>
+
+
+          <div class="ticket">
+            <div>
+              <div class="ticket-name">Silver</div>
+              <div class="ticket-price">299 QAR</div>
+            </div>
+
+            <div class="quantity">
+              <button onclick="changeQuantity(1, -1)">−</button>
+              <span id="qty-1">0</span>
+              <button onclick="changeQuantity(1, 1)">+</button>
+            </div>
+          </div>
+
+
+          <div class="ticket">
+            <div>
+              <div class="ticket-name">Gold</div>
+              <div class="ticket-price">399 QAR</div>
+            </div>
+
+            <div class="quantity">
+              <button onclick="changeQuantity(2, -1)">−</button>
+              <span id="qty-2">0</span>
+              <button onclick="changeQuantity(2, 1)">+</button>
+            </div>
+          </div>
+
+
+          <div class="ticket">
+            <div>
+              <div class="ticket-name">Platinum</div>
+              <div class="ticket-price">499 QAR</div>
+            </div>
+
+            <div class="quantity">
+              <button onclick="changeQuantity(3, -1)">−</button>
+              <span id="qty-3">0</span>
+              <button onclick="changeQuantity(3, 1)">+</button>
+            </div>
+          </div>
+
+
+          <div class="ticket">
+            <div>
+              <div class="ticket-name">Premium</div>
+              <div class="ticket-price">599 QAR</div>
+            </div>
+
+            <div class="quantity">
+              <button onclick="changeQuantity(4, -1)">−</button>
+              <span id="qty-4">0</span>
+              <button onclick="changeQuantity(4, 1)">+</button>
+            </div>
+          </div>
+
+
+          <div class="ticket">
+            <div>
+              <div class="ticket-name">VIP</div>
+              <div class="ticket-price">699 QAR</div>
+            </div>
+
+            <div class="quantity">
+              <button onclick="changeQuantity(5, -1)">−</button>
+              <span id="qty-5">0</span>
+              <button onclick="changeQuantity(5, 1)">+</button>
+            </div>
+          </div>
+
+
+          <div class="ticket">
+            <div>
+              <div class="ticket-name">Royal VIP</div>
+              <div class="ticket-price">849 QAR</div>
+            </div>
+
+            <div class="quantity">
+              <button onclick="changeQuantity(6, -1)">−</button>
+              <span id="qty-6">0</span>
+              <button onclick="changeQuantity(6, 1)">+</button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="email-box">
+
+          <label for="email">
+            البريد الإلكتروني
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            placeholder="example@email.com"
+          >
+
+        </div>
+
+
+        <div class="total">
+          الإجمالي:
+          <span id="total">0</span>
+          QAR
+        </div>
+
+
+        <button class="continue" onclick="continueBooking()">
+          متابعة الحجز
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script>
+
+    const prices = [
+      199,
+      299,
+      399,
+      499,
+      599,
+      699,
+      849
+    ];
+
+    const quantities = [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ];
+
+
+    function changeQuantity(index, amount) {
+
+      quantities[index] += amount;
+
+      if (quantities[index] < 0) {
+        quantities[index] = 0;
+      }
+
+      if (quantities[index] > 10) {
+        quantities[index] = 10;
+      }
+
+      document.getElementById("qty-" + index).textContent =
+        quantities[index];
+
+      calculateTotal();
+    }
+
+
+    function calculateTotal() {
+
+      let total = 0;
+
+      for (let i = 0; i < prices.length; i++) {
+        total += prices[i] * quantities[i];
+      }
+
+      document.getElementById("total").textContent = total;
+    }
+
+
+    function continueBooking() {
+
+      const email = document.getElementById("email").value.trim();
+
+      let totalTickets = 0;
+
+      for (let i = 0; i < quantities.length; i++) {
+        totalTickets += quantities[i];
+      }
+
+      if (totalTickets === 0) {
+        alert("من فضلك اختر تذكرة واحدة على الأقل.");
+        return;
+      }
+
+      if (!email) {
+        alert("من فضلك أدخل البريد الإلكتروني.");
+        return;
+      }
+
+      alert(
+        "تم تجهيز طلب الحجز.\n\n" +
+        "سيتم الانتقال للدفع بعد تجهيز بوابة الدفع."
+      );
+    }
+
+  </script>
+
+</body>
+
+</html>
