@@ -1,1 +1,445 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>حجز تامر عاشور | Ticket arab</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Tahoma, sans-serif;
+      background: #07111F;
+      color: white;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    header {
+      padding: 22px 0;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    }
+
+    .logo {
+      color: #D4AF37;
+      font-size: 27px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .back {
+      color: #AEB8C4;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .event {
+      padding: 35px 0;
+    }
+
+    .event-box {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 35px;
+      background: #0D1B2A;
+      border: 1px solid rgba(212, 175, 55, 0.2);
+      border-radius: 18px;
+      padding: 25px;
+    }
+
+    .poster {
+      width: 100%;
+      border-radius: 14px;
+      display: block;
+    }
+
+    .event-info h1 {
+      margin-top: 0;
+      font-size: 34px;
+      color: #D4AF37;
+    }
+
+    .details {
+      color: #AEB8C4;
+      line-height: 2;
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      margin: 25px 0 15px;
+    }
+
+    .ticket {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #07111F;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 10px;
+    }
+
+    .ticket-name {
+      font-weight: bold;
+    }
+
+    .price {
+      color: #D4AF37;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .quantity {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .quantity button {
+      width: 34px;
+      height: 34px;
+      border: none;
+      border-radius: 8px;
+      background: #D4AF37;
+      color: #07111F;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .quantity span {
+      width: 25px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .email-box {
+      margin-top: 25px;
+    }
+
+    .email-box label {
+      display: block;
+      margin-bottom: 8px;
+      color: #AEB8C4;
+    }
+
+    .email-box input {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: #07111F;
+      color: white;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .email-box input:focus {
+      border-color: #D4AF37;
+    }
+
+    .total-box {
+      margin-top: 25px;
+      padding: 18px;
+      background: rgba(212, 175, 55, 0.08);
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      border-radius: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .total {
+      color: #D4AF37;
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .continue {
+      width: 100%;
+      margin-top: 15px;
+      padding: 16px;
+      border: none;
+      border-radius: 12px;
+      background: #D4AF37;
+      color: #07111F;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .continue:hover {
+      background: #B8963E;
+    }
+
+    .note {
+      text-align: center;
+      color: #7F8B98;
+      font-size: 13px;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 750px) {
+      .event-box {
+        grid-template-columns: 1fr;
+      }
+
+      .poster {
+        max-width: 350px;
+        margin: auto;
+      }
+
+      .event-info h1 {
+        font-size: 28px;
+      }
+
+      .ticket {
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center;">
+      <a href="index.html" class="logo">Ticket arab</a>
+      <a href="index.html" class="back">← العودة للحفلات</a>
+    </div>
+  </header>
+
+  <main class="container event">
+
+    <div class="event-box">
+
+      <!-- صورة الحفلة -->
+      <div>
+        <img src="./tamer-ashour.png" alt="تامر عاشور" class="poster">
+      </div>
+
+      <!-- بيانات الحفلة -->
+      <div class="event-info">
+
+        <h1>تامر عاشور</h1>
+
+        <div class="details">
+          📅 <strong>6 نوفمبر 2026</strong><br>
+          📍 OCEC<br>
+          🇴🇲 مسقط، عُمان
+        </div>
+
+        <h2 class="section-title">اختر فئة التذكرة</h2>
+
+        <div class="ticket">
+          <div>
+            <div class="ticket-name">Regular</div>
+            <div class="price">5 OMR</div>
+          </div>
+
+          <div class="quantity">
+            <button onclick="changeQuantity(0, -1)">−</button>
+            <span id="q0">0</span>
+            <button onclick="changeQuantity(0, 1)">+</button>
+          </div>
+        </div>
+
+        <div class="ticket">
+          <div>
+            <div class="ticket-name">Silver</div>
+            <div class="price">10 OMR</div>
+          </div>
+
+          <div class="quantity">
+            <button onclick="changeQuantity(1, -1)">−</button>
+            <span id="q1">0</span>
+            <button onclick="changeQuantity(1, 1)">+</button>
+          </div>
+        </div>
+
+        <div class="ticket">
+          <div>
+            <div class="ticket-name">Gold</div>
+            <div class="price">20 OMR</div>
+          </div>
+
+          <div class="quantity">
+            <button onclick="changeQuantity(2, -1)">−</button>
+            <span id="q2">0</span>
+            <button onclick="changeQuantity(2, 1)">+</button>
+          </div>
+        </div>
+
+        <div class="ticket">
+          <div>
+            <div class="ticket-name">Platinum</div>
+            <div class="price">25 OMR</div>
+          </div>
+
+          <div class="quantity">
+            <button onclick="changeQuantity(3, -1)">−</button>
+            <span id="q3">0</span>
+            <button onclick="changeQuantity(3, 1)">+</button>
+          </div>
+        </div>
+
+        <div class="ticket">
+          <div>
+            <div class="ticket-name">Premium</div>
+            <div class="price">35 OMR</div>
+          </div>
+
+          <div class="quantity">
+            <button onclick="changeQuantity(4, -1)">−</button>
+            <span id="q4">0</span>
+            <button onclick="changeQuantity(4, 1)">+</button>
+          </div>
+        </div>
+
+        <div class="ticket">
+          <div>
+            <div class="ticket-name">Premium VIP</div>
+            <div class="price">45 OMR</div>
+          </div>
+
+          <div class="quantity">
+            <button onclick="changeQuantity(5, -1)">−</button>
+            <span id="q5">0</span>
+            <button onclick="changeQuantity(5, 1)">+</button>
+          </div>
+        </div>
+
+        <div class="ticket">
+          <div>
+            <div class="ticket-name">VIP</div>
+            <div class="price">65 OMR</div>
+          </div>
+
+          <div class="quantity">
+            <button onclick="changeQuantity(6, -1)">−</button>
+            <span id="q6">0</span>
+            <button onclick="changeQuantity(6, 1)">+</button>
+          </div>
+        </div>
+
+        <div class="email-box">
+          <label for="email">البريد الإلكتروني لاستلام التذكرة</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="example@email.com"
+          >
+        </div>
+
+        <div class="total-box">
+          <span>الإجمالي</span>
+          <span class="total" id="total">0 OMR</span>
+        </div>
+
+        <button class="continue" onclick="continueBooking()">
+          متابعة الحجز
+        </button>
+
+        <div class="note">
+          سيتم إرسال تفاصيل الحجز والتذكرة على البريد الإلكتروني.
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+
+    const prices = [
+      5,
+      10,
+      20,
+      25,
+      35,
+      45,
+      65
+    ];
+
+    const quantities = [
+      0, 0, 0, 0, 0, 0, 0
+    ];
+
+    function changeQuantity(index, change) {
+
+      quantities[index] += change;
+
+      if (quantities[index] < 0) {
+        quantities[index] = 0;
+      }
+
+      if (quantities[index] > 10) {
+        quantities[index] = 10;
+      }
+
+      document.getElementById("q" + index).textContent =
+        quantities[index];
+
+      calculateTotal();
+    }
+
+    function calculateTotal() {
+
+      let total = 0;
+
+      for (let i = 0; i < prices.length; i++) {
+        total += prices[i] * quantities[i];
+      }
+
+      document.getElementById("total").textContent =
+        total.toLocaleString("en-US") + " OMR";
+    }
+
+    function continueBooking() {
+
+      const email = document.getElementById("email").value.trim();
+
+      let ticketsSelected = false;
+
+      for (let i = 0; i < quantities.length; i++) {
+        if (quantities[i] > 0) {
+          ticketsSelected = true;
+          break;
+        }
+      }
+
+      if (!ticketsSelected) {
+        alert("من فضلك اختر تذكرة واحدة على الأقل.");
+        return;
+      }
+
+      if (!email) {
+        alert("من فضلك اكتب البريد الإلكتروني.");
+        return;
+      }
+
+      if (!email.includes("@")) {
+        alert("من فضلك اكتب بريد إلكتروني صحيح.");
+        return;
+      }
+
+      alert("تم تجهيز الحجز بنجاح. خطوة الدفع هنضيفها بعد ما نخلص صفحات الحفلات.");
+
+    }
+
+  </script>
+
+</body>
+</html>
