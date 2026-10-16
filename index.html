@@ -25,10 +25,7 @@
       text-decoration: none;
     }
 
-    /* =========================
-       HERO
-    ========================= */
-
+    /* HERO */
     .hero {
       width: 100%;
       background: #07111F;
@@ -42,19 +39,13 @@
       object-fit: cover;
     }
 
-    /* =========================
-       CONTAINER
-    ========================= */
-
+    /* CONTAINER */
     .container {
       width: min(1200px, 92%);
       margin: auto;
     }
 
-    /* =========================
-       TITLE
-    ========================= */
-
+    /* TITLE */
     .section-title {
       text-align: center;
       margin: 45px 0 30px;
@@ -71,10 +62,7 @@
       font-size: 15px;
     }
 
-    /* =========================
-       CONCERT GRID
-    ========================= */
-
+    /* CONCERT GRID */
     .concert-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -82,10 +70,7 @@
       padding-bottom: 60px;
     }
 
-    /* =========================
-       CARD
-    ========================= */
-
+    /* CARD */
     .card {
       background: #0D1B2A;
       border: 1px solid rgba(212, 175, 55, 0.18);
@@ -131,10 +116,7 @@
       font-size: 15px;
     }
 
-    /* =========================
-       BOOK BUTTON
-    ========================= */
-
+    /* BOOK BUTTON */
     .book-btn {
       display: block;
       width: 100%;
@@ -155,10 +137,7 @@
       transform: translateY(-1px);
     }
 
-    /* =========================
-       FOOTER
-    ========================= */
-
+    /* FOOTER */
     footer {
       text-align: center;
       padding: 30px 15px;
@@ -171,24 +150,15 @@
       color: #D4AF37;
     }
 
-    /* =========================
-       TABLET
-    ========================= */
-
+    /* TABLET */
     @media (max-width: 900px) {
-
       .concert-grid {
         grid-template-columns: repeat(2, 1fr);
       }
-
     }
 
-    /* =========================
-       MOBILE
-    ========================= */
-
+    /* MOBILE */
     @media (max-width: 600px) {
-
       .hero img {
         min-height: 180px;
         object-fit: cover;
@@ -205,17 +175,13 @@
       .card h2 {
         font-size: 20px;
       }
-
     }
   </style>
 </head>
 
 <body>
 
-  <!-- =========================
-       HERO
-  ========================= -->
-
+  <!-- HERO -->
   <header class="hero">
     <img
       src="./hero-banner.png"
@@ -224,30 +190,22 @@
   </header>
 
 
-  <!-- =========================
-       CONCERTS
-  ========================= -->
-
+  <!-- CONCERTS -->
   <main class="container">
 
     <div class="section-title">
-
       <h1>الحفلات القادمة</h1>
 
       <p>
         اختار حفلتك واحجز تذكرتك بسهولة
       </p>
-
     </div>
 
 
     <section class="concert-grid">
 
 
-      <!-- =================================================
-           1 - AMR DIAB
-      ================================================== -->
-
+      <!-- 1 - AMR DIAB -->
       <article class="card">
 
         <img
@@ -268,12 +226,12 @@
           </div>
 
           <div class="price">
-            يبدأ من 225 AED
+            تذاكر تبدأ من 275 AED
           </div>
 
           <a
             class="book-btn"
-            href="booking.html"
+            href="booking.html?event=amr"
           >
             احجز الآن
           </a>
@@ -283,10 +241,7 @@
       </article>
 
 
-      <!-- =================================================
-           2 - GEORGE WASSOUF
-      ================================================== -->
-
+      <!-- 2 - GEORGE WASSOUF -->
       <article class="card">
 
         <img
@@ -303,16 +258,16 @@
           </div>
 
           <div class="info">
-            📍 Doha - Qatar
+            📍 Doha Golf Club - Qatar
           </div>
 
           <div class="price">
-            يبدأ من 199 QAR
+            تذاكر تبدأ من 199 QAR
           </div>
 
           <a
             class="book-btn"
-            href="booking-george.html"
+            href="booking.html?event=george"
           >
             احجز الآن
           </a>
@@ -322,10 +277,7 @@
       </article>
 
 
-      <!-- =================================================
-           3 - ELISSA
-      ================================================== -->
-
+      <!-- 3 - ELISSA -->
       <article class="card">
 
         <img
@@ -342,16 +294,16 @@
           </div>
 
           <div class="info">
-            📍 OCEC - Muscat
+            📍 OCEC - Muscat, Oman
           </div>
 
           <div class="price">
-            التذاكر متاحة
+            تذاكر تبدأ من 25 OMR
           </div>
 
           <a
             class="book-btn"
-            href="#"
+            href="booking.html?event=elissa"
           >
             احجز الآن
           </a>
@@ -361,10 +313,7 @@
       </article>
 
 
-      <!-- =================================================
-           4 - TAMER ASHOUR
-      ================================================== -->
-
+      <!-- 4 - TAMER ASHOUR -->
       <article class="card">
 
         <img
@@ -381,16 +330,16 @@
           </div>
 
           <div class="info">
-            📍 OCEC - Muscat
+            📍 OCEC - Muscat, Oman
           </div>
 
           <div class="price">
-            التذاكر متاحة
+            تذاكر تبدأ من 5 OMR
           </div>
 
           <a
             class="book-btn"
-            href="#"
+            href="booking.html?event=tamer"
           >
             احجز الآن
           </a>
@@ -400,10 +349,7 @@
       </article>
 
 
-      <!-- =================================================
-           5 - TUL8TE
-      ================================================== -->
-
+      <!-- 5 - TUL8TE -->
       <article class="card">
 
         <img
@@ -420,16 +366,16 @@
           </div>
 
           <div class="info">
-            📍 Bahrain
+            📍 Beyon Al Dana Amphitheatre - Bahrain
           </div>
 
           <div class="price">
-            التذاكر متاحة
+            تذاكر تبدأ من 8 BHD
           </div>
 
           <a
             class="book-btn"
-            href="#"
+            href="booking.html?event=tul8te"
           >
             احجز الآن
           </a>
@@ -439,10 +385,7 @@
       </article>
 
 
-      <!-- =================================================
-           6 - FADEL CHAKER
-      ================================================== -->
-
+      <!-- 6 - FADEL CHAKER -->
       <article class="card">
 
         <img
@@ -463,12 +406,12 @@
           </div>
 
           <div class="price">
-            التذاكر متاحة
+            تذاكر تبدأ من 455 SAR
           </div>
 
           <a
             class="book-btn"
-            href="#"
+            href="booking.html?event=fadel"
           >
             احجز الآن
           </a>
@@ -478,10 +421,7 @@
       </article>
 
 
-      <!-- =================================================
-           7 - NANCY AJRAM
-      ================================================== -->
-
+      <!-- 7 - NANCY AJRAM -->
       <article class="card">
 
         <img
@@ -502,12 +442,12 @@
           </div>
 
           <div class="price">
-            التذاكر متاحة
+            تذاكر تبدأ من 190 AED
           </div>
 
           <a
             class="book-btn"
-            href="#"
+            href="booking.html?event=nancy"
           >
             احجز الآن
           </a>
@@ -517,10 +457,7 @@
       </article>
 
 
-      <!-- =================================================
-           8 - RABEH SAQER
-      ================================================== -->
-
+      <!-- 8 - RABEH SAQER -->
       <article class="card">
 
         <img
@@ -541,12 +478,12 @@
           </div>
 
           <div class="price">
-            التذاكر متاحة
+            تذاكر تبدأ من 299 SAR
           </div>
 
           <a
             class="book-btn"
-            href="#"
+            href="booking.html?event=rabeh"
           >
             احجز الآن
           </a>
@@ -556,10 +493,7 @@
       </article>
 
 
-      <!-- =================================================
-           9 - ISMAEL DAWAS BAND
-      ================================================== -->
-
+      <!-- 9 - ISMAEL DAWAS BAND -->
       <article class="card">
 
         <img
@@ -576,16 +510,16 @@
           </div>
 
           <div class="info">
-            📍 Bahrain
+            📍 Dar Al Muharraq - Bahrain
           </div>
 
           <div class="price">
-            التذاكر متاحة
+            تذاكر تبدأ من 4.9 BHD
           </div>
 
           <a
             class="book-btn"
-            href="#"
+            href="booking.html?event=ismael"
           >
             احجز الآن
           </a>
@@ -600,10 +534,7 @@
   </main>
 
 
-  <!-- =========================
-       FOOTER
-  ========================= -->
-
+  <!-- FOOTER -->
   <footer>
 
     <div>
