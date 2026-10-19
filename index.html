@@ -204,7 +204,7 @@
     </div>
 
 
-    <section class="concert-grid">
+   <section class="concert-grid" id="events-container">
 
 
       <!-- ========================= -->
@@ -596,7 +596,21 @@
     </div>
 
   </footer>
+</footer>
+
+<script>
+fetch("http://localhost:3000/api/events")
+  .then(response => response.json())
+  .then(data => {
+    console.log("Events from database:", data);
+  })
+  .catch(error => {
+    console.error("Events API Error:", error);
+  });
+</script>
 
 </body>
-
 </html>
+
+
+
